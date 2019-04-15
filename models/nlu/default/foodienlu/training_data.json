@@ -16,6 +16,57 @@
       {
         "intent": "goodbye",
         "text": "bye"
+      },
+      {
+        "intent": "search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 31,
+            "end": 36,
+            "value": "delhi",
+            "entity": "location"
+          }
+        ],
+        "text": "Find me italian restaurants in delhi"
+      },
+      {
+        "intent": "search",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 49,
+            "end": 55,
+            "value": "Jaipur",
+            "entity": "location"
+          }
+        ],
+        "text": "can you suggest some good mexican restaurants in Jaipur"
+      },
+      {
+        "intent": "search",
+        "text": "I'm looking for a place to eat lunch"
+      },
+      {
+        "entities": [
+          {
+            "start": 15,
+            "end": 27,
+            "value": "South Indian",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "Help me locate South Indian restaurant"
       }
     ],
     "regex_features": [],
