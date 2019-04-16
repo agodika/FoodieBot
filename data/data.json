@@ -64,12 +64,89 @@
       },
       {
         "text": "Help me locate South Indian restaurant",
-        "intent": "",
+        "intent": "search",
         "entities": [
           {
             "start": 15,
             "end": 27,
             "value": "South Indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I'm hungry. Looking for good restaurants",
+        "intent": "search",
+        "entities": []
+      },
+      {
+        "text": "Bangalore",
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Bangalore",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "In Delhi",
+        "intent": "location",
+        "entities": [
+          {
+            "start": 3,
+            "end": 8,
+            "value": "Delhi",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "in Jaipur near statue circle",
+        "intent": "location",
+        "entities": [
+          {
+            "start": 3,
+            "end": 9,
+            "value": "Jaipur",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I want Thai",
+        "intent": "cuisine",
+        "entities": [
+          {
+            "start": 7,
+            "end": 11,
+            "value": "Thai",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Italian would be good",
+        "intent": "cuisine",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "I love Mexican food",
+        "intent": "cuisine",
+        "entities": [
+          {
+            "start": 7,
+            "end": 14,
+            "value": "Mexican",
             "entity": "cuisine"
           }
         ]
