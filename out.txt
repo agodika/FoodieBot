@@ -1,0 +1,10 @@
+('Byg Brewski Brewing Company in Behind MK Retail, Sarjapur Road, Bangalore '
+ 'has been rated 4.9\n'
+ "AB's - Absolute Barbecues in 100 Feet Road, 1st Phase, Near Jayadeva "
+ 'Flyover, 2nd Stage, BTM, Bangalore has been rated 4.9\n'
+ "AB's - Absolute Barbecues in 90/4, 3rd Floor, Outer Ring Road, Munnekollaly "
+ 'Village, Marathahalli, Bangalore has been rated 4.9\n'
+ 'Punjab Grill in 26/1, Dr Rajkumar Road, Brigade Gateway Campus, Malleshwaram '
+ 'Bangalore has been rated 4.9\n'
+ 'Flechazo in 120 A3, 2nd Floor, Santosh Tower, EPIP Industrial Area, Phase 1, '
+ 'Hoodi Village, Whitefield, Bangalore has been rated 4.9\n')

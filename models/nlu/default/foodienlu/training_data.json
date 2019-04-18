@@ -202,7 +202,7 @@
         "text": "I am searching for a dinner spot"
       },
       {
-        "intent": "search_restaurant",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 8,
@@ -220,7 +220,7 @@
         "text": "Find me italian restaurants in delhi"
       },
       {
-        "intent": "search_restaurant",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 26,
@@ -238,11 +238,11 @@
         "text": "can you suggest some good mexican restaurants in Jaipur"
       },
       {
-        "intent": "search_restaurant",
+        "intent": "restaurant_search",
         "text": "I'm looking for a place to eat lunch"
       },
       {
-        "intent": "search_restaurant",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 15,
@@ -254,10 +254,11 @@
         "text": "Help me locate South Indian restaurant"
       },
       {
-        "intent": "search_restaurant",
+        "intent": "restaurant_search",
         "text": "I'm hungry. Looking for good restaurants"
       },
       {
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
@@ -269,7 +270,7 @@
         "text": "Bangalore"
       },
       {
-        "intent": "specify_location",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 3,
@@ -281,7 +282,7 @@
         "text": "In Delhi"
       },
       {
-        "intent": "specify_location",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 3,
@@ -293,7 +294,7 @@
         "text": "in Jaipur near statue circle"
       },
       {
-        "intent": "specify_cuisine",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 7,
@@ -305,7 +306,7 @@
         "text": "I want Thai"
       },
       {
-        "intent": "specify_cuisine",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
@@ -317,7 +318,7 @@
         "text": "Italian would be good"
       },
       {
-        "intent": "specify_cuisine",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 7,
@@ -329,7 +330,7 @@
         "text": "I love Mexican food"
       },
       {
-        "intent": "search_restaurant",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 13,
@@ -347,7 +348,7 @@
         "text": "I am craving chinese. I wonder if there are any good chinese restaurants in mumbai?"
       },
       {
-        "intent": "search_restaurant",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 19,
@@ -373,11 +374,11 @@
         "text": "Hi There"
       },
       {
-        "intent": "search_restaurant",
+        "intent": "restaurant_search",
         "text": "I’m hungry. Looking out for some good restaurants"
       },
       {
-        "intent": "specify_cuisine",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 12,
@@ -393,7 +394,7 @@
         "text": "hey"
       },
       {
-        "intent": "specify_location",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 16,
@@ -405,103 +406,103 @@
         "text": "Show me some in Allahabad"
       },
       {
-        "intent": "specify_budget",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
             "end": 4,
-            "value": "<300",
-            "entity": "budget"
+            "value": "1",
+            "entity": "price"
           }
         ],
         "text": "<300"
       },
       {
-        "intent": "specify_budget",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
             "end": 4,
-            "value": ">700",
-            "entity": "budget"
+            "value": "3",
+            "entity": "price"
           }
         ],
         "text": ">700"
       },
       {
-        "intent": "specify_budget",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
             "end": 7,
-            "value": "300-700",
-            "entity": "budget"
+            "value": "2",
+            "entity": "price"
           }
         ],
         "text": "300-700 range"
       },
       {
-        "intent": "specify_budget",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
             "end": 13,
-            "value": ">700",
-            "entity": "budget"
+            "value": "3",
+            "entity": "price"
           }
         ],
         "text": "More than 700"
       },
       {
-        "intent": "specify_budget",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
             "end": 19,
-            "value": "<300",
-            "entity": "budget"
+            "value": "1",
+            "entity": "price"
           }
         ],
         "text": "Lesser than Rs. 300"
       },
       {
-        "intent": "specify_budget",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
             "end": 13,
-            "value": "<300",
-            "entity": "budget"
+            "value": "1",
+            "entity": "price"
           }
         ],
         "text": "less than 300"
       },
       {
-        "intent": "specify_budget",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
             "end": 4,
-            "value": ">700",
-            "entity": "budget"
+            "value": "3",
+            "entity": "price"
           }
         ],
         "text": "700+"
       },
       {
-        "intent": "specify_budget",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 0,
             "end": 8,
-            "value": ">700",
-            "entity": "budget"
+            "value": "3",
+            "entity": "price"
           }
         ],
         "text": "no limit"
       },
       {
-        "intent": "specify_email",
+        "intent": "send_email",
         "entities": [
           {
             "start": 23,
@@ -513,7 +514,7 @@
         "text": "yes. Please send it to ahbcdj@dkj.com"
       },
       {
-        "intent": "specify_email",
+        "intent": "send_email",
         "entities": [
           {
             "start": 0,
@@ -525,7 +526,7 @@
         "text": "jddk.2jmd@kdl.co.in"
       },
       {
-        "intent": "specify_email",
+        "intent": "send_email",
         "entities": [
           {
             "start": 26,
@@ -537,19 +538,443 @@
         "text": "Sure, You can email me at blah@test.com"
       },
       {
-        "intent": "specify_budget",
+        "intent": "restaurant_search",
         "entities": [
           {
             "start": 12,
             "end": 22,
-            "value": "300-700",
-            "entity": "budget"
+            "value": "2",
+            "entity": "price"
           }
         ],
         "text": "in range of 300 to 700"
+      },
+      {
+        "intent": "send_email",
+        "entities": [
+          {
+            "start": 19,
+            "end": 36,
+            "value": "wqeqw@daeerwe.com",
+            "entity": "email"
+          }
+        ],
+        "text": "send me details on wqeqw@daeerwe.com"
+      },
+      {
+        "intent": "send_email",
+        "entities": [
+          {
+            "start": 35,
+            "end": 52,
+            "value": "dsf34fs@dfser.com",
+            "entity": "email"
+          }
+        ],
+        "text": "please send restaurants details to dsf34fs@dfser.com"
+      },
+      {
+        "intent": "send_email",
+        "entities": [
+          {
+            "start": 3,
+            "end": 22,
+            "value": "gdafadgs@fwefds.com",
+            "entity": "email"
+          }
+        ],
+        "text": "to gdafadgs@fwefds.com"
+      },
+      {
+        "intent": "send_email",
+        "entities": [
+          {
+            "start": 12,
+            "end": 33,
+            "value": "hfdgd3243et@ergfg.com",
+            "entity": "email"
+          }
+        ],
+        "text": "my email is hfdgd3243et@ergfg.com"
+      },
+      {
+        "intent": "send_email",
+        "entities": [
+          {
+            "start": 0,
+            "end": 26,
+            "value": "r32rvrsvsd@ssdfwethtfd.com",
+            "entity": "email"
+          }
+        ],
+        "text": "r32rvrsvsd@ssdfwethtfd.com"
+      },
+      {
+        "intent": "send_email",
+        "entities": [
+          {
+            "start": 23,
+            "end": 42,
+            "value": "irwoesd@dfjdsfk.com",
+            "entity": "email"
+          }
+        ],
+        "text": "Yes, send the email to irwoesd@dfjdsfk.com"
+      },
+      {
+        "intent": "send_email",
+        "entities": [
+          {
+            "start": 0,
+            "end": 19,
+            "value": "jddk.2jmd@kdl.co.in",
+            "entity": "email"
+          }
+        ],
+        "text": "jddk.2jmd@kdl.co.in"
+      },
+      {
+        "intent": "send_email",
+        "entities": [
+          {
+            "start": 11,
+            "end": 33,
+            "value": "dfgdfsdkf@dfsfsd.co.in",
+            "entity": "email"
+          }
+        ],
+        "text": "send it to dfgdfsdkf@dfsfsd.co.in"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 21,
+            "end": 33,
+            "value": "south indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 49,
+            "end": 54,
+            "value": "Delhi",
+            "entity": "location"
+          },
+          {
+            "start": 74,
+            "end": 84,
+            "value": "300 to 700",
+            "entity": "price"
+          },
+          {
+            "start": 109,
+            "end": 127,
+            "value": "sasi.424@gmail.com",
+            "entity": "email"
+          }
+        ],
+        "text": "Can you find me good south indian restaurants in Delhi in the price range 300 to 700 and send me an email to sasi.424@gmail.com"
+      },
+      {
+        "intent": "send_email",
+        "entities": [
+          {
+            "start": 13,
+            "end": 28,
+            "value": "asdef@dfdsf.com",
+            "entity": "email"
+          }
+        ],
+        "text": "sent list to asdef@dfdsf.com"
+      },
+      {
+        "intent": "send_email",
+        "entities": [
+          {
+            "start": 12,
+            "end": 28,
+            "value": "fsfdsd@sdfsf.com",
+            "entity": "email"
+          }
+        ],
+        "text": "my email is fsfdsd@sdfsf.com"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "2",
+            "entity": "price"
+          }
+        ],
+        "text": "moderate price"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "1",
+            "entity": "price"
+          }
+        ],
+        "text": "low price restaurants"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "2",
+            "entity": "price"
+          }
+        ],
+        "text": "mid-range"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "3",
+            "entity": "price"
+          }
+        ],
+        "text": "high-end"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "3",
+            "entity": "price"
+          }
+        ],
+        "text": "fine restaurants"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "1",
+            "entity": "price"
+          }
+        ],
+        "text": "upto 300"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "2",
+            "entity": "price"
+          }
+        ],
+        "text": "above 300"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "3",
+            "entity": "price"
+          }
+        ],
+        "text": "top end restaurant"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "3",
+            "entity": "price"
+          }
+        ],
+        "text": "expensive restaurants"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "1",
+            "entity": "price"
+          }
+        ],
+        "text": "cheep restaurants"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "2",
+            "entity": "price"
+          }
+        ],
+        "text": "mid-range restaurants"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 15,
+            "value": "1",
+            "entity": "price"
+          }
+        ],
+        "text": "budget friendly restaurants"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 12,
+            "end": 20,
+            "value": "1",
+            "entity": "price"
+          },
+          {
+            "start": 21,
+            "end": 28,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 46,
+            "end": 50,
+            "value": "pune",
+            "entity": "location"
+          },
+          {
+            "start": 68,
+            "end": 90,
+            "value": "sdfsdfdcv2e@dcsdfs.com",
+            "entity": "email"
+          }
+        ],
+        "text": "looking for economic mexican dining option in pune. send details to sdfsdfdcv2e@dcsdfs.com"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "3",
+            "entity": "price"
+          },
+          {
+            "start": 19,
+            "end": 27,
+            "value": "american",
+            "entity": "cuisine"
+          },
+          {
+            "start": 45,
+            "end": 51,
+            "value": "mumbai",
+            "entity": "location"
+          }
+        ],
+        "text": "looking for classy american dining option in mumbai"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "1",
+            "entity": "price"
+          }
+        ],
+        "text": "below 300"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "1",
+            "entity": "price"
+          }
+        ],
+        "text": "cheap restaurants"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 13,
+            "value": "1",
+            "entity": "price"
+          },
+          {
+            "start": 14,
+            "end": 21,
+            "value": "italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 37,
+            "end": 41,
+            "value": "pune",
+            "entity": "location"
+          }
+        ],
+        "text": "find me cheap italian restaurants in pune"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 28,
+            "end": 37,
+            "value": "hyderabad",
+            "entity": "location"
+          },
+          {
+            "start": 5,
+            "end": 12,
+            "value": "italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 0,
+            "end": 4,
+            "value": "3",
+            "entity": "price"
+          }
+        ],
+        "text": "fine italian restaurants in hyderabad"
       }
     ],
     "regex_features": [
+      {
+        "name": "emailid",
+        "pattern": "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$"
+      },
       {
         "name": "greet",
         "pattern": "((hey)|(hi)|(Hey)|(Hi)|(Hello)|(hello)|(hola)|(heya))[^\\s]*"
@@ -585,6 +1010,15 @@
         "synonyms": [
           "poona",
           "poon"
+        ]
+      },
+      {
+        "value": "hyderabad",
+        "synonyms": [
+          "hydeerabad",
+          "hyderabat",
+          "yyderabad",
+          "hydrabad"
         ]
       },
       {

@@ -32,7 +32,7 @@ intents:
  - goodbye
  - thankyou
  - restaurant_search
- - send email
+ - send_email
 
 
 templates:
@@ -61,13 +61,13 @@ templates:
       - title: "Italian"
         payload: "Italian"
   utter_ask_price: 
-    - text: "what price range you like to search?"
+    - text: "what price range would you like to search?"
       buttons:
-      - title: "1. < 300"
+      - title: "< 300"
         payload: "1"
-      - title: "2. 300-700"
+      - title: "300-700"
         payload: "2"
-      - title: "3. > 700"
+      - title: "> 700"
         payload: "3" 
 
   utter_ask_howcanhelp:
@@ -87,6 +87,7 @@ templates:
     - "Sent the email successfully to {email}"
   utter_invalid_location:
     - "Sorry! We do not operate in that area yet. Enter different city"
+    - "Sorry! Location not found. Enter a valid city" 
 
 actions:
 - utter_greet
@@ -101,3 +102,5 @@ actions:
 - utter_email_sent_successfully
 - utter_invalid_location
 - actions.ActionSearchRestaurants
+- actions.ActionValidateLocation
+- actions.ActionSendEmail
