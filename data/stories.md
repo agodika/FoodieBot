@@ -67,3 +67,24 @@
 * affirm
     - utter_goodbye
     - export
+
+## Generated Story -4406550421169986531
+* greet
+    - utter_greet
+* search_restaurant
+    - utter_ask_location
+* specify_location
+    - utter_ask_cuisine
+* specify_cuisine
+    - utter_ask_budget
+* specify_budget{"budget": "300-700"}
+    - slot{"budget": "300-700"}
+    - action_restaurant
+    - slot{"location": null}
+    - utter_ask_email
+* specify_email{"email": "ahbcdj@dkj.com"}
+    - slot{"email": "ahbcdj@dkj.com"}
+    - action_email
+    - slot{"email": "ahbcdj@dkj.com"}
+    - utter_goodbye
+    - export	

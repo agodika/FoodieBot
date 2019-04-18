@@ -3,8 +3,6 @@ slots:
     type: text
   cuisine:
     type: text
-  valid_location:
-    type: boolean
   budget:
     type: text
   email:

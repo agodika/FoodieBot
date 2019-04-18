@@ -5,10 +5,18 @@
     "intent_deny",
     "intent_goodbye",
     "intent_thankyou",
-    "intent_restaurant_search",
+    "intent_search_restaurant",
+    "intent_specify_location",
+    "intent_specify_cuisine",
+    "intent_specify_budget",
+    "intent_specify_email",
     "entity_location",
     "entity_cuisine",
+    "entity_budget",
+    "entity_email",
+    "slot_budget_0",
     "slot_cuisine_0",
+    "slot_email_0",
     "slot_location_0",
     "prev_action_listen",
     "prev_action_restart",
@@ -19,6 +27,9 @@
     "prev_utter_ask_howcanhelp",
     "prev_utter_ask_location",
     "prev_utter_ask_cuisine",
-    "prev_action_restaurant"
+    "prev_utter_ask_budget",
+    "prev_utter_ask_email",
+    "prev_action_restaurant",
+    "prev_action_email"
   ]
 }
