@@ -16,9 +16,615 @@
       {
         "intent": "goodbye",
         "text": "bye"
+      },
+      {
+        "intent": "greet",
+        "text": "hey"
+      },
+      {
+        "intent": "greet",
+        "text": "howdy"
+      },
+      {
+        "intent": "greet",
+        "text": "hey there"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "good morning"
+      },
+      {
+        "intent": "greet",
+        "text": "good evening"
+      },
+      {
+        "intent": "greet",
+        "text": "hi there"
+      },
+      {
+        "intent": "greet",
+        "text": "hi !"
+      },
+      {
+        "intent": "greet",
+        "text": "hello there"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "howdy"
+      },
+      {
+        "intent": "greet",
+        "text": "hi there!"
+      },
+      {
+        "intent": "greet",
+        "text": "dear sir"
+      },
+      {
+        "intent": "greet",
+        "text": "Hi, there"
+      },
+      {
+        "intent": "greet",
+        "text": "how do you do"
+      },
+      {
+        "intent": "greet",
+        "text": "hi,"
+      },
+      {
+        "intent": "greet",
+        "text": "hi!"
+      },
+      {
+        "intent": "greet",
+        "text": "hi, how do you do"
+      },
+      {
+        "intent": "greet",
+        "text": "hi, there"
+      },
+      {
+        "intent": "greet",
+        "text": "Hi,"
+      },
+      {
+        "intent": "greet",
+        "text": "howdy how do you do"
+      },
+      {
+        "intent": "greet",
+        "text": "Howdy, there"
+      },
+      {
+        "intent": "greet",
+        "text": "hi how do you do"
+      },
+      {
+        "intent": "greet",
+        "text": "Hello, how do you do"
+      },
+      {
+        "intent": "greet",
+        "text": "howdy there"
+      },
+      {
+        "intent": "greet",
+        "text": "Howdy,"
+      },
+      {
+        "intent": "greet",
+        "text": "hello how do you do"
+      },
+      {
+        "intent": "greet",
+        "text": "hello there"
+      },
+      {
+        "intent": "greet",
+        "text": "howdy"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "yep"
+      },
+      {
+        "intent": "affirm",
+        "text": "yeah"
+      },
+      {
+        "intent": "affirm",
+        "text": "sure"
+      },
+      {
+        "intent": "affirm",
+        "text": "ok"
+      },
+      {
+        "intent": "affirm",
+        "text": "great"
+      },
+      {
+        "intent": "affirm",
+        "text": "sounds really good"
+      },
+      {
+        "intent": "affirm",
+        "text": "okay"
+      },
+      {
+        "intent": "deny",
+        "text": "No, thank you"
+      },
+      {
+        "intent": "deny",
+        "text": "No, I am fine"
+      },
+      {
+        "intent": "deny",
+        "text": "No"
+      },
+      {
+        "intent": "deny",
+        "text": "No, I am okay"
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "i'm hungry"
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "feeling hungry"
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "i'm looking for a place to eat"
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "I want to grab lunch"
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "I am searching for a dinner spot"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 31,
+            "end": 36,
+            "value": "delhi",
+            "entity": "location"
+          }
+        ],
+        "text": "Find me italian restaurants in delhi"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 26,
+            "end": 33,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 49,
+            "end": 55,
+            "value": "Jaipur",
+            "entity": "location"
+          }
+        ],
+        "text": "can you suggest some good mexican restaurants in Jaipur"
+      },
+      {
+        "intent": "search_restaurant",
+        "text": "I'm looking for a place to eat lunch"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 15,
+            "end": 27,
+            "value": "South Indian",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "Help me locate South Indian restaurant"
+      },
+      {
+        "intent": "search_restaurant",
+        "text": "I'm hungry. Looking for good restaurants"
+      },
+      {
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Bangalore",
+            "entity": "location"
+          }
+        ],
+        "text": "Bangalore"
+      },
+      {
+        "intent": "specify_location",
+        "entities": [
+          {
+            "start": 3,
+            "end": 8,
+            "value": "Delhi",
+            "entity": "location"
+          }
+        ],
+        "text": "In Delhi"
+      },
+      {
+        "intent": "specify_location",
+        "entities": [
+          {
+            "start": 3,
+            "end": 9,
+            "value": "Jaipur",
+            "entity": "location"
+          }
+        ],
+        "text": "in Jaipur near statue circle"
+      },
+      {
+        "intent": "specify_cuisine",
+        "entities": [
+          {
+            "start": 7,
+            "end": 11,
+            "value": "Thai",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "I want Thai"
+      },
+      {
+        "intent": "specify_cuisine",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Italian",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "Italian would be good"
+      },
+      {
+        "intent": "specify_cuisine",
+        "entities": [
+          {
+            "start": 7,
+            "end": 14,
+            "value": "Mexican",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "I love Mexican food"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 13,
+            "end": 20,
+            "value": "chinese",
+            "entity": "cuisine"
+          },
+          {
+            "start": 76,
+            "end": 82,
+            "value": "mumbai",
+            "entity": "location"
+          }
+        ],
+        "text": "I am craving chinese. I wonder if there are any good chinese restaurants in mumbai?"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 19,
+            "end": 28,
+            "value": "american ",
+            "entity": "cuisine"
+          },
+          {
+            "start": 43,
+            "end": 52,
+            "value": "Hyderabad",
+            "entity": "location"
+          }
+        ],
+        "text": "Are there any good american restaurants in Hyderabad?"
+      },
+      {
+        "intent": "greet",
+        "text": "Hola"
+      },
+      {
+        "intent": "greet",
+        "text": "Hi There"
+      },
+      {
+        "intent": "search_restaurant",
+        "text": "I’m hungry. Looking out for some good restaurants"
+      },
+      {
+        "intent": "specify_cuisine",
+        "entities": [
+          {
+            "start": 12,
+            "end": 24,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "I’ll prefer north indian"
+      },
+      {
+        "intent": "greet",
+        "text": "hey"
+      },
+      {
+        "intent": "specify_location",
+        "entities": [
+          {
+            "start": 16,
+            "end": 25,
+            "value": "Allahabad",
+            "entity": "location"
+          }
+        ],
+        "text": "Show me some in Allahabad"
+      },
+      {
+        "intent": "specify_budget",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "<300",
+            "entity": "budget"
+          }
+        ],
+        "text": "<300"
+      },
+      {
+        "intent": "specify_budget",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": ">700",
+            "entity": "budget"
+          }
+        ],
+        "text": ">700"
+      },
+      {
+        "intent": "specify_budget",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "300-700",
+            "entity": "budget"
+          }
+        ],
+        "text": "300-700 range"
+      },
+      {
+        "intent": "specify_budget",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": ">700",
+            "entity": "budget"
+          }
+        ],
+        "text": "More than 700"
+      },
+      {
+        "intent": "specify_budget",
+        "entities": [
+          {
+            "start": 0,
+            "end": 19,
+            "value": "<300",
+            "entity": "budget"
+          }
+        ],
+        "text": "Lesser than Rs. 300"
+      },
+      {
+        "intent": "specify_budget",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "<300",
+            "entity": "budget"
+          }
+        ],
+        "text": "less than 300"
+      },
+      {
+        "intent": "specify_budget",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": ">700",
+            "entity": "budget"
+          }
+        ],
+        "text": "700+"
+      },
+      {
+        "intent": "specify_budget",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": ">700",
+            "entity": "budget"
+          }
+        ],
+        "text": "no limit"
+      },
+      {
+        "intent": "specify_email",
+        "entities": [
+          {
+            "start": 23,
+            "end": 37,
+            "value": "ahbcdj@dkj.com",
+            "entity": "email"
+          }
+        ],
+        "text": "yes. Please send it to ahbcdj@dkj.com"
+      },
+      {
+        "intent": "specify_email",
+        "entities": [
+          {
+            "start": 0,
+            "end": 19,
+            "value": "jddk.2jmd@kdl.co.in",
+            "entity": "email"
+          }
+        ],
+        "text": "jddk.2jmd@kdl.co.in"
+      },
+      {
+        "intent": "specify_email",
+        "entities": [
+          {
+            "start": 26,
+            "end": 39,
+            "value": "blah@test.com",
+            "entity": "email"
+          }
+        ],
+        "text": "Sure, You can email me at blah@test.com"
+      },
+      {
+        "intent": "specify_budget",
+        "entities": [
+          {
+            "start": 12,
+            "end": 22,
+            "value": "300-700",
+            "entity": "budget"
+          }
+        ],
+        "text": "in range of 300 to 700"
       }
     ],
-    "regex_features": [],
-    "entity_synonyms": []
+    "regex_features": [
+      {
+        "name": "greet",
+        "pattern": "((hey)|(hi)|(Hey)|(Hi)|(Hello)|(hello)|(hola)|(heya))[^\\s]*"
+      },
+      {
+        "name": "location",
+        "pattern": "\\b\\s*(?i)((Ahmedabad)|(Bangalore)|(bengaluru)|(bangloor)|(banglore)|(Chennai)|(chenai)|(chenaii)|(kolkatta)|(Kalkatta)|(Calcutta)|(madras)|(chenaii)|(Delhi)|(gurugram)|(Hyderabad)|(Kolkata)|(Mumbai)|(Bombay)|(Bambai)|(Pune)|(Poona)|(Agra)|(Ajmer)|(Aligarh)|(Allahabad)|(Amravati)|(Amritsar)|(Asansol)|(Aurangabad)|(Bareilly)|(Belgaum)|(Bhavnagar)|(Bhiwandi)|(Bhopal)|(Bhubaneswar)|(Bikaner)|(Bokaro Steel City)|(Chandigarh)|(Coimbatore)|(Cuttack)|(Dehradun)|(Dhanbad)|(Durg-Bhilai Nagar)|(Durgapur)|(Erode)|(Faridabad)|(Firozabad)|(Ghaziabad)|(Gorakhpur)|(Gulbarga)|(Guntur)|(Gurgaon)|(Guwahati)|(Gwalior)|(Hubli-Dharwad)|(Indore)|(Jabalpur)|(Jaipur)|(Jalandhar)|(Jammu)|(Jamnagar)|(Jamshedpur)|(Jhansi)|(Jodhpur)|(Kannur)|(Kanpur)|(Kakinada)|(Kochi)|(Kottayam)|(Kolhapur)|(Kollam)|(Kota)|(Kozhikode)|(Kurnool)|(Lucknow)|(Ludhiana)|(Madurai)|(Malappuram)|(Mathura)|(Goa)|(Mangalore)|(Meerut)|(Moradabad)|(Mysore)|(Nagpur)|(Nanded)|(Nashik)|(Nellore)|(Noida)|(Palakkad)|(Patna)|(Pondicherry)|(Raipur)|(Rajkot)|(Rajahmundry)|(Ranchi)|(Rourkela)|(Salem)|(Sangli)|(Siliguri)|(Solapur)|(Srinagar)|(Sultanpur)|(Surat)|(Thiruvananthapuram)|(Thrissur)|(Tiruchirappalli)|(Tirunelveli)|(Tiruppur)|(Ujjain)|(Vijayapura)|(Vadodara)|(Varanasi)|(Vasai-Virar)|(Vijayawada)|(Visakhapatnam)|(Vishakapattanam)|(Warangal))"
+      },
+      {
+        "name": "zipcode",
+        "pattern": "[0-9]{5}"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "chinese",
+        "synonyms": [
+          "Chinese",
+          "China",
+          "chines"
+        ]
+      },
+      {
+        "value": "Bangalore",
+        "synonyms": [
+          "bengaluru",
+          "bangloor",
+          "banglore"
+        ]
+      },
+      {
+        "value": "pune",
+        "synonyms": [
+          "poona",
+          "poon"
+        ]
+      },
+      {
+        "value": "gurgaon",
+        "synonyms": [
+          "gurugram"
+        ]
+      },
+      {
+        "value": "delhi",
+        "synonyms": [
+          "New Delhi",
+          "Dilli"
+        ]
+      },
+      {
+        "value": "Mumbai",
+        "synonyms": [
+          "Bombay",
+          "Bambai"
+        ]
+      },
+      {
+        "value": "Kolkata",
+        "synonyms": [
+          "kolkatta",
+          "Calcutta",
+          "Kalkatta"
+        ]
+      },
+      {
+        "value": "south indian",
+        "synonyms": [
+          "andhra",
+          "telugu",
+          "tamil",
+          "kannada",
+          "kerala"
+        ]
+      }
+    ]
   }
 }

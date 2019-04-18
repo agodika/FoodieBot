@@ -2,11 +2,28 @@ slots:
   location:
     type: text
   cuisine:
+    type: categorical
+    values:
+    - chinese
+    - mexican
+    - south indian
+    - north indian
+    - american
+    - italian
+  price:
+    type: categorical
+    values:
+    - 1
+    - 2
+    - 3
+  email:
     type: text
 
 entities:
 - location
 - cuisine
+- price
+- email
 
 intents:
  - greet
@@ -15,6 +32,7 @@ intents:
  - goodbye
  - thankyou
  - restaurant_search
+ - send email
 
 
 templates:
@@ -26,22 +44,49 @@ templates:
     - "goodbye :("
     - "Bye-bye"
   utter_default:
-    - "default message"
+    - "Sorry, what do you mean. Please type again"
   utter_ask_cuisine: 
     - text: "what kind of cuisine would you like?"
       buttons:
       - title: "Chinese"
         payload: "Chinese"
-      - title: "Italian"
-        payload: "Italian"
+      - title: "mexican"
+        payload: "mexican"  
       - title: "South Indian"
         payload: "South Indian"
       - title: "North Indian"
         payload: "North Indian"
+      - title: "american"
+        payload: "american"
+      - title: "Italian"
+        payload: "Italian"
+  utter_ask_price: 
+    - text: "what price range you like to search?"
+      buttons:
+      - title: "1. < 300"
+        payload: "1"
+      - title: "2. 300-700"
+        payload: "2"
+      - title: "3. > 700"
+        payload: "3" 
+
   utter_ask_howcanhelp:
     - "how can I help you?"
   utter_ask_location:
     - "In what location?"
+    - "In which city you want to search?"
+    - "May I know your city?"
+    - "In which city?"
+  utter_ask_send_email:
+    - "Should I send you details of all the restaurants on email?"
+    - "Do you like me to send the details to your email?"
+  utter_ask_email:
+    - "To what email should I send the details"
+    - "May I know your email to send you the details?"
+  utter_email_sent_successfully:
+    - "Sent the email successfully to {email}"
+  utter_invalid_location:
+    - "Sorry! We do not operate in that area yet. Enter different city"
 
 actions:
 - utter_greet
@@ -50,4 +95,9 @@ actions:
 - utter_ask_howcanhelp
 - utter_ask_location
 - utter_ask_cuisine
+- utter_ask_price
+- utter_ask_send_email
+- utter_ask_email
+- utter_email_sent_successfully
+- utter_invalid_location
 - actions.ActionSearchRestaurants
