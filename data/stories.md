@@ -133,8 +133,6 @@
     - slot{"cuisine": "italian"}
     - slot{"location": "hyderabad"}
     - slot{"price": "3"}
-    - validate_location
-    - slot{"location": hyderabad}
     - action_restaurant
     - slot{"location": "hyderabad"}
     - utter_ask_send_email
@@ -185,5 +183,18 @@
     - utter_email_sent_successfully
 * affirm
     - utter_goodbye
+    - export
+
+## Generated Story -9179753622307467029
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "agra"}
+    - slot{"location": "agra"}
+    - validate_location
+    - slot{"location": "agra"}
+    - utter_ask_cuisine
+* restaurant_search
     - export
 

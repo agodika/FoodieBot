@@ -60,7 +60,9 @@ class ActionSearchRestaurants(Action):
 		    else:
 		        for index, row in price_results.head(5).iterrows():
 		            response = response+row['Restaurant_Name']+" in "+ row['Address']+" has been rated "+str(row['Rating'])+"\n"
-		dispatcher.utter_message("-----"+response)
+		dispatcher.utter_message("---------------------------------------")
+		dispatcher.utter_message(response)
+		dispatcher.utter_message("---------------------------------------")
 		return [SlotSet('location',loc)]
 	
 class ActionValidateLocation(Action):
@@ -92,7 +94,7 @@ class ActionValidateLocation(Action):
 
 class ActionSendEmail(Action):
 	##
-	## Using the way instructed in the youtube video for sending email with python
+	## Refered the youtube video for sending email with python
 	## link: https://www.youtube.com/watch?v=GHrTSKtfzx8
 	def name(self):
 		return 'action_email'
@@ -164,7 +166,7 @@ class ActionSendEmail(Action):
 		        for index, row in price_results.head(10).iterrows():
 		            response = row['Restaurant_Name']+" in "+ row['Address']+" has been rated "+str(row['Rating'])+"\n"
 		            msg.attach(MIMEText('<br>'+response+'<br>','html'))
-		        msg.attach(MIMEText('<br><br>Bon Appetit!!','html'))
+		        msg.attach(MIMEText('<br><br>Bon Appetit !!','html'))
 
 		server = smtplib.SMTP('smtp.gmail.com:587')
 		server.starttls()

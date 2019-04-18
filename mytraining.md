@@ -117,3 +117,16 @@
     - utter_goodbye
     - export
 
+## Generated Story -9179753622307467029
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "agra"}
+    - slot{"location": "agra"}
+    - validate_location
+    - slot{"location": "agra"}
+    - utter_ask_cuisine
+* restaurant_search
+    - export
+

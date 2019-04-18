@@ -2,9 +2,14 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "email",
-        "price",
         "cuisine",
+        "price",
+        "email",
+        "location"
+      ]
+    },
+    "validate_location": {
+      "slots": [
         "location"
       ]
     },
@@ -13,16 +18,11 @@
         "location"
       ]
     },
-    "action_email": {
-      "slots": []
-    },
     "utter_goodbye": {
       "slots": []
     },
-    "validate_location": {
-      "slots": [
-        "location"
-      ]
+    "action_email": {
+      "slots": []
     }
   },
   "rasa_core": "0.10.1",
