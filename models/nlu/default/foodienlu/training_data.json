@@ -3,6 +3,26 @@
     "common_examples": [
       {
         "intent": "greet",
+        "text": "hey"
+      },
+      {
+        "intent": "greet",
+        "text": "howdy"
+      },
+      {
+        "intent": "greet",
+        "text": "hey there"
+      },
+      {
+        "intent": "greet",
+        "text": "good morning"
+      },
+      {
+        "intent": "greet",
+        "text": "good evening"
+      },
+      {
+        "intent": "greet",
         "text": "Hello"
       },
       {
@@ -16,6 +36,66 @@
       {
         "intent": "goodbye",
         "text": "bye"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "yep"
+      },
+      {
+        "intent": "affirm",
+        "text": "yeah"
+      },
+      {
+        "intent": "affirm",
+        "text": "indeed"
+      },
+      {
+        "intent": "affirm",
+        "text": "that's right"
+      },
+      {
+        "intent": "affirm",
+        "text": "ok"
+      },
+      {
+        "intent": "affirm",
+        "text": "great"
+      },
+      {
+        "intent": "affirm",
+        "text": "right, thank you"
+      },
+      {
+        "intent": "affirm",
+        "text": "correct"
+      },
+      {
+        "intent": "affirm",
+        "text": "sounds good"
+      },
+      {
+        "intent": "deny",
+        "text": "no"
+      },
+      {
+        "intent": "deny",
+        "text": "nah"
+      },
+      {
+        "intent": "deny",
+        "text": "nope"
+      },
+      {
+        "intent": "deny",
+        "text": "let's not"
+      },
+      {
+        "intent": "deny",
+        "text": "leave it"
       },
       {
         "intent": "search_restaurant",
@@ -74,7 +154,7 @@
         "text": "I'm hungry. Looking for good restaurants"
       },
       {
-        "intent": "specify_location",
+        "intent": "search_restaurant",
         "entities": [
           {
             "start": 0,
@@ -86,7 +166,7 @@
         "text": "Bangalore"
       },
       {
-        "intent": "specify_location",
+        "intent": "search_restaurant",
         "entities": [
           {
             "start": 3,
@@ -98,7 +178,7 @@
         "text": "In Delhi"
       },
       {
-        "intent": "specify_location",
+        "intent": "search_restaurant",
         "entities": [
           {
             "start": 3,
@@ -110,7 +190,7 @@
         "text": "in Jaipur near statue circle"
       },
       {
-        "intent": "specify_cuisine",
+        "intent": "search_restaurant",
         "entities": [
           {
             "start": 7,
@@ -122,7 +202,7 @@
         "text": "I want Thai"
       },
       {
-        "intent": "specify_cuisine",
+        "intent": "search_restaurant",
         "entities": [
           {
             "start": 0,
@@ -134,7 +214,7 @@
         "text": "Italian would be good"
       },
       {
-        "intent": "specify_cuisine",
+        "intent": "search_restaurant",
         "entities": [
           {
             "start": 7,
@@ -177,6 +257,12 @@
             "end": 52,
             "value": "Hyderabad",
             "entity": "location"
+          },
+          {
+            "start": 14,
+            "end": 18,
+            "value": ">700",
+            "entity": "budget"
           }
         ],
         "text": "Are there any good american restaurants in Hyderabad?"
@@ -194,7 +280,7 @@
         "text": "I’m hungry. Looking out for some good restaurants"
       },
       {
-        "intent": "specify_cuisine",
+        "intent": "search_restaurant",
         "entities": [
           {
             "start": 12,
@@ -206,11 +292,7 @@
         "text": "I’ll prefer north indian"
       },
       {
-        "intent": "greet",
-        "text": "hey"
-      },
-      {
-        "intent": "specify_location",
+        "intent": "search_restaurant",
         "entities": [
           {
             "start": 16,
@@ -222,7 +304,7 @@
         "text": "Show me some in Allahabad"
       },
       {
-        "intent": "specify_budget",
+        "intent": "search_restaurant",
         "entities": [
           {
             "start": 0,
@@ -234,7 +316,7 @@
         "text": "<300"
       },
       {
-        "intent": "specify_budget",
+        "intent": "search_restaurant",
         "entities": [
           {
             "start": 0,
@@ -246,7 +328,7 @@
         "text": ">700"
       },
       {
-        "intent": "specify_budget",
+        "intent": "search_restaurant",
         "entities": [
           {
             "start": 0,
@@ -258,7 +340,7 @@
         "text": "300-700 range"
       },
       {
-        "intent": "specify_budget",
+        "intent": "search_restaurant",
         "entities": [
           {
             "start": 0,
@@ -270,7 +352,7 @@
         "text": "More than 700"
       },
       {
-        "intent": "specify_budget",
+        "intent": "search_restaurant",
         "entities": [
           {
             "start": 0,
@@ -282,7 +364,7 @@
         "text": "Lesser than Rs. 300"
       },
       {
-        "intent": "specify_budget",
+        "intent": "search_restaurant",
         "entities": [
           {
             "start": 0,
@@ -294,7 +376,7 @@
         "text": "less than 300"
       },
       {
-        "intent": "specify_budget",
+        "intent": "search_restaurant",
         "entities": [
           {
             "start": 0,
@@ -306,7 +388,7 @@
         "text": "700+"
       },
       {
-        "intent": "specify_budget",
+        "intent": "search_restaurant",
         "entities": [
           {
             "start": 0,
@@ -318,7 +400,7 @@
         "text": "no limit"
       },
       {
-        "intent": "specify_email",
+        "intent": "send_details",
         "entities": [
           {
             "start": 23,
@@ -330,7 +412,7 @@
         "text": "yes. Please send it to ahbcdj@dkj.com"
       },
       {
-        "intent": "specify_email",
+        "intent": "send_details",
         "entities": [
           {
             "start": 0,
@@ -342,7 +424,7 @@
         "text": "jddk.2jmd@kdl.co.in"
       },
       {
-        "intent": "specify_email",
+        "intent": "send_details",
         "entities": [
           {
             "start": 26,
@@ -354,7 +436,7 @@
         "text": "Sure, You can email me at blah@test.com"
       },
       {
-        "intent": "specify_budget",
+        "intent": "search_restaurant",
         "entities": [
           {
             "start": 12,
@@ -364,9 +446,224 @@
           }
         ],
         "text": "in range of 300 to 700"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 13,
+            "end": 21,
+            "value": "<300",
+            "entity": "budget"
+          },
+          {
+            "start": 38,
+            "end": 44,
+            "value": "Nagpur",
+            "entity": "location"
+          }
+        ],
+        "text": "Help me find low cost place to eat in Nagpur "
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 14,
+            "end": 21,
+            "value": "chinese",
+            "entity": "cuisine"
+          },
+          {
+            "start": 37,
+            "end": 45,
+            "value": "Warangal",
+            "entity": "location"
+          },
+          {
+            "start": 49,
+            "end": 62,
+            "value": "300-700",
+            "entity": "budget"
+          },
+          {
+            "start": 49,
+            "end": 55,
+            "value": "300-700",
+            "entity": "budget"
+          }
+        ],
+        "text": "Are there any chinese restaurants in Warangal in medium budget range?"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 22,
+            "end": 29,
+            "value": "300-700",
+            "entity": "budget"
+          }
+        ],
+        "text": "Lookup restaurants in 300-700 range"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 28,
+            "end": 41,
+            "value": "<300",
+            "entity": "budget"
+          },
+          {
+            "start": 45,
+            "end": 51,
+            "value": "Mumbai",
+            "entity": "location"
+          }
+        ],
+        "text": "Are there eating joints for less than 300 in Mumbai?"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 19,
+            "end": 28,
+            "value": ">700",
+            "entity": "budget"
+          },
+          {
+            "start": 29,
+            "end": 36,
+            "value": "italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 51,
+            "end": 60,
+            "value": "Bangalore",
+            "entity": "location"
+          }
+        ],
+        "text": "I'm looking for an expensive italian restaurant in Bengaluru"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 12,
+            "end": 17,
+            "value": "<300",
+            "entity": "budget"
+          }
+        ],
+        "text": "Do you have cheap restaurant suggestions"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 7,
+            "end": 16,
+            "value": ">700",
+            "entity": "budget"
+          },
+          {
+            "start": 17,
+            "end": 24,
+            "value": "mexican",
+            "entity": "location"
+          }
+        ],
+        "text": "Search expensive mexican food places"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "Delhi",
+            "entity": "location"
+          }
+        ],
+        "text": "Delhi"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Jaipur",
+            "entity": "location"
+          }
+        ],
+        "text": "Jaipur"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Bhopal",
+            "entity": "location"
+          }
+        ],
+        "text": "bhopal"
       }
     ],
-    "regex_features": [],
-    "entity_synonyms": []
+    "regex_features": [
+      {
+        "name": "email",
+        "pattern": "[a-zA-Z0-9+]+@[a-zA-Z0-9+]+\\.[^\\s]+"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "chinese",
+        "synonyms": [
+          "Chinese",
+          "Chines",
+          "chines"
+        ]
+      },
+      {
+        "value": "<300",
+        "synonyms": [
+          "cheap",
+          "inexpensive",
+          "low cost",
+          "budget",
+          "low"
+        ]
+      },
+      {
+        "value": "300-700",
+        "synonyms": [
+          "medium budget",
+          "moderate",
+          "medium cost",
+          "mid range",
+          "medium",
+          "middle",
+          "mid"
+        ]
+      },
+      {
+        "value": ">700",
+        "synonyms": [
+          "high quality",
+          "expensive",
+          "costly",
+          "top",
+          "five star",
+          "high"
+        ]
+      }
+    ]
   }
 }

@@ -5,22 +5,30 @@ action_names:
 - utter_default
 - utter_ask_howcanhelp
 - utter_ask_location
+- utter_ask_fallback_location
 - utter_ask_cuisine
 - utter_ask_budget
+- utter_query_ask_email
 - utter_ask_email
+- utter_done
 - action_restaurant
 - action_email
+- action_validate_location
 actions:
 - utter_greet
 - utter_goodbye
 - utter_default
 - utter_ask_howcanhelp
 - utter_ask_location
+- utter_ask_fallback_location
 - utter_ask_cuisine
 - utter_ask_budget
+- utter_query_ask_email
 - utter_ask_email
+- utter_done
 - actions.ActionSearchRestaurants
 - actions.SendEmail
+- actions.ValidateLocation
 config:
   store_entities_as_slots: true
 entities:
@@ -35,10 +43,7 @@ intents:
 - goodbye
 - thankyou
 - search_restaurant
-- specify_location
-- specify_cuisine
-- specify_budget
-- specify_email
+- send_details
 slots:
   budget:
     initial_value: null
@@ -49,9 +54,18 @@ slots:
   email:
     initial_value: null
     type: rasa_core.slots.TextSlot
+  email_sent:
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
   location:
     initial_value: null
     type: rasa_core.slots.TextSlot
+  search_results:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  valid_location:
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
 templates:
   utter_ask_budget:
   - buttons:
@@ -78,8 +92,11 @@ templates:
       title: North Indian
     text: what kind of cuisine would you like?
   utter_ask_email:
-  - text: Should I send you details of all the restaurants on email?
-  - text: Would you like to receive the restaurant list on email?
+  - text: Ok. Please tell me your email address.
+  - text: Great! What email address should I send it to?
+  utter_ask_fallback_location:
+  - text: Sorry, we don't serve that location yet. Try a different city?
+  - text: I'm afraid we don't operate there yet. Please specify another city.
   utter_ask_howcanhelp:
   - text: how can I help you?
   utter_ask_location:
@@ -87,6 +104,11 @@ templates:
   - text: In which city?
   utter_default:
   - text: default message
+  utter_done:
+  - text: Ok. It's done!
+  utter_email_invalid:
+  - text: I couldn't understand an email address from there. Do you want to tell me
+      an email again?
   utter_goodbye:
   - text: goodbye :(
   - text: see you later
@@ -97,3 +119,6 @@ templates:
   - text: hey there! How may i help you
   - text: Hi, How can I help you!
   - text: Hey, How is it going. How May I help you Today
+  utter_query_ask_email:
+  - text: Should I send you details of all the restaurants on email?
+  - text: Would you like to receive the restaurant list on email?

@@ -1,3 +1,72 @@
+## Generated Story -7414492826169334219
+* greet
+    - utter_greet
+* search_restaurant{"cuisine": "mexican", "location": "delhi"}
+    - slot{"cuisine": "mexican"}
+    - slot{"location": "delhi"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_budget
+* search_restaurant{"budget": "<300"}
+    - slot{"budget": "<300"}
+    - action_restaurant
+    - slot{"location": "delhi"}
+    - utter_query_ask_email
+* deny
+    - utter_goodbye
+    - export
+
+## Generated Story -5090770963368655501
+* greet
+    - utter_greet
+* search_restaurant{"cuisine": "south indian"}
+    - slot{"cuisine": "south indian"}
+    - utter_ask_location
+* search_restaurant{"location": "Bhopal"}
+    - slot{"location": "Bhopal"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_budget
+* search_restaurant{"budget": "300-700"}
+    - slot{"budget": "300-700"}
+    - action_restaurant
+    - slot{"location": "Bhopal"}
+    - utter_query_ask_email
+* affirm
+    - utter_ask_email
+* send_details{"email": "abc@def.com"}
+    - slot{"email": "abc@def.com"}
+    - action_email
+    - slot{"email": "abc@def.com"}
+    - utter_done
+    - utter_goodbye
+    - export
+
+## Generated Story 6053031762975423584
+* greet
+    - utter_greet
+* search_restaurant{"location": "mysore"}
+    - slot{"location": "mysore"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_budget
+* search_restaurant{"budget": "300"}
+    - slot{"budget": "300"}
+    - utter_ask_cuisine
+* search_restaurant
+    - utter_ask_cuisine
+* search_restaurant
+    - utter_ask_cuisine
+* search_restaurant{"cuisine": "chinese"}
+    - slot{"cuisine": "chinese"}
+    - action_restaurant
+    - slot{"search_results": "(I will search restaurant in this action)"}
+    - utter_query_ask_email
+* deny
+    - utter_goodbye
+    - export
+
+
 ## Generated Story 255706069223404498
 * greet
     - utter_greet
