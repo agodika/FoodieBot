@@ -84,10 +84,10 @@ class ActionValidateLocation(Action):
 		loc = tracker.get_slot('location')
 		response = ""
 		if(loc == None):
-			dispatcher.utter_template("utter_invalid_location")
+			dispatcher.utter_template("utter_invalid_location",tracker)
 			return [SlotSet('location',None)]
 		elif(loc.lower() not in city_list):
-			dispatcher.utter_template("utter_invalid_location")
+			dispatcher.utter_template("utter_invalid_location",tracker)
 			return [SlotSet('location',None)]
 		else:
 			return [SlotSet('location',loc)]
@@ -174,5 +174,5 @@ class ActionSendEmail(Action):
 		server.sendmail(msg['From'],msg['To'],msg.as_string())
 		server.quit()
 		
-		dispatcher.utter_template("utter_email_sent_successfully")
+		dispatcher.utter_template("utter_email_sent_successfully",tracker)
 		return[SlotSet('email',email)]

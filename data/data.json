@@ -813,7 +813,7 @@
           {
             "start": 74,
             "end": 84,
-            "value": "300 to 700",
+            "value": "2",
             "entity": "price"
           },
           {
@@ -1115,6 +1115,78 @@
             "end": 4,
             "value": "3",
             "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "restaurants in Vellore",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 15,
+            "end": 22,
+            "value": "Vellore",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "in moradabad",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 12,
+            "value": "moradabad",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "in guntur",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 9,
+            "value": "guntur",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "in patna city",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 8,
+            "value": "patna",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "chinese",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "looking for chinese",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "chinese",
+            "entity": "cuisine"
           }
         ]
       }

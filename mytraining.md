@@ -130,3 +130,59 @@
 * restaurant_search
     - export
 
+## Generated Story -2052395247833445293
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "warangal"}
+    - slot{"location": "warangal"}
+    - validate_location
+    - slot{"location": "warangal"}
+    - utter_ask_cuisine
+* restaurant_search{"price": "chinese"}
+    - slot{"price": "chinese"}
+    - export
+
+## Generated Story 212623072021473962
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "noida"}
+    - slot{"location": "noida"}
+    - validate_location
+    - slot{"location": "noida"}
+    - utter_ask_cuisine
+* restaurant_search{"price": "chinese"}
+    - slot{"price": "chinese"}
+    - export
+
+## Generated Story 576374693006196103
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* restaurant_search
+    - validate_location
+    - slot{"location": null}
+    - utter_ask_location
+* restaurant_search{"location": "noida"}
+    - slot{"location": "noida"}
+    - validate_location
+    - slot{"location": "noida"}
+    - utter_ask_cuisine
+* restaurant_search{"price": "chinese"}
+    - slot{"price": "chinese"}
+    - utter_ask_price
+* restaurant_search{"price": "3"}
+    - slot{"price": "3"}
+    - action_restaurant
+    - slot{"location": "noida"}
+    - utter_ask_send_email
+* send_email{"email": "foodbot0@gmail.com"}
+    - slot{"email": "foodbot0@gmail.com"}
+    - action_email
+    - slot{"email": "foodbot0@gmail.com"}
+    - export
+
