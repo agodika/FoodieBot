@@ -9,6 +9,10 @@ slots:
     type: text
   valid_location:
     type: bool
+  search_results:
+    type: text
+  email_sent:
+    type: bool
 
 entities:
 - location

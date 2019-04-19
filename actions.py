@@ -23,7 +23,7 @@ class ActionSearchRestaurants(Action):
 		# cuisines_dict={'bakery':5,'chinese':25,'cafe':30,'italian':55,'biryani':7,'north indian':50,'south indian':85}
 		# results=zomato.restaurant_search("", lat, lon, str(cuisines_dict.get(cuisine)), 5)
 		# d = json.loads(results)
-		response="this is a test response"
+		response="(I will search restaurant in this action)"
 		# if d['results_found'] == 0:
 			# response= "no results"
 		# else:
@@ -31,7 +31,7 @@ class ActionSearchRestaurants(Action):
 				# response=response+ "Found "+ restaurant['restaurant']['name']+ " in "+ restaurant['restaurant']['location']['address']+"\n"
 		
 		dispatcher.utter_message("-----"+response)
-		return [SlotSet('location',loc)]
+		return [SlotSet('search_results', response)]
 
 class SendEmail(Action):
 	def name(self):
@@ -43,6 +43,7 @@ class SendEmail(Action):
 		loc = tracker.get_slot('location')
 		cuisine = tracker.get_slot('cuisine')
 		email = tracker.get_slot('email')
+		results = tracker.get_slot('search_results')
 		# location_detail=zomato.get_location(loc, 1)
 		# d1 = json.loads(location_detail)
 		# lat=d1["location_suggestions"][0]["latitude"]
@@ -50,7 +51,7 @@ class SendEmail(Action):
 		# cuisines_dict={'bakery':5,'chinese':25,'cafe':30,'italian':55,'biryani':7,'north indian':50,'south indian':85}
 		# results=zomato.restaurant_search("", lat, lon, str(cuisines_dict.get(cuisine)), 5)
 		# d = json.loads(results)
-		response="this is a test response"
+		response="(I will send email in this action)"
 		# if d['results_found'] == 0:
 			# response= "no results"
 		# else:
@@ -58,7 +59,7 @@ class SendEmail(Action):
 				# response=response+ "Found "+ restaurant['restaurant']['name']+ " in "+ restaurant['restaurant']['location']['address']+"\n"
 		
 		dispatcher.utter_message("-----"+response)
-		return [SlotSet('email',email)]
+		return [SlotSet('email_sent', True)]
 
 class ValidateLocation(Action):
 	def name(self):
