@@ -54,7 +54,13 @@ slots:
   email:
     initial_value: null
     type: rasa_core.slots.TextSlot
+  email_sent:
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
   location:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  search_results:
     initial_value: null
     type: rasa_core.slots.TextSlot
   valid_location:

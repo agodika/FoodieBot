@@ -42,6 +42,31 @@
     - utter_goodbye
     - export
 
+## Generated Story 6053031762975423584
+* greet
+    - utter_greet
+* search_restaurant{"location": "mysore"}
+    - slot{"location": "mysore"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_budget
+* search_restaurant{"budget": "300"}
+    - slot{"budget": "300"}
+    - utter_ask_cuisine
+* search_restaurant
+    - utter_ask_cuisine
+* search_restaurant
+    - utter_ask_cuisine
+* search_restaurant{"cuisine": "chinese"}
+    - slot{"cuisine": "chinese"}
+    - action_restaurant
+    - slot{"search_results": "(I will search restaurant in this action)"}
+    - utter_query_ask_email
+* deny
+    - utter_goodbye
+    - export
+
+
 ## Generated Story 255706069223404498
 * greet
     - utter_greet
