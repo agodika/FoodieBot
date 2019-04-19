@@ -7,6 +7,8 @@ slots:
     type: text
   email:
     type: text
+  valid_location:
+    type: bool
 
 entities:
 - location
@@ -21,10 +23,7 @@ intents:
  - goodbye
  - thankyou
  - search_restaurant
- - specify_location
- - specify_cuisine
- - specify_budget
- - specify_email
+ - send_details
 
 
 templates:
@@ -60,6 +59,9 @@ templates:
   utter_ask_location:
     - "In what location?"
     - "In which city?"
+  utter_ask_fallback_location:
+    - "Sorry, we don't serve that location yet. Try a different city?"
+    - "I'm afraid we don't operate there yet. Please specify another city."
   utter_ask_budget:
     - text: "What price range are you looking at?"
       buttons:
@@ -69,10 +71,16 @@ templates:
         payload: "300-700"
       - title: "More than Rs. 700"
         payload: ">700"
-  utter_ask_email:
+  utter_query_ask_email:
     - text: "Should I send you details of all the restaurants on email?"
     - text: "Would you like to receive the restaurant list on email?"
-
+  utter_ask_email:
+    - text: "Ok. Please tell me your email address."
+    - text: "Great! What email address should I send it to?"
+  utter_email_invalid:
+    - text: "I couldn't understand an email address from there. Do you want to tell me an email again?"
+  utter_done:
+    - text: "Ok. It's done!"
 
 actions:
 - utter_greet
@@ -80,8 +88,12 @@ actions:
 - utter_default
 - utter_ask_howcanhelp
 - utter_ask_location
+- utter_ask_fallback_location
 - utter_ask_cuisine
 - utter_ask_budget
+- utter_query_ask_email
 - utter_ask_email
+- utter_done
 - actions.ActionSearchRestaurants
 - actions.SendEmail
+- actions.ValidateLocation
