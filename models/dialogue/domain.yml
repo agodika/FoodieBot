@@ -13,6 +13,7 @@ action_names:
 - utter_done
 - action_restaurant
 - action_email
+- action_validate_location
 actions:
 - utter_greet
 - utter_goodbye
@@ -27,6 +28,7 @@ actions:
 - utter_done
 - actions.ActionSearchRestaurants
 - actions.SendEmail
+- actions.ValidateLocation
 config:
   store_entities_as_slots: true
 entities:
@@ -41,10 +43,7 @@ intents:
 - goodbye
 - thankyou
 - search_restaurant
-- specify_location
-- specify_cuisine
-- specify_budget
-- specify_email
+- send_details
 slots:
   budget:
     initial_value: null

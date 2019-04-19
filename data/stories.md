@@ -1,3 +1,21 @@
+## Generated Story -7414492826169334219
+* greet
+    - utter_greet
+* search_restaurant{"cuisine": "mexican", "location": "delhi"}
+    - slot{"cuisine": "mexican"}
+    - slot{"location": "delhi"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_budget
+* search_restaurant{"budget": "<300"}
+    - slot{"budget": "<300"}
+    - action_restaurant
+    - slot{"location": "delhi"}
+    - utter_query_ask_email
+* deny
+    - utter_goodbye
+    - export
+
 ## Generated Story 255706069223404498
 * greet
     - utter_greet

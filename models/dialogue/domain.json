@@ -6,10 +6,7 @@
     "intent_goodbye",
     "intent_thankyou",
     "intent_search_restaurant",
-    "intent_specify_location",
-    "intent_specify_cuisine",
-    "intent_specify_budget",
-    "intent_specify_email",
+    "intent_send_details",
     "entity_location",
     "entity_cuisine",
     "entity_budget",
@@ -34,6 +31,7 @@
     "prev_utter_ask_email",
     "prev_utter_done",
     "prev_action_restaurant",
-    "prev_action_email"
+    "prev_action_email",
+    "prev_action_validate_location"
   ]
 }
