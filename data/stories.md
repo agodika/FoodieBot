@@ -117,3 +117,22 @@
     - utter_goodbye
     - export
 
+## Generated Story -5001997364761453290
+* greet
+    - utter_greet
+* search_restaurant{"cuisine": "chinese", "location": "chandigarh"}
+    - slot{"cuisine": "chinese"}
+    - slot{"location": "chandigarh"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_budget
+* search_restaurant{"budget": ">700"}
+    - slot{"budget": ">700"}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": true}
+    - utter_query_ask_email
+* deny
+    - utter_goodbye
+    - export
+

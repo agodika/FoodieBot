@@ -1,13 +1,38 @@
 {
   "action_fingerprints": {
     "action_listen": {
+      "slots": [
+        "cuisine",
+        "budget",
+        "location",
+        "email"
+      ]
+    },
+    "action_validate_location": {
+      "slots": [
+        "location",
+        "valid_location"
+      ]
+    },
+    "action_restaurant": {
+      "slots": [
+        "search_results",
+        "found_results"
+      ]
+    },
+    "action_email": {
+      "slots": [
+        "email_sent"
+      ]
+    },
+    "utter_goodbye": {
       "slots": []
     }
   },
   "rasa_core": "0.10.1",
   "max_histories": [
-    10,
-    10
+    5,
+    5
   ],
   "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
   "policy_names": [

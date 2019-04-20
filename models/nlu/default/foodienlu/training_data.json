@@ -822,6 +822,36 @@
           }
         ],
         "text": "Are there good italian places in bokaro"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "chinese",
+            "entity": "cuisine"
+          },
+          {
+            "start": 35,
+            "end": 45,
+            "value": "chandigarh",
+            "entity": "location"
+          }
+        ],
+        "text": "looking for chinese restaurants in chandigarh"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 19,
+            "end": 31,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "Searching for good north indian restaurants "
       }
     ],
     "regex_features": [

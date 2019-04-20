@@ -31,7 +31,6 @@
     "prev_utter_ask_budget",
     "prev_utter_query_ask_email",
     "prev_utter_ask_email",
-    "prev_utter_done",
     "prev_action_restaurant",
     "prev_action_email",
     "prev_action_validate_location"
