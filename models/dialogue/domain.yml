@@ -62,7 +62,7 @@ slots:
     type: rasa_core.slots.TextSlot
   search_results:
     initial_value: null
-    type: rasa_core.slots.TextSlot
+    type: rasa_core.slots.UnfeaturizedSlot
   valid_location:
     initial_value: null
     type: rasa_core.slots.BooleanSlot

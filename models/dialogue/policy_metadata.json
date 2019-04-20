@@ -2,10 +2,19 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "location",
         "cuisine",
         "budget",
+        "location",
         "email"
+      ]
+    },
+    "utter_goodbye": {
+      "slots": []
+    },
+    "action_restaurant": {
+      "slots": [
+        "location",
+        "search_results"
       ]
     },
     "action_validate_location": {
@@ -13,18 +22,10 @@
         "valid_location"
       ]
     },
-    "action_restaurant": {
-      "slots": [
-        "location"
-      ]
-    },
     "action_email": {
       "slots": [
         "email"
       ]
-    },
-    "utter_goodbye": {
-      "slots": []
     }
   },
   "rasa_core": "0.10.1",
