@@ -668,6 +668,114 @@
           }
         ],
         "text": "find me some budget chinese restaurant nearby"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Bangalore",
+            "entity": "location"
+          }
+        ],
+        "text": "bengaluru"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Chennai",
+            "entity": "location"
+          }
+        ],
+        "text": "chennai"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Mumbai",
+            "entity": "location"
+          }
+        ],
+        "text": "Mumbai"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Kolkata",
+            "entity": "location"
+          }
+        ],
+        "text": "Kolkata"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Hyderabad",
+            "entity": "location"
+          }
+        ],
+        "text": "Hyderabad"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 25,
+            "end": 44,
+            "value": "Chinese",
+            "entity": "cuisine"
+          },
+          {
+            "start": 48,
+            "end": 55,
+            "value": "Chennai",
+            "entity": "location"
+          },
+          {
+            "start": 62,
+            "end": 78,
+            "value": "300-700",
+            "entity": "budget"
+          }
+        ],
+        "text": "please show me some good chinese restaurants in madras in the range of 300-700"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 25,
+            "end": 49,
+            "value": "South Indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 53,
+            "end": 61,
+            "value": "Chennai",
+            "entity": "location"
+          },
+          {
+            "start": 68,
+            "end": 81,
+            "value": ">700",
+            "entity": "budget"
+          }
+        ],
+        "text": "please show me some good south indian restaurants in chennai in the range of >700"
       }
     ],
     "regex_features": [
@@ -716,6 +824,56 @@
           "top",
           "five star",
           "high"
+        ]
+      },
+      {
+        "value": "Bangalore",
+        "synonyms": [
+          "Bengaluru",
+          "bengaluru",
+          "bangalore"
+        ]
+      },
+      {
+        "value": "Chennai",
+        "synonyms": [
+          "chennai",
+          "madras",
+          "Madras",
+          "chenai",
+          "chenaai",
+          "madraas"
+        ]
+      },
+      {
+        "value": "Kolkata",
+        "synonyms": [
+          "kolkata",
+          "kolkataa",
+          "Calcutta",
+          "Calcuta",
+          "calcuta"
+        ]
+      },
+      {
+        "value": "Delhi",
+        "synonyms": [
+          "delhi",
+          "dilli",
+          "New Delhi",
+          "new delhi",
+          "newdelhi",
+          "new-delhi"
+        ]
+      },
+      {
+        "value": "Mumbai",
+        "synonyms": [
+          "mumbai",
+          "bombay",
+          "bombai",
+          "mumbaai",
+          "mumbaye"
         ]
       }
     ]

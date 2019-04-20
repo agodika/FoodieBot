@@ -145,7 +145,7 @@ class ValidateLocation(Action):
 		return 'action_validate_location'
 		
 	def run(self, dispatcher, tracker, domain):
-		loc = tracker.get_slot('location')
+		loc = tracker.get_slot('location')	
 
 		valid_locs = ["Bangalore",
 			"Chennai",
@@ -260,5 +260,8 @@ class ValidateLocation(Action):
 		if loc.casefold() in valid_locs: 
 			return [SlotSet('valid_location', True)]
 		else:
+			#dispatcher.utter_message('Sorry, we don’t operate in this city. Can you please specify some other location')
+			dispatcher.utter_ask_fallback_location
+			dispatcher.action_listen
 			return [SlotSet('location', None), SlotSet('valid_location', False)]
 
