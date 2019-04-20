@@ -57,6 +57,9 @@ slots:
   email_sent:
     initial_value: null
     type: rasa_core.slots.BooleanSlot
+  found_results:
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
   location:
     initial_value: null
     type: rasa_core.slots.TextSlot
@@ -103,7 +106,7 @@ templates:
   - text: In what location?
   - text: In which city?
   utter_default:
-  - text: default message
+  - text: "--- I'm sorry, I did not understand that.\n-----------"
   utter_done:
   - text: Ok. It's done!
   utter_email_invalid:

@@ -1,3 +1,115 @@
+## Generated Story 7554428437242603382
+* greet
+    - utter_greet
+* 
+    - utter_default
+    - utter_greet
+* 
+    - export
+
+## Generated Story -8679705349623352381
+* greet
+    - utter_greet
+* search_restaurant{"location": "delhi"}
+    - slot{"location": "delhi"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_cuisine
+* 
+    - utter_default
+    - utter_ask_cuisine
+    - export
+
+## Generated Story 7433842033132481257
+* greet
+    - utter_greet
+* search_restaurant{"location": "jaipur"}
+    - slot{"location": "jaipur"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_cuisine
+* search_restaurant{"cuisine": "south indian"}
+    - slot{"cuisine": "south indian"}
+    - utter_ask_budget
+* 
+    - utter_default
+    - utter_ask_budget
+    - export
+
+## Generated Story 97667711386433612
+* greet
+    - utter_greet
+* search_restaurant
+    - utter_ask_location
+* search_restaurant{"location": "delhi"}
+    - slot{"location": "delhi"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_budget
+* search_restaurant{"budget": "<300"}
+    - slot{"budget": "<300"}
+    - utter_ask_cuisine
+* search_restaurant{"cuisine": "italian"}
+    - slot{"cuisine": "italian"}
+    - action_restaurant
+    - slot{"search_results": "has_text"}
+    - slot{"found_results": false}
+* affirm
+    - utter_ask_budget
+* search_restaurant{"budget": ">700"}
+    - slot{"budget": ">700"}
+    - action_restaurant
+    - slot{"search_results": "has_text"}
+    - slot{"found_results": true}
+    - utter_ask_email
+* send_details{"email": "abc@def.com"}
+    - slot{"email": "abc@def.com"}
+    - action_email
+    - utter_goodbye
+    - export
+
+## Generated Story 257967638077977
+* greet
+    - utter_greet
+* search_restaurant
+    - utter_ask_location
+* search_restaurant
+    - utter_default
+    - utter_ask_location
+* search_restaurant{"location": "jaipur"}
+    - slot{"location": "jaipur"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_budget
+* search_restaurant
+    - utter_default
+    - utter_ask_budget
+* search_restaurant{"budget": "<300"}
+    - slot{"budget": "<300"}
+    - utter_ask_cuisine
+* search_restaurant{"cuisine": "north indian"}
+    - slot{"cuisine": "north indian"}
+    - export
+
+## Generated Story 4194480658216869140
+* greet
+    - utter_greet
+* search_restaurant{"cuisine": "mexican", "location": "delhi"}
+    - slot{"cuisine": "mexican"}
+    - slot{"location": "delhi"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_budget
+* search_restaurant{"budget": ">700"}
+    - slot{"budget": ">700"}
+    - action_restaurant
+    - slot{"search_results": "has_text"}
+    - slot{"found_results": true}
+    - utter_query_ask_email
+* deny
+    - utter_goodbye
+    - export
+
 ## Generated Story -7414492826169334219
 * greet
     - utter_greet
@@ -10,7 +122,8 @@
 * search_restaurant{"budget": "<300"}
     - slot{"budget": "<300"}
     - action_restaurant
-    - slot{"location": "delhi"}
+    - slot{"search_results": "has_text"}
+    - slot{"found_results": true}
     - utter_query_ask_email
 * deny
     - utter_goodbye
@@ -30,7 +143,7 @@
 * search_restaurant{"budget": "300-700"}
     - slot{"budget": "300-700"}
     - action_restaurant
-    - slot{"location": "Bhopal"}
+    - slot{"found_results": true}
     - utter_query_ask_email
 * affirm
     - utter_ask_email
@@ -60,7 +173,8 @@
 * search_restaurant{"cuisine": "chinese"}
     - slot{"cuisine": "chinese"}
     - action_restaurant
-    - slot{"search_results": "(I will search restaurant in this action)"}
+    - slot{"search_results": "has_text"}
+    - slot{"found_results": true}
     - utter_query_ask_email
 * deny
     - utter_goodbye
@@ -83,7 +197,8 @@
 * search_restaurant{"budget": ">700"}
     - slot{"budget": ">700"}
     - action_restaurant
-    - slot{"search_results": "(I will search restaurant in this action)"}
+    - slot{"search_results": "has_text"}
+    - slot{"found_results": true}
     - utter_query_ask_email
 * affirm
     - utter_ask_email
@@ -105,7 +220,8 @@
     - action_validate_location
     - slot{"valid_location": true}
     - action_restaurant
-    - slot{"search_results": "(I will search restaurant in this action)"}
+    - slot{"search_results": "has_text"}
+    - slot{"found_results": true}
     - utter_query_ask_email
 * deny
     - utter_goodbye

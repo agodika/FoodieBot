@@ -3,29 +3,37 @@
     "action_listen": {
       "slots": [
         "cuisine",
-        "budget",
         "location",
-        "email"
+        "email",
+        "budget"
       ]
     },
     "utter_goodbye": {
       "slots": []
-    },
-    "action_restaurant": {
-      "slots": [
-        "location",
-        "search_results"
-      ]
     },
     "action_validate_location": {
       "slots": [
         "valid_location"
       ]
     },
+    "action_restaurant": {
+      "slots": [
+        "search_results",
+        "found_results",
+        "location"
+      ]
+    },
     "action_email": {
       "slots": [
+        "email_sent",
         "email"
       ]
+    },
+    "utter_ask_budget": {
+      "slots": []
+    },
+    "utter_ask_cuisine": {
+      "slots": []
     }
   },
   "rasa_core": "0.10.1",

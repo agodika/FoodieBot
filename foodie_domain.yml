@@ -11,6 +11,8 @@ slots:
     type: bool
   search_results:
     type: unfeaturized
+  found_results:
+    type: bool
   email_sent:
     type: bool
 
@@ -42,7 +44,7 @@ templates:
     - "ciao"
     - "have a good day"
   utter_default:
-    - "default message"
+    - "--- I'm sorry, I did not understand that.\n-----------"
   utter_ask_cuisine: 
     - text: "what kind of cuisine would you like?"
       buttons:
