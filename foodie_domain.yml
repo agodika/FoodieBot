@@ -10,7 +10,7 @@ slots:
   valid_location:
     type: bool
   search_results:
-    type: text
+    type: unfeaturized
   email_sent:
     type: bool
 

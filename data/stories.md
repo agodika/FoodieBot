@@ -67,20 +67,52 @@
     - export
 
 
-## Generated Story 255706069223404498
+## Generated Story 6182493262278462731
 * greet
     - utter_greet
-* restaurant_search
+* search_restaurant
     - utter_ask_location
-* restaurant_search{"location": "delhi"}
+* search_restaurant{"location": "delhi"}
     - slot{"location": "delhi"}
+    - action_validate_location
+    - slot{"valid_location": true}
     - utter_ask_cuisine
-* restaurant_search{"cuisine": "chinese"}
+* search_restaurant{"cuisine": "chinese"}
     - slot{"cuisine": "chinese"}
+    - utter_ask_budget
+* search_restaurant{"budget": ">700"}
+    - slot{"budget": ">700"}
     - action_restaurant
-    - slot{"location": "delhi"}
+    - slot{"search_results": "(I will search restaurant in this action)"}
+    - utter_query_ask_email
+* affirm
+    - utter_ask_email
+* send_details{"email": "foo@bar.co.in"}
+    - slot{"email": "foo@bar.co.in"}
+    - action_email
+    - slot{"email_sent": true}
+    - utter_done
     - utter_goodbye
     - export
+
+## Generated Story -4298251492318283722
+* greet
+    - utter_greet
+* search_restaurant{"budget": "<300", "cuisine": "italian", "location": "bangalore"}
+    - slot{"budget": "<300"}
+    - slot{"cuisine": "italian"}
+    - slot{"location": "bangalore"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - action_restaurant
+    - slot{"search_results": "(I will search restaurant in this action)"}
+    - utter_query_ask_email
+* deny
+    - utter_goodbye
+    - export
+
+
+######### These stories need to be corrected
 
 ## Generated Story 1993277579540566202
 * greet
