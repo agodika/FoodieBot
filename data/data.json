@@ -67,6 +67,7 @@
           "Asansol",
           "Aurangabad",
           "Ahmedabad",
+          "Allahabad",
           "Bareilly",
           "Belgaum",
           "Bhavnagar",
@@ -87,6 +88,7 @@
           "Faridabad",
           "Firozabad",
           "Ghaziabad",
+          "Goa",
           "Gorakhpur",
           "Gulbarga",
           "Guntur",
@@ -118,7 +120,6 @@
           "Madurai",
           "Malappuram",
           "Mathura",
-          "Goa",
           "Mangalore",
           "Meerut",
           "Moradabad",
@@ -131,7 +132,8 @@
           "Patna",
           "Pondicherry",
           "Prayagraj",
-          "PuneRaipur",
+          "Pune",
+          "Raipur",
           "Rajkot",
           "Rajahmundry",
           "Ranchi",
@@ -154,16 +156,33 @@
           "Vadodara",
           "Varanasi",
           "Vasai-Virar City",
+          "Vijayapura",
           "Vijayawada",
           "Visakhapatnam",
           "Vellore",
           "Warangal"
+        ]
+      },
+      {
+        "name": "cuisine",
+        "elements": [
+          "Mexican",
+          "Chinese",
+          "Italian",
+          "American",
+          "South Indian",
+          "North Indian"
         ]
       }
     ],
     "common_examples": [
       {
         "text": "hey",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hola",
         "intent": "greet",
         "entities": []
       },
@@ -765,7 +784,7 @@
             "start": 17,
             "end": 24,
             "value": "mexican",
-            "entity": "location"
+            "entity": "cuisine"
           }
         ]
       },
@@ -830,6 +849,18 @@
         ]
       },
       {
+        "text": "Mexican",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
         "text": "South Indian will be great",
         "intent": "search_restaurant",
         "entities": [
@@ -856,6 +887,144 @@
             "end": 27,
             "value": "chinese",
             "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Bangalore",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Bangalore",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Pune",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Pune",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Raipur",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Raipur",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "aligarh",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Aligarh",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Bokaro Steel City",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 17,
+            "value": "Bokaro Steel City",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Bokaro",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Bokaro Steel City",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Ahmedabad",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Ahmedabad",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Help me find a place to eat in Siliguri",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 31,
+            "end": 39,
+            "value": "Siliguri",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Find best food stores from Siliguri",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 27,
+            "end": 35,
+            "value": "Siliguri",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Looking for restaurants from Aligarh",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 29,
+            "end": 36,
+            "value": "Aligarh",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Are there good italian places in bokaro",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 15,
+            "end": 22,
+            "value": "italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 33,
+            "end": 39,
+            "value": "Bokaro Steel City",
+            "entity": "location"
           }
         ]
       }

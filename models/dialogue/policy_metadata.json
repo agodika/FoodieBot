@@ -1,45 +1,13 @@
 {
   "action_fingerprints": {
     "action_listen": {
-      "slots": [
-        "cuisine",
-        "location",
-        "email",
-        "budget"
-      ]
-    },
-    "utter_goodbye": {
-      "slots": []
-    },
-    "action_validate_location": {
-      "slots": [
-        "valid_location"
-      ]
-    },
-    "action_restaurant": {
-      "slots": [
-        "search_results",
-        "found_results",
-        "location"
-      ]
-    },
-    "action_email": {
-      "slots": [
-        "email_sent",
-        "email"
-      ]
-    },
-    "utter_ask_budget": {
-      "slots": []
-    },
-    "utter_ask_cuisine": {
       "slots": []
     }
   },
   "rasa_core": "0.10.1",
   "max_histories": [
-    4,
-    5
+    10,
+    10
   ],
   "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
   "policy_names": [

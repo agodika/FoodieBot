@@ -7,6 +7,10 @@
       },
       {
         "intent": "greet",
+        "text": "hola"
+      },
+      {
+        "intent": "greet",
         "text": "howdy"
       },
       {
@@ -574,7 +578,7 @@
             "start": 17,
             "end": 24,
             "value": "mexican",
-            "entity": "location"
+            "entity": "cuisine"
           }
         ],
         "text": "Search expensive mexican food places"
@@ -644,6 +648,18 @@
         "entities": [
           {
             "start": 0,
+            "end": 7,
+            "value": "Mexican",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "Mexican"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
             "end": 12,
             "value": "South Indian",
             "entity": "cuisine"
@@ -668,6 +684,144 @@
           }
         ],
         "text": "find me some budget chinese restaurant nearby"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Bangalore",
+            "entity": "location"
+          }
+        ],
+        "text": "Bangalore"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Pune",
+            "entity": "location"
+          }
+        ],
+        "text": "Pune"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Raipur",
+            "entity": "location"
+          }
+        ],
+        "text": "Raipur"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Aligarh",
+            "entity": "location"
+          }
+        ],
+        "text": "aligarh"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 17,
+            "value": "Bokaro Steel City",
+            "entity": "location"
+          }
+        ],
+        "text": "Bokaro Steel City"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Bokaro Steel City",
+            "entity": "location"
+          }
+        ],
+        "text": "Bokaro"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Ahmedabad",
+            "entity": "location"
+          }
+        ],
+        "text": "Ahmedabad"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 31,
+            "end": 39,
+            "value": "Siliguri",
+            "entity": "location"
+          }
+        ],
+        "text": "Help me find a place to eat in Siliguri"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 27,
+            "end": 35,
+            "value": "Siliguri",
+            "entity": "location"
+          }
+        ],
+        "text": "Find best food stores from Siliguri"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 29,
+            "end": 36,
+            "value": "Aligarh",
+            "entity": "location"
+          }
+        ],
+        "text": "Looking for restaurants from Aligarh"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 15,
+            "end": 22,
+            "value": "italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 33,
+            "end": 39,
+            "value": "Bokaro Steel City",
+            "entity": "location"
+          }
+        ],
+        "text": "Are there good italian places in bokaro"
       }
     ],
     "regex_features": [
