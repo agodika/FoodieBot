@@ -1040,6 +1040,269 @@
           }
         ],
         "text": "looking for chinese"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "mexican"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "italian",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "italian"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "south indian",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "south indian"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 5,
+            "end": 10,
+            "value": "south Indian",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "find south restaurants"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 5,
+            "end": 10,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "find north restaurants"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "american",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "american"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "looking for chinese food"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 13,
+            "value": "1",
+            "entity": "price"
+          },
+          {
+            "start": 14,
+            "end": 22,
+            "value": "american",
+            "entity": "cuisine"
+          },
+          {
+            "start": 38,
+            "end": 44,
+            "value": "mumbai",
+            "entity": "location"
+          }
+        ],
+        "text": "find me cheap american restaurnats in mumbai"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "3",
+            "entity": "price"
+          }
+        ],
+        "text": "looking for exotic restaurants"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 13,
+            "end": 21,
+            "value": "italian ",
+            "entity": "cuisine"
+          },
+          {
+            "start": 36,
+            "end": 40,
+            "value": "pune",
+            "entity": "location"
+          }
+        ],
+        "text": "find me good italian restaurants in pune"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 24,
+            "end": 31,
+            "value": "vellore",
+            "entity": "location"
+          }
+        ],
+        "text": "mexican food options in vellore"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 13,
+            "value": "1",
+            "entity": "price"
+          },
+          {
+            "start": 14,
+            "end": 22,
+            "value": "american",
+            "entity": "cuisine"
+          },
+          {
+            "start": 38,
+            "end": 44,
+            "value": "mumbai",
+            "entity": "location"
+          }
+        ],
+        "text": "find me cheap american restaurnats in mumbai"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 14,
+            "end": 26,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "i want to eat north indian today"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 14,
+            "value": "pondicherry",
+            "entity": "location"
+          }
+        ],
+        "text": "in pondicherry"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 5,
+            "end": 12,
+            "value": "gurgaon",
+            "entity": "location"
+          }
+        ],
+        "text": "near gurgaon"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 18,
+            "end": 25,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "feels like having chinese today"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 13,
+            "end": 20,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "want to have mexican today"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 12,
+            "end": 24,
+            "value": "south indian",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "craving for south indian cuisine"
+      },
+      {
+        "entities": [
+          {
+            "start": 9,
+            "end": 17,
+            "value": "american",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "want  an american breakfast today"
       }
     ],
     "regex_features": [

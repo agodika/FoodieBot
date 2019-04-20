@@ -7,6 +7,9 @@ action_names:
 - utter_ask_location
 - utter_ask_cuisine
 - utter_ask_price
+- utter_no_result
+- utter_search_again
+- utter_affirm
 - utter_ask_send_email
 - utter_ask_email
 - utter_email_sent_successfully
@@ -14,6 +17,7 @@ action_names:
 - action_restaurant
 - validate_location
 - action_email
+- action_reset_slots
 actions:
 - utter_greet
 - utter_goodbye
@@ -22,6 +26,9 @@ actions:
 - utter_ask_location
 - utter_ask_cuisine
 - utter_ask_price
+- utter_no_result
+- utter_search_again
+- utter_affirm
 - utter_ask_send_email
 - utter_ask_email
 - utter_email_sent_successfully
@@ -29,6 +36,7 @@ actions:
 - actions.ActionSearchRestaurants
 - actions.ActionValidateLocation
 - actions.ActionSendEmail
+- actions.ActionResetSlots
 config:
   store_entities_as_slots: true
 entities:
@@ -69,6 +77,11 @@ slots:
     - '2'
     - '3'
 templates:
+  utter_affirm:
+  - text: Ok
+  - text: Cool
+  - text: Great
+  - text: Bon Apitite !!
   utter_ask_cuisine:
   - buttons:
     - payload: Chinese
@@ -113,6 +126,7 @@ templates:
   utter_goodbye:
   - text: goodbye :(
   - text: Bye-bye
+  - text: Have a good day. Bye.
   utter_greet:
   - text: hey there! How may i help you
   - text: Hi, How can I help you!
@@ -120,3 +134,8 @@ templates:
   utter_invalid_location:
   - text: Sorry! We do not operate in that area yet. Enter different city
   - text: Sorry! Location not found. Enter a valid city
+  utter_no_result:
+  - text: Sorry couldn't find any restaurants . Please try again !!
+  utter_search_again:
+  - text: Would you like anything else ?
+  - text: would you like to make another search?

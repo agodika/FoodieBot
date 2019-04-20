@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 
 from rasa_core.actions.action import Action
 from rasa_core.events import SlotSet
+from rasa_core.events import AllSlotsReset
 import zomatopy
 import json
 import pandas as pd
@@ -42,21 +43,21 @@ class ActionSearchRestaurants(Action):
 		if(price_range=="1"):
 		    price_results = results_df[results_df['Avg_budget'] <=300]
 		    if(len(price_results)==0):
-		        response=response+" Sorry couldn't find any restaurants in price range. Please re enter different price range "
+		        response=response+" no results for search !!"
 		    else:
 		        for index, row in price_results.head(5).iterrows():
 		            response = response+row['Restaurant_Name']+" in "+ row['Address']+" has been rated "+str(row['Rating'])+"\n"
 		elif(price_range=="2"):
 		    price_results = results_df[(results_df['Avg_budget'] >300) & (results_df['Avg_budget'] < 700)]
 		    if(len(price_results)==0):
-		        response=response+" Sorry couldn't find any restaurants in price range. Please re enter different price range "
+		        dresponse=response+" no results for search !!"
 		    else:
 		        for index, row in price_results.head(5).iterrows():
 		            response = response+row['Restaurant_Name']+" in "+ row['Address']+" has been rated "+str(row['Rating'])+"\n"          #" Price per 2 person "+str(row['Avg_budget'])+
 		elif(price_range=="3"):
 		    price_results = results_df[(results_df['Avg_budget'] >=700)]
 		    if(len(price_results)==0):
-		        response=response+" Sorry couldn't find any restaurants in price range. Please re enter different price range "
+		        response=response+" no results for search !!"
 		    else:
 		        for index, row in price_results.head(5).iterrows():
 		            response = response+row['Restaurant_Name']+" in "+ row['Address']+" has been rated "+str(row['Rating'])+"\n"
@@ -136,7 +137,7 @@ class ActionSendEmail(Action):
 		if(price_range=="1"):
 		    price_results = results_df[results_df['Avg_budget'] <=300]
 		    if(len(price_results)==0):
-		        response=response+" Sorry couldn't find any restaurants in price range. Please re enter different price range "
+		        response=response+" Sorry couldn't find any restaurants . Please try again !!"
 		        msg.attach(MIMEText(response,'html'))
 		    else:
 		        msg.attach(MIMEText("Hello User,<br><br><b>Top 10 restaurants for your search,</b> <br><br>",'html'))
@@ -147,7 +148,7 @@ class ActionSendEmail(Action):
 		elif(price_range=="2"):
 		    price_results = results_df[(results_df['Avg_budget'] >300) & (results_df['Avg_budget'] < 700)]
 		    if(len(price_results)==0):
-		        response=response+" Sorry couldn't find any restaurants in price range. Please re enter different price range "
+		        response=response+" Sorry couldn't find any restaurants . Please try again !!"
 		        msg.attach(MIMEText(response,'html'))
 		    else:
 		        msg.attach(MIMEText("Hello User,<br><br><b>Top 10 restaurants for your search,</b> <br><br>",'html'))
@@ -159,7 +160,7 @@ class ActionSendEmail(Action):
 		elif(price_range=="3"):
 		    price_results = results_df[(results_df['Avg_budget'] >=700)]
 		    if(len(price_results)==0):
-		        response=response+" Sorry couldn't find any restaurants in price range. Please re enter different price range "
+		        response=response+" Sorry couldn't find any restaurants . Please try again !!"
 		        msg.attach(MIMEText(response,'html'))
 		    else:
 		        msg.attach(MIMEText("Hello User,<br><br><b>Top 10 restaurants for your search,</b> <br><br>",'html'))
@@ -176,3 +177,9 @@ class ActionSendEmail(Action):
 		
 		dispatcher.utter_template("utter_email_sent_successfully",tracker)
 		return[SlotSet('email',email)]
+class ActionResetSlots(Action):
+	def name(self):
+		return 'action_reset_slots'
+		
+	def run(self, dispatcher, tracker, domain):
+		return [AllSlotsReset()]

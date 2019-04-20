@@ -47,5 +47,8 @@
   "economic": "1",
   "classy": "3",
   "below": "1",
-  "cheap": "1"
+  "cheap": "1",
+  "south": "south Indian",
+  "north": "north indian",
+  "exotic": "3"
 }

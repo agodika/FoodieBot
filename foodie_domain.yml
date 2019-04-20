@@ -43,6 +43,7 @@ templates:
   utter_goodbye:
     - "goodbye :("
     - "Bye-bye"
+    - "Have a good day. Bye."
   utter_default:
     - "Sorry, what do you mean. Please type again"
   utter_ask_cuisine: 
@@ -87,7 +88,17 @@ templates:
     - "Sent the email successfully to {email}"
   utter_invalid_location:
     - "Sorry! We do not operate in that area yet. Enter different city"
-    - "Sorry! Location not found. Enter a valid city" 
+    - "Sorry! Location not found. Enter a valid city"
+  utter_no_result:
+    - "Sorry couldn't find any restaurants . Please try again !!"
+  utter_search_again:
+    - "Would you like anything else ?"
+    - "would you like to make another search?"
+  utter_affirm:
+    - "Ok"
+    - "Cool"
+    - "Great"
+    - "Bon Apitite !!"  
 
 actions:
 - utter_greet
@@ -97,6 +108,9 @@ actions:
 - utter_ask_location
 - utter_ask_cuisine
 - utter_ask_price
+- utter_no_result
+- utter_search_again
+- utter_affirm
 - utter_ask_send_email
 - utter_ask_email
 - utter_email_sent_successfully
@@ -104,3 +118,4 @@ actions:
 - actions.ActionSearchRestaurants
 - actions.ActionValidateLocation
 - actions.ActionSendEmail
+- actions.ActionResetSlots

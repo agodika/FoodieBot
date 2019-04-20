@@ -5,9 +5,10 @@ import zomatopy
 import pandas as pd
 
 # specify location and cuisine
-loc = 'Bangalore'
-cuisine = 'Italian'
-price_range='3'
+loc = 'mumbai'
+cuisine = 'american'
+price_range='1'
+
 
 # provide API key and initialise a 'zomato app' object
 config={ "user_key":"f207a84eb81c174a12735f568cffd505"}
@@ -31,7 +32,7 @@ cuisines_dict={'bakery':5,'chinese':25,'cafe':30,'italian':55,'biryani':7,'north
 #d = json.loads(results)
 #pprint.pprint(d)
 results_df = pd.DataFrame(columns=['Restaurant_Name','Address','Avg_budget','Rating'])
-results =zomato.restaurant_search("", lat, lon, str(cuisines_dict.get(cuisine)), 80,"rating","desc")
+results =zomato.restaurant_search("", lat, lon, str(cuisines_dict.get(cuisine)), 150,"rating","desc")
 d = json.loads(results)
 response=""
 if d['results_found'] == 0:

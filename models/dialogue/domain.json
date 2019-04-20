@@ -32,12 +32,16 @@
     "prev_utter_ask_location",
     "prev_utter_ask_cuisine",
     "prev_utter_ask_price",
+    "prev_utter_no_result",
+    "prev_utter_search_again",
+    "prev_utter_affirm",
     "prev_utter_ask_send_email",
     "prev_utter_ask_email",
     "prev_utter_email_sent_successfully",
     "prev_utter_invalid_location",
     "prev_action_restaurant",
     "prev_validate_location",
-    "prev_action_email"
+    "prev_action_email",
+    "prev_action_reset_slots"
   ]
 }
