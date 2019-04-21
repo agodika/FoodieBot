@@ -3,9 +3,9 @@
     "action_listen": {
       "slots": [
         "cuisine",
+        "budget",
         "location",
-        "email",
-        "budget"
+        "email"
       ]
     },
     "action_validate_location": {
@@ -22,14 +22,14 @@
     },
     "action_reset_slot": {
       "slots": [
+        "valid_location",
+        "budget",
+        "email_sent",
+        "location",
         "search_results",
         "cuisine",
-        "location",
-        "valid_location",
-        "found_results",
-        "email_sent",
         "email",
-        "budget"
+        "found_results"
       ]
     },
     "action_email": {
