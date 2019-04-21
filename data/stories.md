@@ -345,3 +345,38 @@
     - slot{"email_sent": null}
     - export
 
+## Generated Story -2373924488948642431
+* greet
+    - utter_greet
+* search_restaurant{"cuisine": "italian", "location": "Mumbai", "budget": "<300"}
+    - slot{"budget": "<300"}
+    - slot{"cuisine": "italian"}
+    - slot{"location": "Mumbai"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - action_restaurant
+    - slot{"search_results": null}
+    - slot{"found_results": false}
+* search_restaurant{"budget": "300-700"}
+    - slot{"budget": "300-700"}
+    - action_restaurant
+    - slot{"search_results": null}
+    - slot{"found_results": false}
+* search_restaurant{"budget": "<300"}
+    - slot{"budget": "<300"}
+    - action_restaurant
+    - slot{"search_results": null}
+    - slot{"found_results": false}
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+
