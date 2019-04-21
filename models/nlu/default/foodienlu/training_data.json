@@ -7,6 +7,10 @@
       },
       {
         "intent": "greet",
+        "text": "hola"
+      },
+      {
+        "intent": "greet",
         "text": "howdy"
       },
       {
@@ -80,6 +84,10 @@
       {
         "intent": "deny",
         "text": "no"
+      },
+      {
+        "intent": "deny",
+        "text": "no, thanks"
       },
       {
         "intent": "deny",
@@ -574,7 +582,7 @@
             "start": 17,
             "end": 24,
             "value": "mexican",
-            "entity": "location"
+            "entity": "cuisine"
           }
         ],
         "text": "Search expensive mexican food places"
@@ -589,7 +597,7 @@
             "entity": "location"
           }
         ],
-        "text": "Delhi"
+        "text": "delhi"
       },
       {
         "intent": "search_restaurant",
@@ -601,7 +609,7 @@
             "entity": "location"
           }
         ],
-        "text": "Jaipur"
+        "text": "jaipur"
       },
       {
         "intent": "search_restaurant",
@@ -638,6 +646,18 @@
           }
         ],
         "text": "American"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Mexican",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "Mexican"
       },
       {
         "intent": "search_restaurant",

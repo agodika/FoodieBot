@@ -15,6 +15,9 @@ from rasa_core.featurizers import (MaxHistoryTrackerFeaturizer, BinarySingleStat
 
 logger = logging.getLogger(__name__)
 
+import warnings
+warnings.filterwarnings("ignore")
+
 def train_dialogue(domain_file = 'foodie_domain.yml',
 					model_path = './models/dialogue',
 					training_data_file = './data/stories.md'):

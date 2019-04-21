@@ -13,6 +13,11 @@
     "entity_email",
     "slot_budget_0",
     "slot_cuisine_0",
+    "slot_cuisine_1",
+    "slot_cuisine_2",
+    "slot_cuisine_3",
+    "slot_cuisine_4",
+    "slot_cuisine_5",
     "slot_email_0",
     "slot_email_sent_0",
     "slot_found_results_0",
@@ -31,9 +36,9 @@
     "prev_utter_ask_budget",
     "prev_utter_query_ask_email",
     "prev_utter_ask_email",
-    "prev_utter_done",
     "prev_action_restaurant",
     "prev_action_email",
-    "prev_action_validate_location"
+    "prev_action_validate_location",
+    "prev_action_reset_slot"
   ]
 }

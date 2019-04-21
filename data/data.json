@@ -118,6 +118,7 @@
           "Asansol",
           "Aurangabad",
           "Ahmedabad",
+          "Allahabad",
           "Bareilly",
           "Belgaum",
           "Bhavnagar",
@@ -138,6 +139,7 @@
           "Faridabad",
           "Firozabad",
           "Ghaziabad",
+          "Goa",
           "Gorakhpur",
           "Gulbarga",
           "Guntur",
@@ -169,7 +171,6 @@
           "Madurai",
           "Malappuram",
           "Mathura",
-          "Goa",
           "Mangalore",
           "Meerut",
           "Moradabad",
@@ -182,7 +183,8 @@
           "Patna",
           "Pondicherry",
           "Prayagraj",
-          "PuneRaipur",
+          "Pune",
+          "Raipur",
           "Rajkot",
           "Rajahmundry",
           "Ranchi",
@@ -205,16 +207,33 @@
           "Vadodara",
           "Varanasi",
           "Vasai-Virar City",
+          "Vijayapura",
           "Vijayawada",
           "Visakhapatnam",
           "Vellore",
           "Warangal"
+        ]
+      },
+      {
+        "name": "cuisine",
+        "elements": [
+          "Mexican",
+          "Chinese",
+          "Italian",
+          "American",
+          "South Indian",
+          "North Indian"
         ]
       }
     ],
     "common_examples": [
       {
         "text": "hey",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hola",
         "intent": "greet",
         "entities": []
       },
@@ -310,6 +329,11 @@
       },
       {
         "text": "no",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "no, thanks",
         "intent": "deny",
         "entities": []
       },
@@ -804,12 +828,12 @@
             "start": 17,
             "end": 24,
             "value": "mexican",
-            "entity": "location"
+            "entity": "cuisine"
           }
         ]
       },
       {
-        "text": "Delhi",
+        "text": "delhi",
         "intent": "search_restaurant",
         "entities": [
           {
@@ -821,7 +845,7 @@
         ]
       },
       {
-        "text": "Jaipur",
+        "text": "jaipur",
         "intent": "search_restaurant",
         "entities": [
           {
@@ -869,6 +893,18 @@
         ]
       },
       {
+        "text": "Mexican",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
         "text": "South Indian will be great",
         "intent": "search_restaurant",
         "entities": [
@@ -911,25 +947,25 @@
         ]
       },
       {
-        "text": "chennai",
+        "text": "Pune",
         "intent": "search_restaurant",
         "entities": [
           {
             "start": 0,
-            "end": 7,
-            "value": "Chennai",
+            "end": 4,
+            "value": "Pune",
             "entity": "location"
           }
         ]
       },
       {
-        "text": "Mumbai",
+        "text": "Raipur",
         "intent": "search_restaurant",
         "entities": [
           {
             "start": 0,
             "end": 6,
-            "value": "Mumbai",
+            "value": "Raipur",
             "entity": "location"
           }
         ]
@@ -947,6 +983,30 @@
         ]
       },
       {
+        "text": "Bokaro Steel City",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 17,
+            "value": "Bokaro Steel City",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Bokaro",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 61,
+            "value": "Bokaro Steel City",
+            "entity": "location"
+          }
+        ]
+      },
+      {
         "text": "Hyderabad",
         "intent": "search_restaurant",
         "entities": [
@@ -954,6 +1014,30 @@
             "start": 0,
             "end": 9,
             "value": "Hyderabad",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Help me find a place to eat in Siliguri",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 31,
+            "end": 39,
+            "value": "Siliguri",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Find best food stores from Siliguri",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 27,
+            "end": 35,
+            "value": "Siliguri",
             "entity": "location"
           }
         ]
@@ -1005,6 +1089,21 @@
             "entity": "budget"
           }
         ]
+      },
+      {
+        "text": "Do you know good restaurants for lunch",
+        "intent": "search_restaurant",
+        "entities": []
+      },
+      {
+        "text": "Are there any good places for dinner",
+        "intent": "search_restaurant",
+        "entities": []
+      },
+      {
+        "text": "search some great restaurants for breakfast",
+        "intent": "",
+        "entities": []
       }
     ]
   }

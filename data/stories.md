@@ -1,346 +1,382 @@
-## Generated Story 7554428437242603382
+## Simple stories
+## Greet
 * greet
     - utter_greet
-* 
-    - utter_default
-    - utter_greet
-* 
     - export
 
-## Generated Story -8679705349623352381
-* greet
-    - utter_greet
-* search_restaurant{"location": "delhi"}
-    - slot{"location": "delhi"}
-    - action_validate_location
-    - slot{"valid_location": true}
-    - utter_ask_cuisine
-* 
-    - utter_default
-    - utter_ask_cuisine
+## Bye
+* goodbye
+    - utter_goodbye
+    - action_reset_slot
     - export
 
-## Generated Story 7433842033132481257
-* greet
-    - utter_greet
-* search_restaurant{"location": "jaipur"}
-    - slot{"location": "jaipur"}
-    - action_validate_location
-    - slot{"valid_location": true}
-    - utter_ask_cuisine
-* search_restaurant{"cuisine": "south indian"}
-    - slot{"cuisine": "south indian"}
-    - utter_ask_budget
+## No Input
 * 
     - utter_default
-    - utter_ask_budget
     - export
 
-## Generated Story 97667711386433612
+## No Input
+* 
+    - utter_default
+* 
+    - utter_default
+* 
+    - utter_default
+    - export
+
+
+## Generated Story 3610933134170833992
 * greet
     - utter_greet
 * search_restaurant
     - utter_ask_location
-* search_restaurant{"location": "delhi"}
-    - slot{"location": "delhi"}
+* search_restaurant{"location": "bangalore"}
+    - slot{"location": "bangalore"}
     - action_validate_location
     - slot{"valid_location": true}
-    - utter_ask_budget
-* search_restaurant{"budget": "<300"}
-    - slot{"budget": "<300"}
     - utter_ask_cuisine
-* search_restaurant{"cuisine": "italian"}
-    - slot{"cuisine": "italian"}
-    - action_restaurant
-    - slot{"search_results": "has_text"}
-    - slot{"found_results": false}
-* affirm
+* search_restaurant{"cuisine": "chinese"}
+    - slot{"cuisine": "chinese"}
     - utter_ask_budget
 * search_restaurant{"budget": ">700"}
     - slot{"budget": ">700"}
     - action_restaurant
     - slot{"search_results": "has_text"}
     - slot{"found_results": true}
-    - utter_ask_email
+    - utter_query_ask_email
 * send_details{"email": "abc@def.com"}
     - slot{"email": "abc@def.com"}
     - action_email
     - utter_goodbye
+    - action_reset_slot
     - export
 
-## Generated Story 257967638077977
+## Generated Story 388558728549701728
 * greet
     - utter_greet
-* search_restaurant
-    - utter_ask_location
-* search_restaurant
-    - utter_default
-    - utter_ask_location
+* search_restaurant{"location": "rishikesh"}
+    - slot{"location": "rishikesh"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": false}
 * search_restaurant{"location": "jaipur"}
     - slot{"location": "jaipur"}
     - action_validate_location
     - slot{"valid_location": true}
-    - utter_ask_budget
-* search_restaurant
-    - utter_default
-    - utter_ask_budget
-* search_restaurant{"budget": "<300"}
-    - slot{"budget": "<300"}
     - utter_ask_cuisine
-* search_restaurant{"cuisine": "north indian"}
-    - slot{"cuisine": "north indian"}
-    - export
-
-## Generated Story 4194480658216869140
-* greet
-    - utter_greet
-* search_restaurant{"cuisine": "mexican", "location": "delhi"}
-    - slot{"cuisine": "mexican"}
-    - slot{"location": "delhi"}
-    - action_validate_location
-    - slot{"valid_location": true}
+* search_restaurant{"cuisine": "chinese"}
+    - slot{"cuisine": "chinese"}
     - utter_ask_budget
 * search_restaurant{"budget": ">700"}
     - slot{"budget": ">700"}
     - action_restaurant
-    - slot{"search_results": "has_text"}
+    - slot{"search_results": "text"}
     - slot{"found_results": true}
     - utter_query_ask_email
 * deny
     - utter_goodbye
+    - action_reset_slot
     - export
 
-## Generated Story -7414492826169334219
+## Generated Story 3819246282420587981
 * greet
     - utter_greet
-* search_restaurant{"cuisine": "mexican", "location": "delhi"}
-    - slot{"cuisine": "mexican"}
-    - slot{"location": "delhi"}
+* search_restaurant{"location": "kolkata"}
+    - slot{"location": "kolkata"}
     - action_validate_location
     - slot{"valid_location": true}
-    - utter_ask_budget
-* search_restaurant{"budget": "<300"}
-    - slot{"budget": "<300"}
-    - action_restaurant
-    - slot{"search_results": "has_text"}
-    - slot{"found_results": true}
-    - utter_query_ask_email
-* deny
-    - utter_goodbye
-    - export
-
-## Generated Story -5090770963368655501
-* greet
-    - utter_greet
-* search_restaurant{"cuisine": "south indian"}
-    - slot{"cuisine": "south indian"}
-    - utter_ask_location
-* search_restaurant{"location": "Bhopal"}
-    - slot{"location": "Bhopal"}
-    - action_validate_location
-    - slot{"valid_location": true}
+    - utter_ask_cuisine
+* search_restaurant{"cuisine": "american"}
+    - slot{"cuisine": "american"}
     - utter_ask_budget
 * search_restaurant{"budget": "300-700"}
     - slot{"budget": "300-700"}
     - action_restaurant
+    - slot{"search_results": "text"}
     - slot{"found_results": true}
     - utter_query_ask_email
 * affirm
     - utter_ask_email
-* send_details{"email": "abc@def.com"}
-    - slot{"email": "abc@def.com"}
-    - action_email
-    - slot{"email": "abc@def.com"}
-    - utter_done
-    - utter_goodbye
-    - export
-
-## Generated Story 6053031762975423584
-* greet
-    - utter_greet
-* search_restaurant{"location": "mysore"}
-    - slot{"location": "mysore"}
-    - action_validate_location
-    - slot{"valid_location": true}
-    - utter_ask_budget
-* search_restaurant{"budget": "300"}
-    - slot{"budget": "300"}
-    - utter_ask_cuisine
-* search_restaurant
-    - utter_ask_cuisine
-* search_restaurant
-    - utter_ask_cuisine
-* search_restaurant{"cuisine": "chinese"}
-    - slot{"cuisine": "chinese"}
-    - action_restaurant
-    - slot{"search_results": "has_text"}
-    - slot{"found_results": true}
-    - utter_query_ask_email
-* deny
-    - utter_goodbye
-    - export
-
-
-## Generated Story 6182493262278462731
-* greet
-    - utter_greet
-* search_restaurant
-    - utter_ask_location
-* search_restaurant{"location": "delhi"}
-    - slot{"location": "delhi"}
-    - action_validate_location
-    - slot{"valid_location": true}
-    - utter_ask_cuisine
-* search_restaurant{"cuisine": "chinese"}
-    - slot{"cuisine": "chinese"}
-    - utter_ask_budget
-* search_restaurant{"budget": ">700"}
-    - slot{"budget": ">700"}
-    - action_restaurant
-    - slot{"search_results": "has_text"}
-    - slot{"found_results": true}
-    - utter_query_ask_email
-* affirm
-    - utter_ask_email
-* send_details{"email": "foo@bar.co.in"}
-    - slot{"email": "foo@bar.co.in"}
+* send_details{"email": "someone@somewhere.com"}
+    - slot{"email": "someone@somewhere.com"}
     - action_email
     - slot{"email_sent": true}
-    - utter_done
     - utter_goodbye
+    - action_reset_slot
     - export
 
-## Generated Story -4298251492318283722
-* greet
-    - utter_greet
-* search_restaurant{"budget": "<300", "cuisine": "italian", "location": "bangalore"}
-    - slot{"budget": "<300"}
-    - slot{"cuisine": "italian"}
-    - slot{"location": "bangalore"}
-    - action_validate_location
-    - slot{"valid_location": true}
-    - action_restaurant
-    - slot{"search_results": "has_text"}
-    - slot{"found_results": true}
-    - utter_query_ask_email
-* deny
-    - utter_goodbye
-    - export
-
-
-######### These stories need to be corrected
-
-## Generated Story 1993277579540566202
-* greet
-    - utter_greet
-* restaurant_search
-    - utter_ask_location
-* restaurant_search{"location": "delhi"}
-    - slot{"location": "delhi"}
-    - utter_ask_cuisine
-* restaurant_search{"cuisine": "North Indian"}
-    - slot{"cuisine": "North Indian"}
-    - action_restaurant
-    - utter_goodbye
-
-## Generated Story 3320800183399695936
-* greet
-    - utter_greet
-* restaurant_search
-    - utter_ask_location
-* restaurant_search{"location": "italy"}
-    - slot{"location": "italy"}
-	- utter_ask_cuisine
-* restaurant_search{"cuisine": "chinese"}
-    - slot{"cuisine": "chinese"}
-    - action_restaurant
-* goodbye
-    - utter_goodbye
-
-## Generated Story -4639179087166749998
-* greet
-    - utter_greet
-* restaurant_search
-    - utter_ask_location
-* restaurant_search{"location": "delhi"}
-    - slot{"location": "delhi"}
-    - utter_ask_cuisine
-* restaurant_search{"cuisine": "chinese"}
-    - slot{"cuisine": "chinese"}
-    - action_restaurant
-    - slot{"location": "delhi"}
-    - export
-
-
-## Generated Story 4963448062290237512
-* greet
-    - utter_greet
-* restaurant_search{"location": "delhi"}
-    - slot{"location": "delhi"}
-    - utter_ask_cuisine
-* restaurant_search{"cuisine": "chinese"}
-    - slot{"cuisine": "chinese"}
-    - action_restaurant
-* affirm
-    - utter_goodbye
-    - export
-
-## Generated Story -4406550421169986531
+## Generated Story 5952315894912500283
 * greet
     - utter_greet
 * search_restaurant
     - utter_ask_location
-* specify_location
-    - utter_ask_cuisine
-* specify_cuisine
-    - utter_ask_budget
-* specify_budget{"budget": "300-700"}
-    - slot{"budget": "300-700"}
-    - action_restaurant
+* search_restaurant{"location": "mubaim"}
+    - slot{"location": "mubaim"}
+    - action_validate_location
     - slot{"location": null}
-    - utter_ask_email
-* specify_email{"email": "ahbcdj@dkj.com"}
-    - slot{"email": "ahbcdj@dkj.com"}
-    - action_email
-    - slot{"email": "ahbcdj@dkj.com"}
-    - utter_goodbye
-    - export	
-	
-## Generated Story -7974700981390538253
-* greet
-    - utter_greet
-* search_restaurant{"cuisine": "chinese", "location": "Chennai", "budget": "300-700"}
-    - slot{"budget": "300-700"}
-    - slot{"cuisine": "chinese"}
-    - slot{"location": "Chennai"}
+    - slot{"valid_location": null}
+* search_restaurant{"location": "mumbai"}
+    - slot{"location": "mumbai"}
     - action_validate_location
     - slot{"valid_location": true}
+    - utter_ask_cuisine
+* search_restaurant{"cuisine": "american"}
+    - slot{"cuisine": "american"}
+    - utter_ask_budget
+* search_restaurant{"budget": ">700"}
+    - slot{"budget": ">700"}
     - action_restaurant
-    - slot{"search_results": {"results_found": 2830, "results_start": 0, "results_shown": 20, "restaurants": [{"restaurant": {"R": {"res_id": 72604}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "72604", "name": "Coal Barbecues", "url": "https://www.zomato.com/chennai/coal-barbecues-velachery?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "Shop 17-18, Rajalakshmi Nagar, 7th Cross Street, 100 Feet Bypass Road, Velachery, Chennai", "locality": "Velachery", "city": "Chennai", "city_id": 7, "latitude": "12.9860370807", "longitude": "80.2181855589", "zipcode": "600042", "country_id": 1, "locality_verbose": "Velachery, Chennai"}, "switch_to_order_menu": 0, "cuisines": "North Indian, Mediterranean, Asian, Arabian, BBQ", "average_cost_for_two": 1400, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/4/18595414/d69428e6b8271110b778f9f37a882cce.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.9", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "6808", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/coal-barbecues-velachery/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/coal-barbecues-velachery/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/4/18595414/d69428e6b8271110b778f9f37a882cce.jpg", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/72604", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/coal-barbecues-velachery/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 18595414}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "18595414", "name": "Coal Barbecues", "url": "https://www.zomato.com/chennai/coal-barbecues-t-nagar?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "40, 2nd Floor, Bazullah Road, T. Nagar, Chennai", "locality": "T. Nagar", "city": "Chennai", "city_id": 7, "latitude": "13.0469048625", "longitude": "80.2369140834", "zipcode": "600017", "country_id": 1, "locality_verbose": "T. Nagar, Chennai"}, "switch_to_order_menu": 0, "cuisines": "North Indian, Mediterranean, Asian, Arabian, BBQ", "average_cost_for_two": 1400, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/4/18595414/d69428e6b8271110b778f9f37a882cce.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.9", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "5922", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/coal-barbecues-t-nagar/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/coal-barbecues-t-nagar/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/4/18595414/d69428e6b8271110b778f9f37a882cce.jpg", "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/18595414", "is_table_reservation_supported": 0, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/coal-barbecues-t-nagar/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 70856}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "70856", "name": "AB's - Absolute Barbecues", "url": "https://www.zomato.com/chennai/abs-absolute-barbecues-t-nagar?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "45, GN Chetty Road, T. Nagar, Chennai", "locality": "T. Nagar", "city": "Chennai", "city_id": 7, "latitude": "13.0450303765", "longitude": "80.2412860841", "zipcode": "", "country_id": 1, "locality_verbose": "T. Nagar, Chennai"}, "switch_to_order_menu": 0, "cuisines": "BBQ, North Indian, European, Mediterranean", "average_cost_for_two": 1400, "price_range": 3, "currency": "Rs.", "offers": [], "zomato_events": [{"event": {"event_id": 340167, "friendly_start_date": "16 April", "friendly_end_date": "31 December", "friendly_timing_str": "Tuesday, 16th April - Tuesday, 31st December", "start_date": "2019-04-16", "end_date": "2019-12-31", "end_time": "23:55:00", "start_time": "12:00:00", "is_active": 1, "date_added": "2019-04-16 19:06:49", "photos": [], "restaurants": [], "is_valid": 1, "share_url": "http://www.zoma.to/r/0", "show_share_url": 0, "title": "Group Deals & Offers", "description": "1.\t\u201cTeam Grilling! Time\" Now Pay 9 for a Group of 10 People. Offer Valid on Wednesday, Friday & Saturday in both Lunch & Dinner.\n\n2.\t\u201cServing Happiness\u201d Now Serving Best BBQ Buffet Veg at 600/- and Non Veg at 650/-, Valid on Monday, Tuesday and Thursday in Lunch & Dinner.\n", "display_time": "12:00 pm - 11:55 pm", "display_date": "16 April - 31 December", "is_end_time_set": 1, "disclaimer": "Restaurants are solely responsible for the service; availability and quality of the events including all or any cancellations/ modifications/ complaints.", "event_category": 0, "event_category_name": "", "book_link": "", "types": [{"name": "Promos", "color": "#F96C6A"}], "share_data": {"should_show": 0}}}], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/6/70856/d1fabc4669318bc940749ff735359327.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.9", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "9879", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/abs-absolute-barbecues-t-nagar/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/abs-absolute-barbecues-t-nagar/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/6/70856/d1fabc4669318bc940749ff735359327.jpg?output-format=webp", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/70856", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/abs-absolute-barbecues-t-nagar/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 18666824}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "18666824", "name": "AB's - Absolute Barbecues", "url": "https://www.zomato.com/chennai/abs-absolute-barbecues-navallur?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "5th Floor, Vivira Mall, Navallur, Chennai", "locality": "Navallur", "city": "Chennai", "city_id": 7, "latitude": "12.8503030874", "longitude": "80.2256407589", "zipcode": "", "country_id": 1, "locality_verbose": "Navallur, Chennai"}, "switch_to_order_menu": 0, "cuisines": "BBQ, North Indian, European, Mediterranean", "average_cost_for_two": 1400, "price_range": 3, "currency": "Rs.", "offers": [], "zomato_events": [{"event": {"event_id": 340164, "friendly_start_date": "16 April", "friendly_end_date": "31 December", "friendly_timing_str": "Tuesday, 16th April - Tuesday, 31st December", "start_date": "2019-04-16", "end_date": "2019-12-31", "end_time": "23:55:00", "start_time": "12:00:00", "is_active": 1, "date_added": "2019-04-16 19:04:33", "photos": [], "restaurants": [], "is_valid": 1, "share_url": "http://www.zoma.to/r/0", "show_share_url": 0, "title": "Group Deals & Offers", "description": "1.\t\u201cTeam Grilling! Time\u201d Now Pay 9 for a Group of 10 People Offer Valid from Tuesday till Saturday in both Lunch & Dinner.\n\n2.\t\u201cTeam Grilling! Time\u201d Now Pay 17 for a Group of 20 People Offer Valid from Tuesday till Saturday in both Lunch & Dinner.\n", "display_time": "12:00 pm - 11:55 pm", "display_date": "16 April - 31 December", "is_end_time_set": 1, "disclaimer": "Restaurants are solely responsible for the service; availability and quality of the events including all or any cancellations/ modifications/ complaints.", "event_category": 0, "event_category_name": "", "book_link": "", "types": [{"name": "Promos", "color": "#F96C6A"}], "share_data": {"should_show": 0}}}], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/6/70856/d1fabc4669318bc940749ff735359327.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.9", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "2251", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/abs-absolute-barbecues-navallur/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/abs-absolute-barbecues-navallur/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/6/70856/d1fabc4669318bc940749ff735359327.jpg", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/18666824", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/abs-absolute-barbecues-navallur/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 71405}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "71405", "name": "Barbeque Nation", "url": "https://www.zomato.com/chennai/barbeque-nation-thuraipakkam?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "Ground Floor, 11, Ramaniyam Isha, Block 1, Thuraipakkam, Chennai", "locality": "Thuraipakkam", "city": "Chennai", "city_id": 7, "latitude": "12.9438521068", "longitude": "80.2380070835", "zipcode": "", "country_id": 1, "locality_verbose": "Thuraipakkam, Chennai"}, "switch_to_order_menu": 0, "cuisines": "North Indian, Continental, Kebab, BBQ", "average_cost_for_two": 1500, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/5/65055/fb582b15299c618849ad47e6384f41d1.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.9", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "2121", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/barbeque-nation-thuraipakkam/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/barbeque-nation-thuraipakkam/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/5/65055/fb582b15299c618849ad47e6384f41d1.jpg", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/71405", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/barbeque-nation-thuraipakkam/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 73088}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "73088", "name": "Chili's American Grill & Bar", "url": "https://www.zomato.com/chennai/chilis-american-grill-bar-royapettah?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "49 & 50 L, Express Avenue Mall, White's Road, Royapettah, Chennai", "locality": "Express Avenue Mall,  Royapettah", "city": "Chennai", "city_id": 7, "latitude": "13.0584996421", "longitude": "80.2646075562", "zipcode": "", "country_id": 1, "locality_verbose": "Express Avenue Mall,  Royapettah, Chennai"}, "switch_to_order_menu": 0, "cuisines": "Mexican, American, Tex-Mex, Burger", "average_cost_for_two": 1400, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/6/18579216/81e813a4db38cbf4614bf6e17ab914e8.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.8", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "4485", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/chilis-american-grill-bar-royapettah/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/chilis-american-grill-bar-royapettah/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/6/18579216/81e813a4db38cbf4614bf6e17ab914e8.jpg", "medio_provider": 1, "has_online_delivery": 1, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/73088", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/chilis-american-grill-bar-royapettah/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 65055}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "65055", "name": "Barbeque Nation", "url": "https://www.zomato.com/chennai/barbeque-nation-t-nagar?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "39, 1st Floor, Bazullah Road, Star City Serviced Apartments, T. Nagar, Chennai", "locality": "T. Nagar", "city": "Chennai", "city_id": 7, "latitude": "13.0469391577", "longitude": "80.2349671349", "zipcode": "0", "country_id": 1, "locality_verbose": "T. Nagar, Chennai"}, "switch_to_order_menu": 0, "cuisines": "North Indian, Continental, Kebab, BBQ", "average_cost_for_two": 1500, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/5/65055/fb582b15299c618849ad47e6384f41d1.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.8", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "5491", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/barbeque-nation-t-nagar/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/barbeque-nation-t-nagar/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/5/65055/fb582b15299c618849ad47e6384f41d1.jpg", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/65055", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/barbeque-nation-t-nagar/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 18579216}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "18579216", "name": "Chili's American Grill & Bar", "url": "https://www.zomato.com/chennai/chilis-american-grill-bar-velachery?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "S-29, 2nd Floor, Phoneix Market City, 142, Velachery Main Road, Chennai", "locality": "Phoenix Market City, Velachery", "city": "Chennai", "city_id": 7, "latitude": "12.9909754499", "longitude": "80.2169302851", "zipcode": "", "country_id": 1, "locality_verbose": "Phoenix Market City, Velachery, Chennai"}, "switch_to_order_menu": 0, "cuisines": "Mexican, American, Tex-Mex, Burger", "average_cost_for_two": 1400, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/6/18579216/81e813a4db38cbf4614bf6e17ab914e8.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.7", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "2777", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/chilis-american-grill-bar-velachery/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/chilis-american-grill-bar-velachery/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/6/18579216/81e813a4db38cbf4614bf6e17ab914e8.jpg", "medio_provider": 1, "has_online_delivery": 1, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/18579216", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/chilis-american-grill-bar-velachery/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 67280}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "67280", "name": "Momo Sa-Khang by Kailash Kitchen", "url": "https://www.zomato.com/chennai/momo-sa-khang-by-kailash-kitchen-choolaimedu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "2/247, Perinbavilas Complex, Opposite Chitra Apartments, Choolaimedu, Chennai", "locality": "Choolaimedu", "city": "Chennai", "city_id": 7, "latitude": "13.0653083003", "longitude": "80.2309169993", "zipcode": "0", "country_id": 1, "locality_verbose": "Choolaimedu, Chennai"}, "switch_to_order_menu": 0, "cuisines": "Tibetan, Momos", "average_cost_for_two": 300, "price_range": 1, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/0/67280/47b817dcc408056e122f64d2bb6787d3.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.7", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "1478", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/momo-sa-khang-by-kailash-kitchen-choolaimedu/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/momo-sa-khang-by-kailash-kitchen-choolaimedu/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/0/67280/47b817dcc408056e122f64d2bb6787d3.jpg", "has_online_delivery": 1, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/67280", "is_table_reservation_supported": 0, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/momo-sa-khang-by-kailash-kitchen-choolaimedu/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 18796863}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "18796863", "name": "Wok Monk", "url": "https://www.zomato.com/chennai/wok-monk-anna-nagar-west?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "117 Ravilla Towers, 2nd Floor, 3rd Avenue, W Block, Anna Nagar West, Chennai", "locality": "Anna Nagar West", "city": "Chennai", "city_id": 7, "latitude": "13.0870910000", "longitude": "80.2177320000", "zipcode": "", "country_id": 1, "locality_verbose": "Anna Nagar West, Chennai"}, "switch_to_order_menu": 0, "cuisines": "Thai, Chinese, Japanese, Indonesian, Malaysian, Burmese, Vietnamese", "average_cost_for_two": 1200, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/chains/3/18796863/b40981e871eb76b5b612bd9305b78663.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.7", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "292", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/wok-monk-anna-nagar-west/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/wok-monk-anna-nagar-west/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/chains/3/18796863/b40981e871eb76b5b612bd9305b78663.jpg", "has_online_delivery": 1, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/18796863", "is_table_reservation_supported": 0, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/wok-monk-anna-nagar-west/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 18677589}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "18677589", "name": "Alchemy Bar & Lounge", "url": "https://www.zomato.com/chennai/alchemy-bar-lounge-alwarpet?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "180, TTK Road, Alwarpet, Chennai", "locality": "Hotel Rajpark, Alwarpet", "city": "Chennai", "city_id": 7, "latitude": "13.0441514307", "longitude": "80.2592689544", "zipcode": "", "country_id": 1, "locality_verbose": "Hotel Rajpark, Alwarpet, Chennai"}, "switch_to_order_menu": 0, "cuisines": "Continental, Finger Food, Beverages", "average_cost_for_two": 1500, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/9/18677589/f99cce409aee12f08aebfff50031a594.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.7", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "366", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/alchemy-bar-lounge-alwarpet/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/alchemy-bar-lounge-alwarpet/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/9/18677589/f99cce409aee12f08aebfff50031a594.jpg", "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/18677589", "is_table_reservation_supported": 0, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/alchemy-bar-lounge-alwarpet/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 18510341}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "18510341", "name": "Avartana - ITC Grand Chola", "url": "https://www.zomato.com/chennai/avartana-itc-grand-chola-guindy?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "ITC Grand Chola, 63, Mount Road, Guindy, Chennai", "locality": "ITC Grand Chola, Guindy", "city": "Chennai", "city_id": 7, "latitude": "13.0115446151", "longitude": "80.2201690525", "zipcode": "", "country_id": 1, "locality_verbose": "ITC Grand Chola, Guindy, Chennai"}, "switch_to_order_menu": 0, "cuisines": "South Indian, Chinese, Desserts", "average_cost_for_two": 4500, "price_range": 4, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/res_imagery/18510341_RESTAURANT_908fedb80903eeefdf2e950c52bfc85d.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.7", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "261", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/avartana-itc-grand-chola-guindy/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/avartana-itc-grand-chola-guindy/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/res_imagery/18510341_RESTAURANT_908fedb80903eeefdf2e950c52bfc85d.jpg", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/18510341", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/avartana-itc-grand-chola-guindy/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 67407}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "67407", "name": "Copper Kitchen", "url": "https://www.zomato.com/chennai/copper-kitchen-porur?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "6/133, Arcot Road, Near Porur Signal, Porur, Chennai", "locality": "Porur", "city": "Chennai", "city_id": 7, "latitude": "13.0362544967", "longitude": "80.1572809741", "zipcode": "600116", "country_id": 1, "locality_verbose": "Porur, Chennai"}, "switch_to_order_menu": 0, "cuisines": "Seafood, North Indian, Chinese, Mughlai, Biryani", "average_cost_for_two": 800, "price_range": 2, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/7/67407/3c3d35435760282c00d40f3152621690.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.6", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "3925", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/copper-kitchen-porur/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/copper-kitchen-porur/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/7/67407/3c3d35435760282c00d40f3152621690.jpg", "medio_provider": 1, "has_online_delivery": 1, "is_delivering_now": 1, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/67407", "order_url": "https://www.zomato.com/chennai/copper-kitchen-porur/order?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "order_deeplink": "", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/copper-kitchen-porur/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 72497}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "72497", "name": "Palmshore", "url": "https://www.zomato.com/chennai/palmshore-ramapuram?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "Plot 8, Park Dugar, Mount Poonamallee High Road, Ramapuram, Chennai", "locality": "Ramapuram", "city": "Chennai", "city_id": 7, "latitude": "13.0261227177", "longitude": "80.1746965572", "zipcode": "600089", "country_id": 1, "locality_verbose": "Ramapuram, Chennai"}, "switch_to_order_menu": 0, "cuisines": "Seafood, Biryani, Kebab, North Indian, Chinese, Arabian, BBQ, Juices", "average_cost_for_two": 1000, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "", "user_rating": {"aggregate_rating": "4.6", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "2769", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/palmshore-ramapuram/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/palmshore-ramapuram/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "", "medio_provider": 1, "has_online_delivery": 1, "is_delivering_now": 1, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/72497", "order_url": "https://www.zomato.com/chennai/palmshore-ramapuram/order?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "order_deeplink": "", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/palmshore-ramapuram/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 67472}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "67472", "name": "Mainland China", "url": "https://www.zomato.com/chennai/mainland-china-velachery?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "1st Floor, 142, Phoenix Market City, Velachery, Chennai", "locality": "Phoenix Market City, Velachery", "city": "Chennai", "city_id": 7, "latitude": "12.9907408828", "longitude": "80.2171529084", "zipcode": "600040", "country_id": 1, "locality_verbose": "Phoenix Market City, Velachery, Chennai"}, "switch_to_order_menu": 0, "cuisines": "Chinese", "average_cost_for_two": 1800, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/chains/6/65316/45580adbe811548686550c352035bd72.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.6", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "1002", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/mainland-china-velachery/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/mainland-china-velachery/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/chains/6/65316/45580adbe811548686550c352035bd72.jpg", "medio_provider": 1, "has_online_delivery": 1, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/67472", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/mainland-china-velachery/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 18437170}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "18437170", "name": "Nasi And Mee", "url": "https://www.zomato.com/chennai/nasi-and-mee-nungambakkam?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "Kedar khan road, nungambakkam, chennai", "locality": "Nungambakkam", "city": "Chennai", "city_id": 7, "latitude": "13.0607639900", "longitude": "80.2497139201", "zipcode": "600006", "country_id": 1, "locality_verbose": "Nungambakkam, Chennai"}, "switch_to_order_menu": 0, "cuisines": "Singaporean, Malaysian, Chinese, Asian, Thai, Momos", "average_cost_for_two": 1200, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/res_imagery/18437170_RESTAURANT_7a0fad84b09e56c5b950efc033e96a1d.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.6", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "1346", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/nasi-and-mee-nungambakkam/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/nasi-and-mee-nungambakkam/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/res_imagery/18437170_RESTAURANT_7a0fad84b09e56c5b950efc033e96a1d.jpg", "medio_provider": 1, "has_online_delivery": 1, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/18437170", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/nasi-and-mee-nungambakkam/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 73119}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "73119", "name": "Bazaar - All Day Diner - Grand by GRT Hotels", "url": "https://www.zomato.com/chennai/bazaar-all-day-diner-grand-by-grt-hotels-t-nagar?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "Grand by GRT Hotels, 120, Sir Thyagaraya Road, T. Nagar, Chennai", "locality": "Grand by GRT Hotels", "city": "Chennai", "city_id": 7, "latitude": "13.0401195412", "longitude": "80.2451742813", "zipcode": "", "country_id": 1, "locality_verbose": "Grand by GRT Hotels, Chennai"}, "switch_to_order_menu": 0, "cuisines": "North Indian, South Indian, Continental, Asian", "average_cost_for_two": 2500, "price_range": 4, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/res_imagery/73119_RESTAURANT_66a85ab4f8e961c95849d2aa047526c5.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.6", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "835", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/bazaar-all-day-diner-grand-by-grt-hotels-t-nagar/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/bazaar-all-day-diner-grand-by-grt-hotels-t-nagar/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/res_imagery/73119_RESTAURANT_66a85ab4f8e961c95849d2aa047526c5.jpg", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/73119", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/bazaar-all-day-diner-grand-by-grt-hotels-t-nagar/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 71585}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "71585", "name": "Asia Kitchen by Mainland China", "url": "https://www.zomato.com/chennai/asia-kitchen-by-mainland-china-nungambakkam?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "11, The Spring Hotel, ,\u00a0Kodambakkam High Road,\u00a0Nungambakkam, Chennai 600034.", "locality": "The Spring Hotel, Nungambakkam", "city": "Chennai", "city_id": 7, "latitude": "13.0528388447", "longitude": "80.2483419701", "zipcode": "600034", "country_id": 1, "locality_verbose": "The Spring Hotel, Nungambakkam, Chennai"}, "switch_to_order_menu": 0, "cuisines": "Chinese, Asian, Momos", "average_cost_for_two": 1500, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/res_imagery/71585_RESTAURANT_53e8c5daad262731508f55922b896d4f.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.6", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "676", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/asia-kitchen-by-mainland-china-nungambakkam/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/asia-kitchen-by-mainland-china-nungambakkam/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/res_imagery/71585_RESTAURANT_53e8c5daad262731508f55922b896d4f.jpg", "medio_provider": 1, "has_online_delivery": 1, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/71585", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/asia-kitchen-by-mainland-china-nungambakkam/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 18812522}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "18812522", "name": "Pause Bar & Kitchen", "url": "https://www.zomato.com/chennai/pause-bar-kitchen-perungudi?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "1st Floor, Kandanchavadi, Perungudi, Chennai", "locality": "OMR Food Street, Kandanchavadi", "city": "Chennai", "city_id": 7, "latitude": "12.9748682160", "longitude": "80.2444601431", "zipcode": "", "country_id": 1, "locality_verbose": "OMR Food Street, Kandanchavadi, Chennai"}, "switch_to_order_menu": 0, "cuisines": "Italian, Continental, Chinese, North Indian", "average_cost_for_two": 1200, "price_range": 3, "currency": "Rs.", "offers": [], "zomato_events": [{"event": {"event_id": 341038, "friendly_start_date": "20 April", "friendly_end_date": "21 April", "friendly_timing_str": "Saturday, 20th April - Sunday, 21st April", "start_date": "2019-04-20", "end_date": "2019-04-21", "end_time": "23:59:59", "start_time": "23:00:02", "is_active": 1, "date_added": "2019-04-19 01:14:44", "photos": [{"photo": {"url": "https://b.zmtcdn.com/data/zomato_events/photos/1e2/2ff7b16779f40785d052aa3f4ea1c1e2_1555616697.jpg", "thumb_url": "https://b.zmtcdn.com/data/zomato_events/photos/1e2/2ff7b16779f40785d052aa3f4ea1c1e2_1555616697.jpg?fit=around%7C100%3A100&crop=100%3A100%3B%2A%2C%2A", "order": 0, "md5sum": "2ff7b16779f40785d052aa3f4ea1c1e2", "id": 459792, "photo_id": 459792, "uuid": 15556166974108, "type": "FEATURED"}}], "restaurants": [], "is_valid": 1, "share_url": "http://www.zoma.to/r/0", "show_share_url": 0, "title": "SAT and SUNDAY 15% discount for INKED ", "description": "SHOW UR INKED FINGER AND AVAIL 15% discount on your al carte bill ", "display_time": "11:00 pm onwards", "display_date": "20 April - 21 April", "is_end_time_set": 0, "disclaimer": "Restaurants are solely responsible for the service; availability and quality of the events including all or any cancellations/ modifications/ complaints.", "event_category": 1, "event_category_name": "", "book_link": "", "types": [{"name": "Promos", "color": "#F96C6A"}], "share_data": {"should_show": 0}}}, {"event": {"event_id": 307384, "friendly_start_date": "21 April", "friendly_end_date": "05 May", "friendly_timing_str": "Sunday, 21st April - Sunday, 5th May", "start_date": "2019-04-21", "end_date": "2019-05-05", "end_time": "18:00:01", "start_time": "11:00:01", "is_active": 1, "date_added": "2019-02-03 12:23:39", "photos": [{"photo": {"url": "https://b.zmtcdn.com/data/zomato_events/photos/3b0/d894d2e9a4882061bf509db9598c73b0_1553949988.jpg", "thumb_url": "https://b.zmtcdn.com/data/zomato_events/photos/3b0/d894d2e9a4882061bf509db9598c73b0_1553949988.jpg?fit=around%7C100%3A100&crop=100%3A100%3B%2A%2C%2A", "order": 0, "md5sum": "d894d2e9a4882061bf509db9598c73b0", "id": 448795, "photo_id": 448795, "uuid": 15539499885027, "type": "FEATURED"}}], "restaurants": [], "is_valid": 1, "share_url": "http://www.zoma.to/r/0", "show_share_url": 0, "title": "SUNDAY UNLIMITED \u20b91234* DRINK OUTSIDE THE BOX ", "description": "PAUSE\u2019s BEST OFFER GO \u20b91234* GO UNLIMITED on domestic draught beer and domestic spirits \n", "display_time": "11:00 am - 06:00 pm", "display_date": "21 April - 05 May", "is_end_time_set": 1, "disclaimer": "Restaurants are solely responsible for the service; availability and quality of the events including all or any cancellations/ modifications/ complaints.", "event_category": 1, "event_category_name": "", "book_link": "", "types": [], "share_data": {"should_show": 0}}}, {"event": {"event_id": 296404, "friendly_start_date": "22 April", "friendly_end_date": "29 April", "friendly_timing_str": "Monday, 22nd April - Monday, 29th April", "start_date": "2019-04-22", "end_date": "2019-04-29", "end_time": "23:59:59", "start_time": "20:00:45", "is_active": 1, "date_added": "2019-01-07 17:34:24", "photos": [{"photo": {"url": "https://b.zmtcdn.com/data/zomato_events/photos/4fb/ac4cc3da8d4d55eca702a9e2967524fb_1554039899.jpg", "thumb_url": "https://b.zmtcdn.com/data/zomato_events/photos/4fb/ac4cc3da8d4d55eca702a9e2967524fb_1554039899.jpg?fit=around%7C100%3A100&crop=100%3A100%3B%2A%2C%2A", "order": 0, "md5sum": "ac4cc3da8d4d55eca702a9e2967524fb", "id": 449125, "photo_id": 449125, "uuid": 15540398986638, "type": "FEATURED"}}], "restaurants": [], "is_valid": 1, "share_url": "http://www.zoma.to/r/0", "show_share_url": 0, "title": "EVERY MONDAY ITS RETRO NIGHT", "description": "From 7pm onwards ", "display_time": "08:00 pm onwards", "display_date": "22 April - 29 April", "is_end_time_set": 0, "disclaimer": "Restaurants are solely responsible for the service; availability and quality of the events including all or any cancellations/ modifications/ complaints.", "event_category": 1, "event_category_name": "", "book_link": "", "types": [{"name": "Live DJ", "color": "#6454B8"}], "share_data": {"should_show": 0}}}, {"event": {"event_id": 296549, "friendly_start_date": "23 April", "friendly_end_date": "30 April", "friendly_timing_str": "Tuesday, 23rd April - Tuesday, 30th April", "start_date": "2019-04-23", "end_date": "2019-04-30", "end_time": "23:59:59", "start_time": "20:00:48", "is_active": 1, "date_added": "2019-01-07 21:08:58", "photos": [{"photo": {"url": "https://b.zmtcdn.com/data/zomato_events/photos/273/37b70d676a00503ad38557217ae9e273_1554197790.jpg", "thumb_url": "https://b.zmtcdn.com/data/zomato_events/photos/273/37b70d676a00503ad38557217ae9e273_1554197790.jpg?fit=around%7C100%3A100&crop=100%3A100%3B%2A%2C%2A", "order": 0, "md5sum": "37b70d676a00503ad38557217ae9e273", "id": 450420, "photo_id": 450420, "uuid": 15541977894108, "type": "FEATURED"}}], "restaurants": [], "is_valid": 1, "share_url": "http://www.zoma.to/r/0", "show_share_url": 0, "title": "EVERY TUESDAY BEER PONG", "description": "BEER PONG - pong the ball in the glass and get a special surprise from pause managers ", "display_time": "08:00 pm onwards", "display_date": "23 April - 30 April", "is_end_time_set": 0, "disclaimer": "Restaurants are solely responsible for the service; availability and quality of the events including all or any cancellations/ modifications/ complaints.", "event_category": 1, "event_category_name": "", "book_link": "", "types": [{"name": "Beer Fest", "color": "#F96C6A"}], "share_data": {"should_show": 0}}}, {"event": {"event_id": 277473, "friendly_start_date": "24 April", "friendly_end_date": "22 May", "friendly_timing_str": "Wednesday, 24th April - Wednesday, 22nd May", "start_date": "2019-04-24", "end_date": "2019-05-22", "end_time": "23:59:59", "start_time": "19:00:17", "is_active": 1, "date_added": "2018-11-24 17:28:46", "photos": [{"photo": {"url": "https://b.zmtcdn.com/data/zomato_events/photos/c72/c42ad188ca067ff0ae59ab87e25dec72_1554836766.jpg", "thumb_url": "https://b.zmtcdn.com/data/zomato_events/photos/c72/c42ad188ca067ff0ae59ab87e25dec72_1554836766.jpg?fit=around%7C100%3A100&crop=100%3A100%3B%2A%2C%2A", "order": 0, "md5sum": "c42ad188ca067ff0ae59ab87e25dec72", "id": 454809, "photo_id": 454809, "uuid": 15548367664108, "type": "FEATURED"}}], "restaurants": [], "is_valid": 1, "share_url": "http://www.zoma.to/r/0", "show_share_url": 0, "title": "WEDNESDAY BOLLYWOOD NIGHT", "description": "7pm onwards .... ", "display_time": "07:00 pm onwards", "display_date": "24 April - 22 May", "is_end_time_set": 0, "disclaimer": "Restaurants are solely responsible for the service; availability and quality of the events including all or any cancellations/ modifications/ complaints.", "event_category": 1, "event_category_name": "", "book_link": "", "types": [{"name": "Bollywood Night", "color": "#6454B8"}], "share_data": {"should_show": 0}}}, {"event": {"event_id": 298118, "friendly_start_date": "26 April", "friendly_end_date": "01 May, 2020", "friendly_timing_str": "Friday, 26th April - Friday, 1st May", "start_date": "2019-04-26", "end_date": "2020-05-01", "end_time": "23:59:59", "start_time": "18:00:08", "is_active": 1, "date_added": "2019-01-10 23:24:06", "photos": [{"photo": {"url": "https://b.zmtcdn.com/data/zomato_events/photos/15c/a315a1bdc9a94585ef4a9e2f6007515c_1555000802.jpg", "thumb_url": "https://b.zmtcdn.com/data/zomato_events/photos/15c/a315a1bdc9a94585ef4a9e2f6007515c_1555000802.jpg?fit=around%7C100%3A100&crop=100%3A100%3B%2A%2C%2A", "order": 0, "md5sum": "a315a1bdc9a94585ef4a9e2f6007515c", "id": 456049, "photo_id": 456049, "uuid": 15550008006638, "type": "FEATURED"}}], "restaurants": [], "is_valid": 1, "share_url": "http://www.zoma.to/r/0", "show_share_url": 0, "title": "BOTTLE HOOK FRIDAY", "description": "BOTTLE HOOK FRIDAY SPECIALLY ON FRIDAY FROM 6pm onwards \n\n-GLENFORT WHISKY @ 5000 nett only ", "display_time": "06:00 pm onwards", "display_date": "26 April - 01 May", "is_end_time_set": 0, "disclaimer": "Restaurants are solely responsible for the service; availability and quality of the events including all or any cancellations/ modifications/ complaints.", "event_category": 1, "event_category_name": "", "book_link": "", "types": [], "share_data": {"should_show": 0}}}, {"event": {"event_id": 279936, "friendly_start_date": "27 April", "friendly_end_date": "25 May", "friendly_timing_str": "Saturday, 27th April - Saturday, 25th May", "start_date": "2019-04-27", "end_date": "2019-05-25", "end_time": "23:00:26", "start_time": "19:00:26", "is_active": 1, "date_added": "2018-12-01 12:13:31", "photos": [{"photo": {"url": "https://b.zmtcdn.com/data/zomato_events/photos/e81/328c1c8e4bc4d1ada124f098c0ad4e81_1555695094.jpg", "thumb_url": "https://b.zmtcdn.com/data/zomato_events/photos/e81/328c1c8e4bc4d1ada124f098c0ad4e81_1555695094.jpg?fit=around%7C100%3A100&crop=100%3A100%3B%2A%2C%2A", "order": 0, "md5sum": "328c1c8e4bc4d1ada124f098c0ad4e81", "id": 460223, "photo_id": 460223, "uuid": 15556950914108, "type": "FEATURED"}}], "restaurants": [], "is_valid": 1, "share_url": "http://www.zoma.to/r/0", "show_share_url": 0, "title": "SATURDAY BOLLYWOOD NIGHT", "description": "Double Bollywood night for Bollywood lovers specially @ pause bar and kitchen ", "display_time": "07:00 pm - 11:00 pm", "display_date": "27 April - 25 May", "is_end_time_set": 1, "disclaimer": "Restaurants are solely responsible for the service; availability and quality of the events including all or any cancellations/ modifications/ complaints.", "event_category": 1, "event_category_name": "", "book_link": "", "types": [{"name": "Bollywood Night", "color": "#6454B8"}], "share_data": {"should_show": 0}}}], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/2/18812522/5b0d482071c7766baf84ab2a5a75431a.jpeg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.6", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "529", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/pause-bar-kitchen-perungudi/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/pause-bar-kitchen-perungudi/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/2/18812522/5b0d482071c7766baf84ab2a5a75431a.jpeg", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/18812522", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/pause-bar-kitchen-perungudi/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 18997427}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "18997427", "name": "Wok Monk", "url": "https://www.zomato.com/chennai/wok-monk-besant-nagar?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "5th Avenue, Old 17, New 15, Besant Nagar, Chennai", "locality": "Besant Nagar", "city": "Chennai", "city_id": 7, "latitude": "13.0026734651", "longitude": "80.2721529454", "zipcode": "", "country_id": 1, "locality_verbose": "Besant Nagar, Chennai"}, "switch_to_order_menu": 0, "cuisines": "Thai, Chinese, Japanese, Indonesian, Malaysian, Burmese, Vietnamese", "average_cost_for_two": 1200, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/chains/3/18796863/3e760899416c9ae439814c45c7516b43.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.6", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "40", "custom_rating_text": "NEW", "custom_rating_text_background": "#89959B", "rating_tool_tip": "This restaurant is newly opened. The rating will appear once the restaurant completes 60 days in operation.", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/wok-monk-besant-nagar/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/wok-monk-besant-nagar/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/chains/3/18796863/3e760899416c9ae439814c45c7516b43.jpg", "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/18997427", "is_table_reservation_supported": 0, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/wok-monk-besant-nagar/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}]}}
-    - slot{"found_results": false}
+    - slot{"search_results": "text"}
+    - slot{"found_results": true}
     - utter_query_ask_email
-* send_details{"email": "nitesh@test.com"}
-    - slot{"email": "nitesh@test.com"}
+* affirm
+    - utter_ask_email
+* send_details{"email": "email@someserver.com"}
+    - slot{"email": "email@someserver.com"}
+    - action_email
+    - slot{"email_sent": true}
     - utter_goodbye
+    - action_reset_slot
     - export
 
-## Generated Story -4121837129692172666
+## Generated Story -5001997364761453290
 * greet
     - utter_greet
-* search_restaurant{"cuisine": "south indian", "location": "Chennai"}
-    - slot{"cuisine": "south indian"}
-    - slot{"location": "Chennai"}
+* search_restaurant{"cuisine": "chinese", "location": "chandigarh"}
+    - slot{"cuisine": "chinese"}
+    - slot{"location": "chandigarh"}
     - action_validate_location
     - slot{"valid_location": true}
     - utter_ask_budget
 * search_restaurant{"budget": ">700"}
     - slot{"budget": ">700"}
     - action_restaurant
-    - slot{"search_results": {"results_found": 3211, "results_start": 0, "results_shown": 20, "restaurants": [{"restaurant": {"R": {"res_id": 72604}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "72604", "name": "Coal Barbecues", "url": "https://www.zomato.com/chennai/coal-barbecues-velachery?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "Shop 17-18, Rajalakshmi Nagar, 7th Cross Street, 100 Feet Bypass Road, Velachery, Chennai", "locality": "Velachery", "city": "Chennai", "city_id": 7, "latitude": "12.9860370807", "longitude": "80.2181855589", "zipcode": "600042", "country_id": 1, "locality_verbose": "Velachery, Chennai"}, "switch_to_order_menu": 0, "cuisines": "North Indian, Mediterranean, Asian, Arabian, BBQ", "average_cost_for_two": 1400, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/4/18595414/d69428e6b8271110b778f9f37a882cce.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.9", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "6808", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/coal-barbecues-velachery/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/coal-barbecues-velachery/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/4/18595414/d69428e6b8271110b778f9f37a882cce.jpg", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/72604", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/coal-barbecues-velachery/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 18595414}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "18595414", "name": "Coal Barbecues", "url": "https://www.zomato.com/chennai/coal-barbecues-t-nagar?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "40, 2nd Floor, Bazullah Road, T. Nagar, Chennai", "locality": "T. Nagar", "city": "Chennai", "city_id": 7, "latitude": "13.0469048625", "longitude": "80.2369140834", "zipcode": "600017", "country_id": 1, "locality_verbose": "T. Nagar, Chennai"}, "switch_to_order_menu": 0, "cuisines": "North Indian, Mediterranean, Asian, Arabian, BBQ", "average_cost_for_two": 1400, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/4/18595414/d69428e6b8271110b778f9f37a882cce.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.9", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "5922", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/coal-barbecues-t-nagar/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/coal-barbecues-t-nagar/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/4/18595414/d69428e6b8271110b778f9f37a882cce.jpg", "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/18595414", "is_table_reservation_supported": 0, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/coal-barbecues-t-nagar/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 70856}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "70856", "name": "AB's - Absolute Barbecues", "url": "https://www.zomato.com/chennai/abs-absolute-barbecues-t-nagar?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "45, GN Chetty Road, T. Nagar, Chennai", "locality": "T. Nagar", "city": "Chennai", "city_id": 7, "latitude": "13.0450303765", "longitude": "80.2412860841", "zipcode": "", "country_id": 1, "locality_verbose": "T. Nagar, Chennai"}, "switch_to_order_menu": 0, "cuisines": "BBQ, North Indian, European, Mediterranean", "average_cost_for_two": 1400, "price_range": 3, "currency": "Rs.", "offers": [], "zomato_events": [{"event": {"event_id": 340167, "friendly_start_date": "16 April", "friendly_end_date": "31 December", "friendly_timing_str": "Tuesday, 16th April - Tuesday, 31st December", "start_date": "2019-04-16", "end_date": "2019-12-31", "end_time": "23:55:00", "start_time": "12:00:00", "is_active": 1, "date_added": "2019-04-16 19:06:49", "photos": [], "restaurants": [], "is_valid": 1, "share_url": "http://www.zoma.to/r/0", "show_share_url": 0, "title": "Group Deals & Offers", "description": "1.\t\u201cTeam Grilling! Time\" Now Pay 9 for a Group of 10 People. Offer Valid on Wednesday, Friday & Saturday in both Lunch & Dinner.\n\n2.\t\u201cServing Happiness\u201d Now Serving Best BBQ Buffet Veg at 600/- and Non Veg at 650/-, Valid on Monday, Tuesday and Thursday in Lunch & Dinner.\n", "display_time": "12:00 pm - 11:55 pm", "display_date": "16 April - 31 December", "is_end_time_set": 1, "disclaimer": "Restaurants are solely responsible for the service; availability and quality of the events including all or any cancellations/ modifications/ complaints.", "event_category": 0, "event_category_name": "", "book_link": "", "types": [{"name": "Promos", "color": "#F96C6A"}], "share_data": {"should_show": 0}}}], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/6/70856/d1fabc4669318bc940749ff735359327.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.9", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "9879", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/abs-absolute-barbecues-t-nagar/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/abs-absolute-barbecues-t-nagar/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/6/70856/d1fabc4669318bc940749ff735359327.jpg?output-format=webp", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/70856", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/abs-absolute-barbecues-t-nagar/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 18666824}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "18666824", "name": "AB's - Absolute Barbecues", "url": "https://www.zomato.com/chennai/abs-absolute-barbecues-navallur?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "5th Floor, Vivira Mall, Navallur, Chennai", "locality": "Navallur", "city": "Chennai", "city_id": 7, "latitude": "12.8503030874", "longitude": "80.2256407589", "zipcode": "", "country_id": 1, "locality_verbose": "Navallur, Chennai"}, "switch_to_order_menu": 0, "cuisines": "BBQ, North Indian, European, Mediterranean", "average_cost_for_two": 1400, "price_range": 3, "currency": "Rs.", "offers": [], "zomato_events": [{"event": {"event_id": 340164, "friendly_start_date": "16 April", "friendly_end_date": "31 December", "friendly_timing_str": "Tuesday, 16th April - Tuesday, 31st December", "start_date": "2019-04-16", "end_date": "2019-12-31", "end_time": "23:55:00", "start_time": "12:00:00", "is_active": 1, "date_added": "2019-04-16 19:04:33", "photos": [], "restaurants": [], "is_valid": 1, "share_url": "http://www.zoma.to/r/0", "show_share_url": 0, "title": "Group Deals & Offers", "description": "1.\t\u201cTeam Grilling! Time\u201d Now Pay 9 for a Group of 10 People Offer Valid from Tuesday till Saturday in both Lunch & Dinner.\n\n2.\t\u201cTeam Grilling! Time\u201d Now Pay 17 for a Group of 20 People Offer Valid from Tuesday till Saturday in both Lunch & Dinner.\n", "display_time": "12:00 pm - 11:55 pm", "display_date": "16 April - 31 December", "is_end_time_set": 1, "disclaimer": "Restaurants are solely responsible for the service; availability and quality of the events including all or any cancellations/ modifications/ complaints.", "event_category": 0, "event_category_name": "", "book_link": "", "types": [{"name": "Promos", "color": "#F96C6A"}], "share_data": {"should_show": 0}}}], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/6/70856/d1fabc4669318bc940749ff735359327.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.9", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "2251", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/abs-absolute-barbecues-navallur/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/abs-absolute-barbecues-navallur/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/6/70856/d1fabc4669318bc940749ff735359327.jpg", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/18666824", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/abs-absolute-barbecues-navallur/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 18384227}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "18384227", "name": "AB's - Absolute Barbecues", "url": "https://www.zomato.com/chennai/abs-absolute-barbecues-velachery?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "Velachery Tharamani Link Road, Opposite TCS, Velachery, Chennai", "locality": "Velachery", "city": "Chennai", "city_id": 7, "latitude": "12.9816334336", "longitude": "80.2316002920", "zipcode": "", "country_id": 1, "locality_verbose": "Velachery, Chennai"}, "switch_to_order_menu": 0, "cuisines": "BBQ, North Indian, European, Mediterranean", "average_cost_for_two": 1400, "price_range": 3, "currency": "Rs.", "offers": [], "zomato_events": [{"event": {"event_id": 340166, "friendly_start_date": "16 April", "friendly_end_date": "31 December", "friendly_timing_str": "Tuesday, 16th April - Tuesday, 31st December", "start_date": "2019-04-16", "end_date": "2019-12-31", "end_time": "23:55:00", "start_time": "12:00:00", "is_active": 1, "date_added": "2019-04-16 19:06:06", "photos": [], "restaurants": [], "is_valid": 1, "share_url": "http://www.zoma.to/r/0", "show_share_url": 0, "title": "Group Deals & Offers", "description": "1.\t\u201cTeam Grilling! Time\u201d Now Pay 9 for a Group of 10 People Offer Valid on Wednesday, Friday & Saturday in both Lunch & Dinner.\n\n2.\t\u201cServing Happiness\u201d Now Serving Best BBQ Buffet Veg at 600/- and Non Veg at 650/-, Valid on Monday, Tuesday and Thursday in Lunch & Dinner.\n", "display_time": "12:00 pm - 11:55 pm", "display_date": "16 April - 31 December", "is_end_time_set": 1, "disclaimer": "Restaurants are solely responsible for the service; availability and quality of the events including all or any cancellations/ modifications/ complaints.", "event_category": 0, "event_category_name": "", "book_link": "", "types": [{"name": "Promos", "color": "#F96C6A"}], "share_data": {"should_show": 0}}}], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/6/70856/d1fabc4669318bc940749ff735359327.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.8", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "3236", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/abs-absolute-barbecues-velachery/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/abs-absolute-barbecues-velachery/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/6/70856/d1fabc4669318bc940749ff735359327.jpg", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/18384227", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/abs-absolute-barbecues-velachery/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 73208}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "73208", "name": "J.Hind - Grand by GRT Hotels", "url": "https://www.zomato.com/chennai/j-hind-grand-by-grt-hotels-t-nagar?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "Grand by GRT Hotels, 120, Sir Thyagaraya Road, T. Nagar, Chennai", "locality": "Grand by GRT Hotels", "city": "Chennai", "city_id": 7, "latitude": "13.0399836631", "longitude": "80.2450384945", "zipcode": "", "country_id": 1, "locality_verbose": "Grand by GRT Hotels, Chennai"}, "switch_to_order_menu": 0, "cuisines": "North Indian, Mughlai, South Indian", "average_cost_for_two": 2500, "price_range": 4, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/res_imagery/73208_RESTAURANT_aba0311ed105c21df2031b5f8250f23c.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.8", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "794", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/j-hind-grand-by-grt-hotels-t-nagar/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/j-hind-grand-by-grt-hotels-t-nagar/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/res_imagery/73208_RESTAURANT_aba0311ed105c21df2031b5f8250f23c.jpg?output-format=webp", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/73208", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/j-hind-grand-by-grt-hotels-t-nagar/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 65055}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "65055", "name": "Barbeque Nation", "url": "https://www.zomato.com/chennai/barbeque-nation-t-nagar?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "39, 1st Floor, Bazullah Road, Star City Serviced Apartments, T. Nagar, Chennai", "locality": "T. Nagar", "city": "Chennai", "city_id": 7, "latitude": "13.0469391577", "longitude": "80.2349671349", "zipcode": "0", "country_id": 1, "locality_verbose": "T. Nagar, Chennai"}, "switch_to_order_menu": 0, "cuisines": "North Indian, Continental, Kebab, BBQ", "average_cost_for_two": 1500, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/5/65055/fb582b15299c618849ad47e6384f41d1.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.8", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "5491", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/barbeque-nation-t-nagar/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/barbeque-nation-t-nagar/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/5/65055/fb582b15299c618849ad47e6384f41d1.jpg", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/65055", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/barbeque-nation-t-nagar/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 71664}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "71664", "name": "Dakshin - Crowne Plaza Chennai Adyar Park", "url": "https://www.zomato.com/chennai/dakshin-crowne-plaza-chennai-adyar-park-alwarpet?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "Crowne Plaza Chennai Adyar Park, TTK Road, Austin Nagar, Alwarpet, Chennai", "locality": "Crowne Plaza Chennai Adyar Park, Alwarpet", "city": "Chennai", "city_id": 7, "latitude": "13.0293689302", "longitude": "80.2492173761", "zipcode": "", "country_id": 1, "locality_verbose": "Crowne Plaza Chennai Adyar Park, Alwarpet, Chennai"}, "switch_to_order_menu": 0, "cuisines": "South Indian, Kerala, Andhra", "average_cost_for_two": 2500, "price_range": 4, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/res_imagery/71664_RESTAURANT_c40af969415d57b8b5737f440944e885_c.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.7", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "290", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/dakshin-crowne-plaza-chennai-adyar-park-alwarpet/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/dakshin-crowne-plaza-chennai-adyar-park-alwarpet/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/res_imagery/71664_RESTAURANT_c40af969415d57b8b5737f440944e885_c.jpg", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/71664", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/dakshin-crowne-plaza-chennai-adyar-park-alwarpet/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 73145}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "73145", "name": "Gossip Fusion Bistro", "url": "https://www.zomato.com/chennai/gossip-fusion-bistro-kanathur?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "New 141, Old 191, Opposite HP Fuel Station, East Coast Road, Uthandi, Kanathur, Chennai", "locality": "Kanathur", "city": "Chennai", "city_id": 7, "latitude": "12.8672041220", "longitude": "80.2432903647", "zipcode": "600119", "country_id": 1, "locality_verbose": "Kanathur, Chennai"}, "switch_to_order_menu": 0, "cuisines": "Italian, North Indian", "average_cost_for_two": 1500, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/res_imagery/73145_RESTAURANT_fe107a94aaa2b602b7d80f693377be33.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.7", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "870", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/gossip-fusion-bistro-kanathur/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/gossip-fusion-bistro-kanathur/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/res_imagery/73145_RESTAURANT_fe107a94aaa2b602b7d80f693377be33.jpg", "has_online_delivery": 1, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/73145", "is_table_reservation_supported": 0, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/gossip-fusion-bistro-kanathur/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 70961}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "70961", "name": "Prems Graama Bhojanam", "url": "https://www.zomato.com/chennai/prems-graama-bhojanam-adyar?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "19, Sardar Patel Road, Next To GRT, Adyar, Chennai", "locality": "Adyar", "city": "Chennai", "city_id": 7, "latitude": "13.0062489465", "longitude": "80.2539796382", "zipcode": "600020", "country_id": 1, "locality_verbose": "Adyar, Chennai"}, "switch_to_order_menu": 0, "cuisines": "South Indian", "average_cost_for_two": 300, "price_range": 1, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/res_imagery/70961_RESTAURANT_393fc340046d94077802b606508c2401.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.7", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "1466", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/prems-graama-bhojanam-adyar/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/prems-graama-bhojanam-adyar/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/res_imagery/70961_RESTAURANT_393fc340046d94077802b606508c2401.jpg", "has_online_delivery": 1, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/70961", "is_table_reservation_supported": 0, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/prems-graama-bhojanam-adyar/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 18510341}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "18510341", "name": "Avartana - ITC Grand Chola", "url": "https://www.zomato.com/chennai/avartana-itc-grand-chola-guindy?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "ITC Grand Chola, 63, Mount Road, Guindy, Chennai", "locality": "ITC Grand Chola, Guindy", "city": "Chennai", "city_id": 7, "latitude": "13.0115446151", "longitude": "80.2201690525", "zipcode": "", "country_id": 1, "locality_verbose": "ITC Grand Chola, Guindy, Chennai"}, "switch_to_order_menu": 0, "cuisines": "South Indian, Chinese, Desserts", "average_cost_for_two": 4500, "price_range": 4, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/res_imagery/18510341_RESTAURANT_908fedb80903eeefdf2e950c52bfc85d.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.7", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "261", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/avartana-itc-grand-chola-guindy/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/avartana-itc-grand-chola-guindy/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/res_imagery/18510341_RESTAURANT_908fedb80903eeefdf2e950c52bfc85d.jpg", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/18510341", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/avartana-itc-grand-chola-guindy/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 72497}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "72497", "name": "Palmshore", "url": "https://www.zomato.com/chennai/palmshore-ramapuram?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "Plot 8, Park Dugar, Mount Poonamallee High Road, Ramapuram, Chennai", "locality": "Ramapuram", "city": "Chennai", "city_id": 7, "latitude": "13.0261227177", "longitude": "80.1746965572", "zipcode": "600089", "country_id": 1, "locality_verbose": "Ramapuram, Chennai"}, "switch_to_order_menu": 0, "cuisines": "Seafood, Biryani, Kebab, North Indian, Chinese, Arabian, BBQ, Juices", "average_cost_for_two": 1000, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "", "user_rating": {"aggregate_rating": "4.6", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "2769", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/palmshore-ramapuram/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/palmshore-ramapuram/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "", "medio_provider": 1, "has_online_delivery": 1, "is_delivering_now": 1, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/72497", "order_url": "https://www.zomato.com/chennai/palmshore-ramapuram/order?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "order_deeplink": "", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/palmshore-ramapuram/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 18621245}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "18621245", "name": "Grill Box - Unlimited BBQ", "url": "https://www.zomato.com/chennai/grill-box-unlimited-bbq-mylapore?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "25 Dr Radhakrishnan Salai, Near Yellow Pages Junction, Mylapore, Chennai", "locality": "Mylapore", "city": "Chennai", "city_id": 7, "latitude": "13.0441174617", "longitude": "80.2687002718", "zipcode": "", "country_id": 1, "locality_verbose": "Mylapore, Chennai"}, "switch_to_order_menu": 0, "cuisines": "North Indian, South Indian, BBQ", "average_cost_for_two": 1200, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/5/18621245/7502bd17dcfce50de715766dec053b7e.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.6", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "1581", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/grill-box-unlimited-bbq-mylapore/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/grill-box-unlimited-bbq-mylapore/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/5/18621245/7502bd17dcfce50de715766dec053b7e.jpg?output-format=webp", "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/18621245", "is_table_reservation_supported": 0, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/grill-box-unlimited-bbq-mylapore/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 73119}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "73119", "name": "Bazaar - All Day Diner - Grand by GRT Hotels", "url": "https://www.zomato.com/chennai/bazaar-all-day-diner-grand-by-grt-hotels-t-nagar?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "Grand by GRT Hotels, 120, Sir Thyagaraya Road, T. Nagar, Chennai", "locality": "Grand by GRT Hotels", "city": "Chennai", "city_id": 7, "latitude": "13.0401195412", "longitude": "80.2451742813", "zipcode": "", "country_id": 1, "locality_verbose": "Grand by GRT Hotels, Chennai"}, "switch_to_order_menu": 0, "cuisines": "North Indian, South Indian, Continental, Asian", "average_cost_for_two": 2500, "price_range": 4, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/res_imagery/73119_RESTAURANT_66a85ab4f8e961c95849d2aa047526c5.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.6", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "835", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/bazaar-all-day-diner-grand-by-grt-hotels-t-nagar/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/bazaar-all-day-diner-grand-by-grt-hotels-t-nagar/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/res_imagery/73119_RESTAURANT_66a85ab4f8e961c95849d2aa047526c5.jpg", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/73119", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/bazaar-all-day-diner-grand-by-grt-hotels-t-nagar/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 18811014}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "18811014", "name": "That Mallu Joint", "url": "https://www.zomato.com/chennai/that-mallu-joint-t-nagar?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "2nd Floor, PMG Complex, GN Chetty Road, T. Nagar, Chennai", "locality": "T. Nagar", "city": "Chennai", "city_id": 7, "latitude": "13.0416119098", "longitude": "80.2345044538", "zipcode": "", "country_id": 1, "locality_verbose": "T. Nagar, Chennai"}, "switch_to_order_menu": 0, "cuisines": "South Indian, Kerala", "average_cost_for_two": 500, "price_range": 2, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "", "user_rating": {"aggregate_rating": "4.6", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "245", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/that-mallu-joint-t-nagar/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/that-mallu-joint-t-nagar/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "", "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/18811014", "is_table_reservation_supported": 0, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/that-mallu-joint-t-nagar/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 72531}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "72531", "name": "The Melting Pot: Market Cafe", "url": "https://www.zomato.com/chennai/the-melting-pot-market-cafe-mahabalipuram?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "InterContinental Chennai Mahabalipuram Resort, 212, Nemelli Village, Mahabalipuram, Chennai", "locality": " InterContinental Chennai Mahabalipuram Resort, East Coast Road (ECR)", "city": "Chennai", "city_id": 7, "latitude": "12.7368152286", "longitude": "80.2356591448", "zipcode": "", "country_id": 1, "locality_verbose": " InterContinental Chennai Mahabalipuram Resort, East Coast Road (ECR), Chennai"}, "switch_to_order_menu": 0, "cuisines": "North Indian, South Indian, Continental", "average_cost_for_two": 1600, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/res_imagery/72531_RESTAURANT_67dfae1180d1e34a6b88c1d3a4fb3f76.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.6", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "296", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/the-melting-pot-market-cafe-mahabalipuram/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/the-melting-pot-market-cafe-mahabalipuram/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/res_imagery/72531_RESTAURANT_67dfae1180d1e34a6b88c1d3a4fb3f76.jpg", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/72531", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/the-melting-pot-market-cafe-mahabalipuram/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 72483}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "72483", "name": "Barbeque Nation", "url": "https://www.zomato.com/chennai/barbeque-nation-velachery?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "137, 1st Floor, The Grand Mall, 1st Cross Street, Dr. Seetharaman Nagar, Velachery-Tambaram High Road, Velachery, Chennai", "locality": "Velachery", "city": "Chennai", "city_id": 7, "latitude": "12.9716925155", "longitude": "80.2202247083", "zipcode": "", "country_id": 1, "locality_verbose": "Velachery, Chennai"}, "switch_to_order_menu": 0, "cuisines": "North Indian, Continental, Kebab, BBQ", "average_cost_for_two": 1500, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/5/65055/fb582b15299c618849ad47e6384f41d1.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.5", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "1243", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/barbeque-nation-velachery/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/barbeque-nation-velachery/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/5/65055/fb582b15299c618849ad47e6384f41d1.jpg?output-format=webp", "medio_provider": 1, "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/72483", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/barbeque-nation-velachery/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 71443}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "71443", "name": "Palmshore", "url": "https://www.zomato.com/chennai/palmshore-ashok-nagar?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "95, Jawaharlal Nehru Salai, Jafferkhanpet, Ashok Nagar, Chennai", "locality": "Ashok Nagar", "city": "Chennai", "city_id": 7, "latitude": "13.0298481170", "longitude": "80.2087193727", "zipcode": "600083", "country_id": 1, "locality_verbose": "Ashok Nagar, Chennai"}, "switch_to_order_menu": 0, "cuisines": "Seafood, Biryani, Kebab, North Indian, Chinese, Arabian, BBQ, Juices", "average_cost_for_two": 1000, "price_range": 3, "currency": "Rs.", "offers": [], "zomato_events": [{"event": {"event_id": 329269, "friendly_start_date": "22 March", "friendly_end_date": "30 April", "friendly_timing_str": "Friday, 22nd March - Tuesday, 30th April", "start_date": "2019-03-22", "end_date": "2019-04-30", "end_time": "12:00:00", "start_time": "11:00:00", "is_active": 1, "date_added": "2019-03-22 10:29:56", "photos": [{"photo": {"url": "https://b.zmtcdn.com/data/zomato_events/photos/810/f8fc852a354dbfa87faac0ca6c899810_1553230796.jpg", "thumb_url": "https://b.zmtcdn.com/data/zomato_events/photos/810/f8fc852a354dbfa87faac0ca6c899810_1553230796.jpg?fit=around%7C100%3A100&crop=100%3A100%3B%2A%2C%2A", "order": 0, "md5sum": "f8fc852a354dbfa87faac0ca6c899810", "id": 443473, "photo_id": 443473, "uuid": 1553230783613370, "type": "NORMAL"}}], "restaurants": [], "is_valid": 1, "share_url": "http://www.zoma.to/r/0", "show_share_url": 0, "title": "Buffet", "description": "Buffet", "display_time": "11:00 am - 12:00 pm", "display_date": "22 March - 30 April", "is_end_time_set": 1, "disclaimer": "Restaurants are solely responsible for the service; availability and quality of the events including all or any cancellations/ modifications/ complaints.", "event_category": 0, "event_category_name": "", "book_link": "", "types": [], "share_data": {"should_show": 0}}}], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "", "user_rating": {"aggregate_rating": "4.5", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "3227", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/palmshore-ashok-nagar/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/palmshore-ashok-nagar/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "", "medio_provider": 1, "has_online_delivery": 1, "is_delivering_now": 1, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/71443", "order_url": "https://www.zomato.com/chennai/palmshore-ashok-nagar/order?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "order_deeplink": "", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/palmshore-ashok-nagar/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 18752364}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "18752364", "name": "Kappa Chakka Kandhari", "url": "https://www.zomato.com/chennai/kappa-chakka-kandhari-1-nungambakkam?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "10, Haddows Road, Opposite to Shastri Bhavan, Nungambakkam, Chennai", "locality": "Nungambakkam", "city": "Chennai", "city_id": 7, "latitude": "13.0636648595", "longitude": "80.2478994057", "zipcode": "", "country_id": 1, "locality_verbose": "Nungambakkam, Chennai"}, "switch_to_order_menu": 0, "cuisines": "Kerala", "average_cost_for_two": 600, "price_range": 2, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "", "user_rating": {"aggregate_rating": "4.5", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "518", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/kappa-chakka-kandhari-1-nungambakkam/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/kappa-chakka-kandhari-1-nungambakkam/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "", "has_online_delivery": 0, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/18752364", "is_table_reservation_supported": 0, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/kappa-chakka-kandhari-1-nungambakkam/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}, {"restaurant": {"R": {"res_id": 73095}, "apikey": "f207a84eb81c174a12735f568cffd505", "id": "73095", "name": "VB Signature - Progressive Veg Restaurant", "url": "https://www.zomato.com/chennai/vb-signature-progressive-veg-restaurant-nungambakkam?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "location": {"address": "52, Nungambakkam High Road, Nungambakkam, Chennai", "locality": "Nungambakkam", "city": "Chennai", "city_id": 7, "latitude": "13.0617170153", "longitude": "80.2456329390", "zipcode": "600034", "country_id": 1, "locality_verbose": "Nungambakkam, Chennai"}, "switch_to_order_menu": 0, "cuisines": "North Indian, South Indian, Chinese, Asian", "average_cost_for_two": 1000, "price_range": 3, "currency": "Rs.", "offers": [], "opentable_support": 0, "is_zomato_book_res": 0, "mezzo_provider": "OTHER", "is_book_form_web_view": 0, "book_form_web_view_url": "", "book_again_url": "", "thumb": "https://b.zmtcdn.com/data/pictures/5/73095/193ef25b22b5d3f474aa9cd84a52005a.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A", "user_rating": {"aggregate_rating": "4.5", "rating_text": "Excellent", "rating_color": "3F7E00", "votes": "993", "has_fake_reviews": 0}, "photos_url": "https://www.zomato.com/chennai/vb-signature-progressive-veg-restaurant-nungambakkam/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop", "menu_url": "https://www.zomato.com/chennai/vb-signature-progressive-veg-restaurant-nungambakkam/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop", "featured_image": "https://b.zmtcdn.com/data/pictures/5/73095/193ef25b22b5d3f474aa9cd84a52005a.jpg", "medio_provider": 1, "has_online_delivery": 1, "is_delivering_now": 0, "has_fake_reviews": 0, "include_bogo_offers": true, "deeplink": "zomato://restaurant/73095", "is_table_reservation_supported": 1, "has_table_booking": 0, "events_url": "https://www.zomato.com/chennai/vb-signature-progressive-veg-restaurant-nungambakkam/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1", "establishment_types": []}}]}}
+    - slot{"search_results": "text"}
     - slot{"found_results": true}
     - utter_query_ask_email
-* send_details{"email": "nitesh@test.com"}
-    - slot{"email": "nitesh@test.com"}
+* deny
     - utter_goodbye
+    - action_reset_slot
+    - export
+
+## Not providing budget
+* search_restaurant{"cuisine": "chinese", "location": "chandigarh"}
+    - slot{"cuisine": "chinese"}
+    - slot{"location": "chandigarh"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_budget
+* 
+    - utter_default
+* 
+    - utter_default
+    - export
+
+
+## Generated Story -4831472538080396003
+* greet
+    - utter_greet
+* 
+    - utter_default
+* search_restaurant
+    - utter_ask_location
+* 
+    - utter_default
+* search_restaurant{"location": "pune"}
+    - slot{"location": "pune"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_cuisine
+* 
+    - utter_default
+* search_restaurant{"cuisine": "chinese"}
+    - slot{"cuisine": "chinese"}
+    - utter_ask_budget
+* 
+    - utter_default
+* search_restaurant{"budget": "300-700"}
+    - slot{"budget": "300-700"}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": false}
+* search_restaurant{"budget": ">700"}
+    - slot{"budget": ">700"}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": true}
+    - utter_query_ask_email
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - export
+
+## Generated Story 5286903957715011224
+* greet
+    - utter_greet
+* search_restaurant
+    - utter_ask_location
+* search_restaurant{"location": "Bangalore"}
+    - slot{"location": "Bangalore"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_cuisine
+* search_restaurant{"cuisine": "south indian"}
+    - slot{"cuisine": "south indian"}
+    - utter_ask_budget
+* search_restaurant{"budget": "300-700"}
+    - slot{"budget": "300-700"}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": false}
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+
+## Generated Story 7916779628815241742
+* greet
+    - utter_greet
+* search_restaurant{"cuisine": "chinese", "location": "chandigarh"}
+    - slot{"cuisine": "chinese"}
+    - slot{"location": "chandigarh"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_budget
+* search_restaurant{"budget": "<300"}
+    - slot{"budget": "<300"}
+    - action_restaurant
+    - slot{"search_results": null}
+    - slot{"found_results": false}
+* search_restaurant{"budget": ">700"}
+    - slot{"budget": ">700"}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": true}
+    - utter_query_ask_email
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+
+## Generated Story -3333502339638337872
+* greet
+    - utter_greet
+* search_restaurant{"cuisine": "chinese", "location": "chandigarh", "budget": "<300"}
+    - slot{"budget": "<300"}
+    - slot{"cuisine": "chinese"}
+    - slot{"location": "chandigarh"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - action_restaurant
+    - slot{"search_results": null}
+    - slot{"found_results": false}
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+
+## Generated Story 5699950204708172850
+* greet
+    - utter_greet
+* search_restaurant
+    - utter_ask_location
+* search_restaurant
+    - utter_default
+* search_restaurant{"location": "Delhi"}
+    - slot{"location": "Delhi"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_cuisine
+* search_restaurant
+    - utter_default
+* search_restaurant{"cuisine": "chinese"}
+    - slot{"cuisine": "chinese"}
+    - utter_ask_budget
+* search_restaurant{"budget": "<300"}
+    - slot{"budget": "<300"}
+    - action_restaurant
+    - slot{"search_results": null}
+    - slot{"found_results": false}
+* search_restaurant{"budget": "300-700"}
+    - slot{"budget": "300-700"}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": true}
+    - utter_query_ask_email
+* affirm
+    - utter_ask_email
+* send_details{"email": "help@me.com"}
+    - slot{"email": "help@me.com"}
+    - action_email
+    - slot{"email_sent": true}
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+
+## Generated Story -2373924488948642431
+* greet
+    - utter_greet
+* search_restaurant{"cuisine": "italian", "location": "Mumbai", "budget": "<300"}
+    - slot{"budget": "<300"}
+    - slot{"cuisine": "italian"}
+    - slot{"location": "Mumbai"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - action_restaurant
+    - slot{"search_results": null}
+    - slot{"found_results": false}
+* search_restaurant{"budget": "300-700"}
+    - slot{"budget": "300-700"}
+    - action_restaurant
+    - slot{"search_results": null}
+    - slot{"found_results": false}
+* search_restaurant{"budget": "<300"}
+    - slot{"budget": "<300"}
+    - action_restaurant
+    - slot{"search_results": null}
+    - slot{"found_results": false}
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
     - export
 

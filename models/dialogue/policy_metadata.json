@@ -10,29 +10,37 @@
     },
     "action_validate_location": {
       "slots": [
-        "valid_location"
+        "valid_location",
+        "location"
       ]
     },
     "action_restaurant": {
       "slots": [
-        "found_results",
-        "location",
-        "search_results"
+        "search_results",
+        "found_results"
       ]
     },
-    "utter_goodbye": {
-      "slots": []
-    },
-    "utter_ask_budget": {
-      "slots": []
+    "action_reset_slot": {
+      "slots": [
+        "search_results",
+        "email",
+        "budget",
+        "cuisine",
+        "found_results",
+        "email_sent",
+        "valid_location",
+        "location"
+      ]
     },
     "action_email": {
       "slots": [
-        "email",
         "email_sent"
       ]
     },
-    "utter_ask_cuisine": {
+    "utter_greet": {
+      "slots": []
+    },
+    "utter_default": {
       "slots": []
     }
   },

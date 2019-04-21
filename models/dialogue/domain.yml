@@ -10,10 +10,10 @@ action_names:
 - utter_ask_budget
 - utter_query_ask_email
 - utter_ask_email
-- utter_done
 - action_restaurant
 - action_email
 - action_validate_location
+- action_reset_slot
 actions:
 - utter_greet
 - utter_goodbye
@@ -25,10 +25,10 @@ actions:
 - utter_ask_budget
 - utter_query_ask_email
 - utter_ask_email
-- utter_done
 - actions.ActionSearchRestaurants
 - actions.SendEmail
 - actions.ValidateLocation
+- actions.ResetSlot
 config:
   store_entities_as_slots: true
 entities:
@@ -50,7 +50,14 @@ slots:
     type: rasa_core.slots.TextSlot
   cuisine:
     initial_value: null
-    type: rasa_core.slots.TextSlot
+    type: rasa_core.slots.CategoricalSlot
+    values:
+    - chinese
+    - mexican
+    - italian
+    - american
+    - south indian
+    - north indian
   email:
     initial_value: null
     type: rasa_core.slots.TextSlot
@@ -67,7 +74,7 @@ slots:
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
   valid_location:
-    initial_value: null
+    initial_value: false
     type: rasa_core.slots.BooleanSlot
 templates:
   utter_ask_budget:
@@ -98,17 +105,15 @@ templates:
   - text: Ok. Please tell me your email address.
   - text: Great! What email address should I send it to?
   utter_ask_fallback_location:
-  - text: Sorry, we don't serve that location yet. Try a different city?
-  - text: I'm afraid we don't operate there yet. Please specify another city.
+  - text: Sorry, we don't operate in that city. Please specify a different location?
+  - text: I'm afraid we don't serve that city yet. Please specify another city.
   utter_ask_howcanhelp:
   - text: how can I help you?
   utter_ask_location:
   - text: In what location?
   - text: In which city?
   utter_default:
-  - text: "--- I'm sorry, I did not understand that.\n-----------"
-  utter_done:
-  - text: Ok. It's done!
+  - text: I'm sorry, I did not understand that. Please try again.
   utter_email_invalid:
   - text: I couldn't understand an email address from there. Do you want to tell me
       an email again?
@@ -119,9 +124,9 @@ templates:
   - text: ciao
   - text: have a good day
   utter_greet:
-  - text: hey there! How may i help you
+  - text: Hey there! How may i help you?
   - text: Hi, How can I help you!
-  - text: Hey, How is it going. How May I help you Today
+  - text: Hey, how is it going. How may I help you today?
   utter_query_ask_email:
   - text: Should I send you details of all the restaurants on email?
   - text: Would you like to receive the restaurant list on email?
