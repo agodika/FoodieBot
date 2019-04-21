@@ -111,13 +111,13 @@
           {
             "start": 8,
             "end": 15,
-            "value": "italian",
+            "value": "Italian",
             "entity": "cuisine"
           },
           {
             "start": 31,
             "end": 36,
-            "value": "delhi",
+            "value": "Delhi",
             "entity": "location"
           }
         ],
@@ -129,7 +129,7 @@
           {
             "start": 26,
             "end": 33,
-            "value": "mexican",
+            "value": "Mexican",
             "entity": "cuisine"
           },
           {
@@ -201,18 +201,6 @@
         "intent": "search_restaurant",
         "entities": [
           {
-            "start": 7,
-            "end": 11,
-            "value": "Thai",
-            "entity": "cuisine"
-          }
-        ],
-        "text": "I want Thai"
-      },
-      {
-        "intent": "search_restaurant",
-        "entities": [
-          {
             "start": 0,
             "end": 7,
             "value": "Italian",
@@ -239,13 +227,13 @@
           {
             "start": 13,
             "end": 20,
-            "value": "chinese",
+            "value": "Chinese",
             "entity": "cuisine"
           },
           {
             "start": 76,
             "end": 82,
-            "value": "mumbai",
+            "value": "Mumbai",
             "entity": "location"
           }
         ],
@@ -257,7 +245,7 @@
           {
             "start": 19,
             "end": 28,
-            "value": "american ",
+            "value": "American ",
             "entity": "cuisine"
           },
           {
@@ -293,7 +281,7 @@
           {
             "start": 12,
             "end": 24,
-            "value": "north indian",
+            "value": "North Indian",
             "entity": "cuisine"
           }
         ],
@@ -479,7 +467,7 @@
           {
             "start": 14,
             "end": 21,
-            "value": "chinese",
+            "value": "Chinese",
             "entity": "cuisine"
           },
           {
@@ -545,7 +533,7 @@
           {
             "start": 29,
             "end": 36,
-            "value": "italian",
+            "value": "Italian",
             "entity": "cuisine"
           },
           {
@@ -629,7 +617,7 @@
           {
             "start": 0,
             "end": 7,
-            "value": "chinese",
+            "value": "Chinese",
             "entity": "cuisine"
           }
         ],
@@ -683,7 +671,7 @@
           {
             "start": 20,
             "end": 27,
-            "value": "chinese",
+            "value": "Chinese",
             "entity": "cuisine"
           }
         ],
@@ -706,12 +694,12 @@
         "entities": [
           {
             "start": 0,
-            "end": 7,
-            "value": "Chennai",
+            "end": 4,
+            "value": "Pune",
             "entity": "location"
           }
         ],
-        "text": "chennai"
+        "text": "Pune"
       },
       {
         "intent": "search_restaurant",
@@ -719,11 +707,11 @@
           {
             "start": 0,
             "end": 6,
-            "value": "Mumbai",
+            "value": "Raipur",
             "entity": "location"
           }
         ],
-        "text": "Mumbai"
+        "text": "Raipur"
       },
       {
         "intent": "search_restaurant",
@@ -742,12 +730,60 @@
         "entities": [
           {
             "start": 0,
+            "end": 17,
+            "value": "Bokaro Steel City",
+            "entity": "location"
+          }
+        ],
+        "text": "Bokaro Steel City"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 61,
+            "value": "Bokaro Steel City",
+            "entity": "location"
+          }
+        ],
+        "text": "Bokaro"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
             "end": 9,
             "value": "Hyderabad",
             "entity": "location"
           }
         ],
         "text": "Hyderabad"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 31,
+            "end": 39,
+            "value": "Siliguri",
+            "entity": "location"
+          }
+        ],
+        "text": "Help me find a place to eat in Siliguri"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 27,
+            "end": 35,
+            "value": "Siliguri",
+            "entity": "location"
+          }
+        ],
+        "text": "Find best food stores from Siliguri"
       },
       {
         "intent": "search_restaurant",
@@ -796,6 +832,17 @@
           }
         ],
         "text": "please show me some good south indian restaurants in chennai in the range of >700"
+      },
+      {
+        "intent": "search_restaurant",
+        "text": "Do you know good restaurants for lunch"
+      },
+      {
+        "intent": "search_restaurant",
+        "text": "Are there any good places for dinner"
+      },
+      {
+        "text": "search some great restaurants for breakfast"
       }
     ],
     "regex_features": [
