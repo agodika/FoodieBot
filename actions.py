@@ -32,7 +32,7 @@ def results_to_utterance(price_results):
 
 def results_to_email(price_results):
 	response = '<table border=1><tr><th>Name</th><th>Address</th><th>Rating</th><th>Average price for two</th></tr>'
-	for index, row in price_results.head(5).iterrows():
+	for index, row in price_results.head(10).iterrows():
 		response = response + "<tr><td>" + row['Restaurant_Name'] + "</td><td>" + row['Address'] + "</td><td> Rated "+str(row['Rating']) + ".</td><td> " + str(row['Avg_budget']) + " Rs </td></tr>"
 
 	return response + "</table>"
