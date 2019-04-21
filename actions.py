@@ -24,7 +24,7 @@ def results_to_utterance(price_results):
 	else:
 		matching_results_found = True
 		for index, row in price_results.head(5).iterrows():
-			response = response + str(index) + ". \"" + row['Restaurant_Name'] + "\" in \"" + row['Address'] + "\" has been rated "+str(row['Rating']) + ". And the average price for two people here is: " + str(row['Avg_budget']) + " Rs \n"
+			response = response + str(index + 1) + ". \"" + row['Restaurant_Name'] + "\" in \"" + row['Address'] + "\" has been rated "+str(row['Rating']) + ". And the average price for two people here is: " + str(row['Avg_budget']) + " Rs \n"
 
 	return matching_results_found, response
 
@@ -79,7 +79,10 @@ class ActionSearchRestaurants(Action):
 		dispatcher.utter_message("---------------------------------------")
 
 		# cuisines_dict={'bakery':5,'chinese':25,'cafe':30,'italian':55,'biryani':7,'north indian':50,'south indian':85}
-		return [SlotSet('search_results', results), SlotSet('found_results', matching_results_found)]
+		if matching_results_found:
+			return [SlotSet('search_results', results), SlotSet('found_results', matching_results_found)]
+		else:
+			return [SlotSet('search_results', None), SlotSet('found_results', matching_results_found)]
 
 class SendEmail(Action):
 	def name(self):

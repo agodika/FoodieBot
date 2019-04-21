@@ -240,3 +240,62 @@
     - slot{"found_results": null}
     - slot{"email_sent": null}
     - export
+
+## Generated Story 7916779628815241742
+* greet
+    - utter_greet
+* search_restaurant{"cuisine": "chinese", "location": "chandigarh"}
+    - slot{"cuisine": "chinese"}
+    - slot{"location": "chandigarh"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_budget
+* search_restaurant{"budget": "<300"}
+    - slot{"budget": "<300"}
+    - action_restaurant
+    - slot{"search_results": null}
+    - slot{"found_results": false}
+* search_restaurant{"budget": ">700"}
+    - slot{"budget": ">700"}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": true}
+    - utter_query_ask_email
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+
+## Generated Story -3333502339638337872
+* greet
+    - utter_greet
+* search_restaurant{"cuisine": "chinese", "location": "chandigarh", "budget": "<300"}
+    - slot{"budget": "<300"}
+    - slot{"cuisine": "chinese"}
+    - slot{"location": "chandigarh"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - action_restaurant
+    - slot{"search_results": null}
+    - slot{"found_results": false}
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+
