@@ -340,13 +340,13 @@
           {
             "start": 8,
             "end": 15,
-            "value": "italian",
+            "value": "Italian",
             "entity": "cuisine"
           },
           {
             "start": 31,
             "end": 36,
-            "value": "delhi",
+            "value": "Delhi",
             "entity": "location"
           }
         ]
@@ -358,7 +358,7 @@
           {
             "start": 26,
             "end": 33,
-            "value": "mexican",
+            "value": "Mexican",
             "entity": "cuisine"
           },
           {
@@ -428,18 +428,6 @@
         ]
       },
       {
-        "text": "I want Thai",
-        "intent": "search_restaurant",
-        "entities": [
-          {
-            "start": 7,
-            "end": 11,
-            "value": "Thai",
-            "entity": "cuisine"
-          }
-        ]
-      },
-      {
         "text": "Italian would be good",
         "intent": "search_restaurant",
         "entities": [
@@ -470,13 +458,13 @@
           {
             "start": 13,
             "end": 20,
-            "value": "chinese",
+            "value": "Chinese",
             "entity": "cuisine"
           },
           {
             "start": 76,
             "end": 82,
-            "value": "mumbai",
+            "value": "Mumbai",
             "entity": "location"
           }
         ]
@@ -488,7 +476,7 @@
           {
             "start": 19,
             "end": 28,
-            "value": "american ",
+            "value": "American ",
             "entity": "cuisine"
           },
           {
@@ -527,7 +515,7 @@
           {
             "start": 12,
             "end": 24,
-            "value": "north indian",
+            "value": "North Indian",
             "entity": "cuisine"
           }
         ]
@@ -713,7 +701,7 @@
           {
             "start": 14,
             "end": 21,
-            "value": "chinese",
+            "value": "Chinese",
             "entity": "cuisine"
           },
           {
@@ -779,7 +767,7 @@
           {
             "start": 29,
             "end": 36,
-            "value": "italian",
+            "value": "Italian",
             "entity": "cuisine"
           },
           {
@@ -863,7 +851,7 @@
           {
             "start": 0,
             "end": 7,
-            "value": "chinese",
+            "value": "Chinese",
             "entity": "cuisine"
           }
         ]
@@ -905,7 +893,7 @@
           {
             "start": 20,
             "end": 27,
-            "value": "chinese",
+            "value": "Chinese",
             "entity": "cuisine"
           }
         ]
