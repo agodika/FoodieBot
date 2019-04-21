@@ -13,6 +13,7 @@ action_names:
 - action_restaurant
 - action_email
 - action_validate_location
+- action_reset_slot
 actions:
 - utter_greet
 - utter_goodbye
@@ -27,6 +28,7 @@ actions:
 - actions.ActionSearchRestaurants
 - actions.SendEmail
 - actions.ValidateLocation
+- actions.ResetSlot
 config:
   store_entities_as_slots: true
 entities:
@@ -104,7 +106,7 @@ templates:
   - text: In what location?
   - text: In which city?
   utter_default:
-  - text: I'm sorry, I did not understand that.
+  - text: I'm sorry, I did not understand that. Please try again.
   utter_email_invalid:
   - text: I couldn't understand an email address from there. Do you want to tell me
       an email again?

@@ -47,6 +47,57 @@
           "five star",
           "high"
         ]
+      },
+      {
+        "value": "Bangalore",
+        "synonyms": [
+          "Bengaluru",
+          "bengaluru",
+          "bangalore"
+        ]
+      },
+      {
+        "value": "Chennai",
+        "synonyms": [
+          "chennai",
+          "madras",
+          "Madras",
+          "chenai",
+          "chenaai",
+          "madraas"
+        ]
+      },
+      {
+        "value": "Kolkata",
+        "synonyms": [
+          "kolkata",
+          "kolkataa",
+          "Calcutta",
+          "Calcuta",
+          "calcuta"
+        ]
+      },
+      {
+        "value": "Delhi",
+        "synonyms": [
+          "delhi",
+          "dilli",
+          "New Delhi",
+          "new delhi",
+          "newdelhi",
+          "new-delhi"
+        ]
+      },
+      {
+        "value": "Mumbai",
+        "synonyms": [
+          "mumbai",
+          "bombay",
+          "bombai",
+          "bombay",
+          "mumbaai",
+          "mumbaye"
+        ]
       }
     ],
     "lookup_tables": [
@@ -1062,6 +1113,93 @@
             "entity": "cuisine"
           }
         ]
+      },
+      {
+        "text": "cheap",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "<300",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "inexpensive",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "<300",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "moderate",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "300-700",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "mid range",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "300-700",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "top",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": ">700",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "high quality",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": ">700",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "Do you know good restaurants for lunch",
+        "intent": "search_restaurant",
+        "entities": []
+      },
+      {
+        "text": "Are there any good places for dinner",
+        "intent": "search_restaurant",
+        "entities": []
+      },
+      {
+        "text": "search some great restaurants for breakfast",
+        "intent": "",
+        "entities": []
       }
     ]
   }

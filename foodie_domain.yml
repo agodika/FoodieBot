@@ -45,7 +45,7 @@ templates:
     - "ciao"
     - "have a good day"
   utter_default:
-    - "I'm sorry, I did not understand that."
+    - "I'm sorry, I did not understand that. Please try again."
   utter_ask_cuisine: 
     - text: "what kind of cuisine would you like?"
       buttons:
@@ -101,3 +101,4 @@ actions:
 - actions.ActionSearchRestaurants
 - actions.SendEmail
 - actions.ValidateLocation
+- actions.ResetSlot

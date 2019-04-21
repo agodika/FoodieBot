@@ -2,16 +2,16 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "cuisine",
-        "budget",
+        "email",
         "location",
-        "email"
+        "budget",
+        "cuisine"
       ]
     },
     "action_validate_location": {
       "slots": [
-        "location",
-        "valid_location"
+        "valid_location",
+        "location"
       ]
     },
     "action_restaurant": {
@@ -20,12 +20,18 @@
         "found_results"
       ]
     },
+    "action_reset_slot": {
+      "slots": []
+    },
     "action_email": {
       "slots": [
         "email_sent"
       ]
     },
-    "utter_goodbye": {
+    "utter_default": {
+      "slots": []
+    },
+    "utter_greet": {
       "slots": []
     }
   },

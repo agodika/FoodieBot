@@ -5,6 +5,9 @@ from rasa_nlu.model import Metadata, Interpreter
 from rasa_nlu import config
 from rasa_nlu.components import ComponentBuilder
 
+import warnings
+warnings.filterwarnings("ignore")
+
 builder = ComponentBuilder(use_cache=True)
 
 def train_nlu(data, config_file, model_dir):

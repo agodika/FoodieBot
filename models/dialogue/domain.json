@@ -33,6 +33,7 @@
     "prev_utter_ask_email",
     "prev_action_restaurant",
     "prev_action_email",
-    "prev_action_validate_location"
+    "prev_action_validate_location",
+    "prev_action_reset_slot"
   ]
 }

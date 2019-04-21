@@ -14,10 +14,26 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import smtplib
 
+
+def results_to_utterance(price_results):
+	response = ''
+	matching_results_found = False
+
+	if len(price_results)==0:
+		response = "Sorry couldn't find any restaurants in price range. Try a different price range?"
+	else:
+		matching_results_found = True
+		for index, row in price_results.head(5).iterrows():
+			response = response + index + ". " + row['Restaurant_Name'] + " in " + row['Address'] + " has been rated "+str(row['Rating'])+"\n"
+
+	return matching_results_found, response
+
+
 class ActionSearchRestaurants(Action):
 	def name(self):
 		return 'action_restaurant'
-		
+
+
 	def run(self, dispatcher, tracker, domain):
 
 		config={ "user_key":"f207a84eb81c174a12735f568cffd505"}
@@ -47,13 +63,7 @@ class ActionSearchRestaurants(Action):
 				#response=response+ "Restaurant Name: "+ restaurant['restaurant']['name']+ " Address: "+ restaurant['restaurant']['location']['address']+" Average budget for two people: "+restaurant['restaurant']['average_cost_for_two']+" Zomato user rating: "+ restaurant['restaurant']['user_rating']['aggregate_rating']+"\n"	
 
 		if price_range=="<300" or price_range == "300":
-			price_results = results_df[results_df['Avg_budget'] <= 300]
-			if len(price_results)==0:
-				response=response+" Sorry couldn't find any restaurants in price range. Try a different price range?"
-			else:
-				matching_results_found = True
-				for index, row in price_results.head(5).iterrows():
-					response = response+row['Restaurant_Name']+" in "+ row['Address']+" has been rated "+str(row['Rating'])+"\n"
+			matching_results_found, response = results_to_utterance(results_df[results_df['Avg_budget'] <= 300])
 		elif(price_range=="300-700"):
 			price_results = results_df[(results_df['Avg_budget'] >300) & (results_df['Avg_budget'] < 700)]
 			if(len(price_results)==0):
@@ -89,6 +99,8 @@ class SendEmail(Action):
 		cuisine = tracker.get_slot('cuisine')
 		email = tracker.get_slot('email')
 		results = tracker.get_slot('search_results')
+
+		dispatcher.utter_message("Sending email ... ")
 
 		msg = MIMEMultipart()
 		msg['From']="foodbot0@gmail.com"
@@ -311,3 +323,13 @@ class ValidateLocation(Action):
 			dispatcher.utter_message("Sorry, I couldn't find any such location. Please try again.")
 			return [SlotSet('location', None), SlotSet('valid_location', None)]
 
+
+class ResetSlot(Action):
+
+    def name(self):
+        return "action_reset_slot"
+
+    def run(self, dispatcher, tracker, domain):
+        return [SlotSet("location", None), SlotSet("cuisine", None),
+			SlotSet("budget", None), SlotSet("email", None), SlotSet("valid_location", False),
+			SlotSet("search_results", None), SlotSet("found_results", None), SlotSet("email_sent", None)]
