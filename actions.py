@@ -23,8 +23,10 @@ def results_to_utterance(price_results):
 		response = "Sorry couldn't find any restaurants in price range. Try a different price range?"
 	else:
 		matching_results_found = True
+		i = 0
 		for index, row in price_results.head(5).iterrows():
-			response = response + str(index + 1) + ". \"" + row['Restaurant_Name'] + "\" in \"" + row['Address'] + "\" has been rated "+str(row['Rating']) + ". And the average price for two people here is: " + str(row['Avg_budget']) + " Rs \n"
+			i = i+1
+			response = response + str( i ) + ". \"" + row['Restaurant_Name'] + "\" in \"" + row['Address'] + "\" has been rated "+str(row['Rating']) + ". And the average price for two people here is: " + str(row['Avg_budget']) + " Rs \n"
 
 	return matching_results_found, response
 

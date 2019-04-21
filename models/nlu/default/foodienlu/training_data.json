@@ -597,7 +597,7 @@
             "entity": "location"
           }
         ],
-        "text": "Delhi"
+        "text": "delhi"
       },
       {
         "intent": "search_restaurant",
@@ -609,7 +609,7 @@
             "entity": "location"
           }
         ],
-        "text": "Jaipur"
+        "text": "jaipur"
       },
       {
         "intent": "search_restaurant",

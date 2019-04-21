@@ -2,7 +2,14 @@ slots:
   location:
     type: text
   cuisine:
-    type: text
+    type: categorical
+    values:
+      - Chinese
+      - Mexican
+      - Italian
+      - American
+      - South Indian
+      - North Indian
   budget:
     type: text
   email:

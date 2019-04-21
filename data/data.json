@@ -845,7 +845,7 @@
         ]
       },
       {
-        "text": "Delhi",
+        "text": "delhi",
         "intent": "search_restaurant",
         "entities": [
           {
@@ -857,7 +857,7 @@
         ]
       },
       {
-        "text": "Jaipur",
+        "text": "jaipur",
         "intent": "search_restaurant",
         "entities": [
           {

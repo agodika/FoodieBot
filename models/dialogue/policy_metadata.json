@@ -2,9 +2,9 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
+        "cuisine",
         "budget",
         "email",
-        "cuisine",
         "location"
       ]
     },
@@ -22,14 +22,14 @@
     },
     "action_reset_slot": {
       "slots": [
-        "email",
-        "location",
         "search_results",
-        "email_sent",
-        "valid_location",
+        "email",
         "budget",
         "cuisine",
-        "found_results"
+        "found_results",
+        "email_sent",
+        "valid_location",
+        "location"
       ]
     },
     "action_email": {
@@ -37,10 +37,10 @@
         "email_sent"
       ]
     },
-    "utter_default": {
+    "utter_greet": {
       "slots": []
     },
-    "utter_greet": {
+    "utter_default": {
       "slots": []
     }
   },

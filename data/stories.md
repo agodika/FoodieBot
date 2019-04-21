@@ -299,3 +299,49 @@
     - slot{"email_sent": null}
     - export
 
+## Generated Story 5699950204708172850
+* greet
+    - utter_greet
+* search_restaurant
+    - utter_ask_location
+* search_restaurant
+    - utter_default
+* search_restaurant{"location": "Delhi"}
+    - slot{"location": "Delhi"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_cuisine
+* search_restaurant
+    - utter_default
+* search_restaurant{"cuisine": "chinese"}
+    - slot{"cuisine": "chinese"}
+    - utter_ask_budget
+* search_restaurant{"budget": "<300"}
+    - slot{"budget": "<300"}
+    - action_restaurant
+    - slot{"search_results": null}
+    - slot{"found_results": false}
+* search_restaurant{"budget": "300-700"}
+    - slot{"budget": "300-700"}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": true}
+    - utter_query_ask_email
+* affirm
+    - utter_ask_email
+* send_details{"email": "help@me.com"}
+    - slot{"email": "help@me.com"}
+    - action_email
+    - slot{"email_sent": true}
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+

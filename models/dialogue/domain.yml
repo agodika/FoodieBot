@@ -50,7 +50,14 @@ slots:
     type: rasa_core.slots.TextSlot
   cuisine:
     initial_value: null
-    type: rasa_core.slots.TextSlot
+    type: rasa_core.slots.CategoricalSlot
+    values:
+    - chinese
+    - mexican
+    - italian
+    - american
+    - south indian
+    - north indian
   email:
     initial_value: null
     type: rasa_core.slots.TextSlot
