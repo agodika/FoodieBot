@@ -24,7 +24,7 @@ def results_to_utterance(price_results):
 	else:
 		matching_results_found = True
 		for index, row in price_results.head(5).iterrows():
-			response = response + index + ". " + row['Restaurant_Name'] + " in " + row['Address'] + " has been rated "+str(row['Rating'])+"\n"
+			response = response + str(index) + ". \"" + row['Restaurant_Name'] + "\" in \"" + row['Address'] + "\" has been rated "+str(row['Rating']) + ". And the average price for two people here is: " + row['Avg_budget'] + "Rs \n"
 
 	return matching_results_found, response
 
@@ -59,27 +59,18 @@ class ActionSearchRestaurants(Action):
 		if d['results_found'] == 0:
 			response= "no results"
 		else:
-			for restaurant in d['restaurants']:results_df = results_df.append({'Restaurant_Name':restaurant['restaurant']['name'],'Address': restaurant['restaurant']['location']['address'],'Avg_budget':restaurant['restaurant']['average_cost_for_two'],'Rating':restaurant['restaurant']['user_rating']['aggregate_rating']},ignore_index=True)
+			for restaurant in d['restaurants']:
+				results_df = results_df.append({'Restaurant_Name':restaurant['restaurant']['name'],'Address': restaurant['restaurant']['location']['address'],'Avg_budget':restaurant['restaurant']['average_cost_for_two'],'Rating':restaurant['restaurant']['user_rating']['aggregate_rating']},ignore_index=True)
 				#response=response+ "Restaurant Name: "+ restaurant['restaurant']['name']+ " Address: "+ restaurant['restaurant']['location']['address']+" Average budget for two people: "+restaurant['restaurant']['average_cost_for_two']+" Zomato user rating: "+ restaurant['restaurant']['user_rating']['aggregate_rating']+"\n"	
 
 		if price_range=="<300" or price_range == "300":
 			matching_results_found, response = results_to_utterance(results_df[results_df['Avg_budget'] <= 300])
 		elif(price_range=="300-700"):
 			price_results = results_df[(results_df['Avg_budget'] >300) & (results_df['Avg_budget'] < 700)]
-			if(len(price_results)==0):
-				response=response+" Sorry couldn't find any restaurants in price range. Try a different price range?"
-			else:
-				matching_results_found = True
-				for index, row in price_results.head(5).iterrows():
-					response = response+row['Restaurant_Name']+" in "+ row['Address']+" has been rated "+str(row['Rating'])+"\n"		  #" Price per 2 person "+str(row['Avg_budget'])+
+			matching_results_found, response = results_to_utterance(price_results)
 		else:
 			price_results = results_df[(results_df['Avg_budget'] >=700)]
-			if(len(price_results)==0):
-				response=response+" Sorry couldn't find any restaurants in price range."
-			else:
-				matching_results_found = True
-				for index, row in price_results.head(5).iterrows():
-					response = response+row['Restaurant_Name']+" in "+ row['Address']+" has been rated "+str(row['Rating'])+"\n"
+			matching_results_found, response = results_to_utterance(price_results)
 
 		if matching_results_found:
 			dispatcher.utter_message("Showing you top rated restaurants:")
@@ -88,7 +79,7 @@ class ActionSearchRestaurants(Action):
 		dispatcher.utter_message("---------------------------------------")
 
 		# cuisines_dict={'bakery':5,'chinese':25,'cafe':30,'italian':55,'biryani':7,'north indian':50,'south indian':85}
-		return [SlotSet('search_results', results), SlotSet('found_results', matching_results_found)]
+		return [SlotSet('search_results', results_df), SlotSet('found_results', matching_results_found)]
 
 class SendEmail(Action):
 	def name(self):
