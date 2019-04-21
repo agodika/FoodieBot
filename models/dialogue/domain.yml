@@ -3,9 +3,7 @@ action_names:
 - utter_greet
 - utter_goodbye
 - utter_default
-- utter_ask_howcanhelp
 - utter_ask_location
-- utter_ask_fallback_location
 - utter_ask_cuisine
 - utter_ask_budget
 - utter_query_ask_email
@@ -18,9 +16,7 @@ actions:
 - utter_greet
 - utter_goodbye
 - utter_default
-- utter_ask_howcanhelp
 - utter_ask_location
-- utter_ask_fallback_location
 - utter_ask_cuisine
 - utter_ask_budget
 - utter_query_ask_email
@@ -104,11 +100,6 @@ templates:
   utter_ask_email:
   - text: Ok. Please tell me your email address.
   - text: Great! What email address should I send it to?
-  utter_ask_fallback_location:
-  - text: Sorry, we don't operate in that city. Please specify a different location?
-  - text: I'm afraid we don't serve that city yet. Please specify another city.
-  utter_ask_howcanhelp:
-  - text: how can I help you?
   utter_ask_location:
   - text: In what location?
   - text: In which city?
@@ -118,7 +109,7 @@ templates:
   - text: I couldn't understand an email address from there. Do you want to tell me
       an email again?
   utter_goodbye:
-  - text: goodbye :(
+  - text: goodbye
   - text: see you later
   - text: Bye-bye
   - text: ciao

@@ -46,7 +46,7 @@ templates:
     - "Hi, How can I help you!"
     - "Hey, how is it going. How may I help you today?"
   utter_goodbye:
-    - "goodbye :("
+    - "goodbye"
     - "see you later"
     - "Bye-bye"
     - "ciao"
@@ -68,14 +68,9 @@ templates:
         payload: "South Indian"
       - title: "North Indian"
         payload: "North Indian"
-  utter_ask_howcanhelp:
-    - "how can I help you?"
   utter_ask_location:
     - "In what location?"
     - "In which city?"
-  utter_ask_fallback_location:
-    - "Sorry, we don't operate in that city. Please specify a different location?"
-    - "I'm afraid we don't serve that city yet. Please specify another city."
   utter_ask_budget:
     - text: "What price range are you looking at?"
       buttons:
@@ -98,9 +93,7 @@ actions:
 - utter_greet
 - utter_goodbye
 - utter_default
-- utter_ask_howcanhelp
 - utter_ask_location
-- utter_ask_fallback_location
 - utter_ask_cuisine
 - utter_ask_budget
 - utter_query_ask_email

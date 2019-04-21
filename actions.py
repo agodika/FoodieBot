@@ -30,6 +30,12 @@ def results_to_utterance(price_results):
 
 	return matching_results_found, response
 
+def results_to_email(price_results):
+	response = '<table border=1><tr><th>Name</th><th>Address</th><th>Rating</th><th>Average price for two</th></tr>'
+	for index, row in price_results.head(5).iterrows():
+		response = response + "<tr><td>" + row['Restaurant_Name'] + "</td><td>" + row['Address'] + "</td><td> Rated "+str(row['Rating']) + ".</td><td> " + str(row['Avg_budget']) + " Rs </td></tr>"
+
+	return response + "</table>"
 
 class ActionSearchRestaurants(Action):
 	def name(self):
@@ -93,63 +99,54 @@ class SendEmail(Action):
 	def run(self, dispatcher, tracker, domain):
 		loc = tracker.get_slot('location')
 		cuisine = tracker.get_slot('cuisine')
+		price_range = tracker.get_slot('budget')
 		email = tracker.get_slot('email')
 		results = tracker.get_slot('search_results')
+		results_df = pd.DataFrame(columns=['Restaurant_Name','Address','Avg_budget','Rating'])
 
 		dispatcher.utter_message("Sending email ... ")
 
 		msg = MIMEMultipart()
 		msg['From']="foodbot0@gmail.com"
-		msg['To']="foodbot0@gmail.com"
-		msg['Subject']="Your Zomato restaurants recommendation are here."
+		msg['To']=email #"foodbot0@gmail.com"
+		msg['Subject']="Your FoodieBot restaurant recommendation are here"
 
-		# if d['results_found'] == 0:
-		# 	response= "no restaurants found!!"
-		# else:
-		# 	for restaurant in d['restaurants']:results_df = results_df.append({'Restaurant_Name':restaurant['restaurant']['name'],'Address': restaurant['restaurant']['location']['address'],'Avg_budget':restaurant['restaurant']['average_cost_for_two'],'Rating':restaurant['restaurant']['user_rating']['aggregate_rating']},ignore_index=True)
-		#		 #response=response+ "Restaurant Name: "+ restaurant['restaurant']['name']+ "\nAddress: "+ restaurant['restaurant']['location']['address']+"\nAverage budget for two people: "+str(restaurant['restaurant']['average_cost_for_two'])+"\nZomato user rating: "+ str(restaurant['restaurant']['user_rating']['aggregate_rating'])+"\n\n"
-		# if(price_range=="1"):
-		#	 price_results = results_df[results_df['Avg_budget'] <=300]
-		#	 if(len(price_results)==0):
-		#		 response=response+" Sorry couldn't find any restaurants in price range. Please re enter different price range "
-		#		 msg.attach(MIMEText(response,'html'))
-		#	 else:
-		#		 msg.attach(MIMEText("Hello User,<br><br><b>Top 10 restaurants for your search,</b> <br><br>",'html'))
-		#		 for index, row in price_results.head(10).iterrows():
-		#			 response = row['Restaurant_Name']+" in "+ row['Address']+" has been rated "+str(row['Rating'])+"\n"
-		#			 msg.attach(MIMEText('<br>'+response+'<br>','html'))
-		#		 msg.attach(MIMEText('<br><br>Bon Appetit!!','html'))
-		# elif(price_range=="2"):
-		#	 price_results = results_df[(results_df['Avg_budget'] >300) & (results_df['Avg_budget'] < 700)]
-		#	 if(len(price_results)==0):
-		#		 response=response+" Sorry couldn't find any restaurants in price range. Please re enter different price range "
-		#		 msg.attach(MIMEText(response,'html'))
-		#	 else:
-		#		 msg.attach(MIMEText("Hello User,<br><br><b>Top 10 restaurants for your search,</b> <br><br>",'html'))
-		#		 for index, row in price_results.head(10).iterrows():
-		#			 response = row['Restaurant_Name']+" in "+ row['Address']+" has been rated "+str(row['Rating'])+"\n"
-		#			 msg.attach(MIMEText('<br>'+response+'<br>','html'))
-		#		 msg.attach(MIMEText('<br><br>Bon Appetit!!','html'))
+		d = results
 
-		# elif(price_range=="3"):
-		#	 price_results = results_df[(results_df['Avg_budget'] >=700)]
-		#	 if(len(price_results)==0):
-		#		 response=response+" Sorry couldn't find any restaurants in price range. Please re enter different price range "
-		#		 msg.attach(MIMEText(response,'html'))
-		#	 else:
-		#		 msg.attach(MIMEText("Hello User,<br><br><b>Top 10 restaurants for your search,</b> <br><br>",'html'))
-		#		 for index, row in price_results.head(10).iterrows():
-		#			 response = row['Restaurant_Name']+" in "+ row['Address']+" has been rated "+str(row['Rating'])+"\n"
-		#			 msg.attach(MIMEText('<br>'+response+'<br>','html'))
-		#		 msg.attach(MIMEText('<br><br>Bon Appetit !!','html'))
+		try:
+			if d['results_found'] == 0:
+				response= "no restaurants found!!"
+			else:
+				for restaurant in d['restaurants']:
+					results_df = results_df.append({'Restaurant_Name':restaurant['restaurant']['name'],'Address': restaurant['restaurant']['location']['address'],'Avg_budget':restaurant['restaurant']['average_cost_for_two'],'Rating':restaurant['restaurant']['user_rating']['aggregate_rating']},ignore_index=True)
 
-		# server = smtplib.SMTP('smtp.gmail.com:587')
-		# server.starttls()
-		# server.login(msg['From'],"bot12345")
-		# server.sendmail(msg['From'],msg['To'], results) # msg.as_string())
-		# server.quit()
+			response = "Hello,<br><br><b>The Top (upto 10) restaurants for your search for {} food in {} with a price range of {} </b> <br><br>".format(cuisine, loc, price_range)
 
-		dispatcher.utter_message("Sent!")
+			if price_range=="<300" or price_range == "300":
+				response = response + results_to_email(results_df[results_df['Avg_budget'] <= 300])
+			elif(price_range=="300-700"):
+				price_results = results_df[(results_df['Avg_budget'] >300) & (results_df['Avg_budget'] < 700)]
+				response = response + results_to_email(price_results)
+			else:
+				price_results = results_df[(results_df['Avg_budget'] >=700)]
+				response = response + results_to_email(price_results)
+
+			# print(response)
+			msg.attach(MIMEText(response,'html'))
+			msg.attach(MIMEText('<br><br>Bon Appetit!!','html'))
+
+			server = smtplib.SMTP('smtp.gmail.com:587')
+			server.starttls()
+			server.login(msg['From'], "bot12345")
+			server.sendmail(msg['From'], msg['To'], msg.as_string())
+			server.quit()
+
+			dispatcher.utter_message("Sent!")
+		except Exception as inst:
+			# print(type(inst))    # the exception instance
+			# print(inst.args)     # arguments stored in .args
+			# print(inst)          # __str__ allows args to be printed directly,
+			dispatcher.utter_message("Sorry, I failed to send email. I'm not going to retry.")
 
 		return [SlotSet('email_sent', True)]
 
@@ -255,7 +252,7 @@ class ValidateLocation(Action):
 		'Satrampadu', 'Sattenapalle', 'Sattur', 'Saunda', 'Saundatti-Yellamma', 'Sausar', 'Savanur', 'Savarkundla', 
 		'Savner', 'Sawantwadi', 'Secunderabad', 'Sedam', 'Sehore', 'Sendhwa', 'Seohara', 'Seoni', 'Seoni-Malwa', 
 		'Serampore', 'Shahabad', 'Shahade', 'Shahbad', 'Shahdol', 'Shahganj', 'Shahjahanpur', 'Shahpur', 'Shahpura', 
-		'Shajapur', 'Shaktigarh', 'Shamgarh', 'Shamli', 'Shamsabad, Agra', 'Shamsabad, Farrukhabad', 'Shegaon', 
+		'Shajapur', 'Shaktigarh', 'Shamgarh', 'Shamli', 'Shamsabad, Farrukhabad', 'Shegaon', 
 		'Sheikhpura', 'Shendurjana', 'Shenkottai', 'Sheoganj', 'Sheohar', 'Sheopur', 'Sherghati', 'Sherkot', 
 		'Shiggaon', 'Shikaripur', 'Shikarpur', 'Shikohabad', 'Shimla', 'Shirdi', 'Shirpur-Warwade', 'Shirur', 
 		'Shishgarh', 'Shivamogga', 'Shivpuri', 'Sholavandan', 'Sholingur', 'Shoranur', 'Shrigonda', 'Shrirampur', 

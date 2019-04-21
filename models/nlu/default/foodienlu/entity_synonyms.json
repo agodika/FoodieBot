@@ -40,7 +40,6 @@
   "bombai": "Mumbai",
   "mumbaai": "Mumbai",
   "mumbaye": "Mumbai",
-  "good": ">700",
   "more than 700": ">700",
   "lesser than rs. 300": "<300",
   "less than 300": "<300",
@@ -50,5 +49,8 @@
   "jaipur": "Jaipur",
   "bhopal": "Bhopal",
   "aligarh": "Aligarh",
-  "bokaro": "Bokaro Steel City"
+  "bokaro": "Bokaro Steel City",
+  "mexican": "Mexican",
+  "classy": ">700",
+  "high quality ": ">700"
 }
