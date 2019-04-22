@@ -2,34 +2,22 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "email",
         "location",
+        "email",
         "cuisine",
         "budget"
       ]
     },
     "action_validate_location": {
       "slots": [
-        "valid_location",
-        "location"
+        "location",
+        "valid_location"
       ]
     },
     "action_restaurant": {
       "slots": [
-        "search_results",
-        "found_results"
-      ]
-    },
-    "action_reset_slot": {
-      "slots": [
-        "email_sent",
-        "location",
-        "email",
-        "cuisine",
-        "budget",
-        "search_results",
-        "valid_location",
-        "found_results"
+        "found_results",
+        "search_results"
       ]
     },
     "action_email": {
@@ -37,17 +25,29 @@
         "email_sent"
       ]
     },
-    "utter_default": {
-      "slots": []
+    "action_reset_slot": {
+      "slots": [
+        "found_results",
+        "cuisine",
+        "email",
+        "valid_location",
+        "location",
+        "budget",
+        "email_sent",
+        "search_results"
+      ]
     },
     "utter_greet": {
+      "slots": []
+    },
+    "utter_default": {
       "slots": []
     }
   },
   "rasa_core": "0.10.1",
   "max_histories": [
-    5,
-    5
+    10,
+    10
   ],
   "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
   "policy_names": [
