@@ -53,6 +53,7 @@
   "300 to 700": "300-700",
   "jaipur": "Jaipur",
   "bhopal": "Bhopal",
+  "aligarh": "Aligarh",
   "bokaro": "Bokaro Steel City",
   "chinese restaurants": "Chinese",
   "madras ": "Chennai",
@@ -60,4 +61,7 @@
   "south indian restaurants": "South Indian",
   "chennai ": "Chennai",
   "range of >700": ">700"
+  "mexican": "Mexican",
+  "classy": ">700",
+  "high quality ": ">700"
 }

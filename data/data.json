@@ -370,7 +370,7 @@
           {
             "start": 31,
             "end": 36,
-            "value": "Delhi",
+            "value": "delhi",
             "entity": "location"
           }
         ]
@@ -452,6 +452,18 @@
         ]
       },
       {
+        "text": "I want Mexican",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 7,
+            "end": 14,
+            "value": "Mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
         "text": "Italian would be good",
         "intent": "search_restaurant",
         "entities": [
@@ -494,24 +506,24 @@
         ]
       },
       {
-        "text": "Are there any good american restaurants in Hyderabad?",
+        "text": "Are there any expensive american restaurants in Hyderabad?",
         "intent": "search_restaurant",
         "entities": [
           {
-            "start": 19,
-            "end": 28,
+            "start": 24,
+            "end": 33,
             "value": "American ",
             "entity": "cuisine"
           },
           {
-            "start": 43,
-            "end": 52,
+            "start": 48,
+            "end": 57,
             "value": "Hyderabad",
             "entity": "location"
           },
           {
             "start": 14,
-            "end": 18,
+            "end": 23,
             "value": ">700",
             "entity": "budget"
           }
@@ -1043,6 +1055,138 @@
         ]
       },
       {
+        "text": "Looking for restaurants from Aligarh",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 29,
+            "end": 36,
+            "value": "Aligarh",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Are there good italian places in bokaro",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 15,
+            "end": 22,
+            "value": "italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 33,
+            "end": 39,
+            "value": "Bokaro Steel City",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "looking for chinese restaurants in chandigarh",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "chinese",
+            "entity": "cuisine"
+          },
+          {
+            "start": 35,
+            "end": 45,
+            "value": "chandigarh",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Searching for good north indian restaurants ",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 19,
+            "end": 31,
+            "value": "north indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "cheap",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "<300",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "inexpensive",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "<300",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "moderate",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "300-700",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "mid range",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "300-700",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "top",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": ">700",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "high quality",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": ">700",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
         "text": "please show me some good chinese restaurants in madras in the range of 300-700",
         "intent": "search_restaurant",
         "entities": [
@@ -1102,8 +1246,56 @@
       },
       {
         "text": "search some great restaurants for breakfast",
-        "intent": "",
+        "intent": "search_restaurant",
         "entities": []
+      },
+      {
+        "text": "help me find low cost restaurants serving mexican food",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 13,
+            "end": 21,
+            "value": "<300",
+            "entity": "budget"
+          },
+          {
+            "start": 42,
+            "end": 49,
+            "value": "Mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "let's search for some mid range restaurants",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 22,
+            "end": 31,
+            "value": "300-700",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "I want to find some classy high quality restaurants",
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": ">700",
+            "entity": "budget"
+          },
+          {
+            "start": 27,
+            "end": 40,
+            "value": ">700",
+            "entity": "budget"
+          }
+        ]
       }
     ]
   }

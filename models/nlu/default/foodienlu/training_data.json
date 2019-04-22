@@ -201,6 +201,18 @@
         "intent": "search_restaurant",
         "entities": [
           {
+            "start": 7,
+            "end": 14,
+            "value": "Mexican",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "I want Mexican"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
             "start": 0,
             "end": 7,
             "value": "Italian",
@@ -243,25 +255,25 @@
         "intent": "search_restaurant",
         "entities": [
           {
-            "start": 19,
-            "end": 28,
+            "start": 24,
+            "end": 33,
             "value": "American ",
             "entity": "cuisine"
           },
           {
-            "start": 43,
-            "end": 52,
+            "start": 48,
+            "end": 57,
             "value": "Hyderabad",
             "entity": "location"
           },
           {
             "start": 14,
-            "end": 18,
+            "end": 23,
             "value": ">700",
             "entity": "budget"
           }
         ],
-        "text": "Are there any good american restaurants in Hyderabad?"
+        "text": "Are there any expensive american restaurants in Hyderabad?"
       },
       {
         "intent": "greet",
@@ -842,7 +854,56 @@
         "text": "Are there any good places for dinner"
       },
       {
+        "intent": "search_restaurant",
         "text": "search some great restaurants for breakfast"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 13,
+            "end": 21,
+            "value": "<300",
+            "entity": "budget"
+          },
+          {
+            "start": 42,
+            "end": 49,
+            "value": "Mexican",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "help me find low cost restaurants serving mexican food"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 22,
+            "end": 31,
+            "value": "300-700",
+            "entity": "budget"
+          }
+        ],
+        "text": "let's search for some mid range restaurants"
+      },
+      {
+        "intent": "search_restaurant",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": ">700",
+            "entity": "budget"
+          },
+          {
+            "start": 27,
+            "end": 40,
+            "value": ">700",
+            "entity": "budget"
+          }
+        ],
+        "text": "I want to find some classy high quality restaurants"
       }
     ],
     "regex_features": [

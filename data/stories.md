@@ -4,6 +4,22 @@
     - utter_greet
     - export
 
+## Greet and Goodbye
+* greet
+    - utter_greet
+* goodbye
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+
 ## Bye
 * goodbye
     - utter_goodbye
@@ -367,6 +383,120 @@
     - action_restaurant
     - slot{"search_results": null}
     - slot{"found_results": false}
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+
+## Generated Story 6061993100952186407
+* greet
+    - utter_greet
+* search_restaurant{"budget": "<300", "cuisine": "Mexican"}
+    - slot{"budget": "<300"}
+    - slot{"cuisine": "Mexican"}
+    - utter_ask_location
+* search_restaurant{"location": "Chennai"}
+    - slot{"location": "Chennai"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": true}
+    - utter_query_ask_email
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+
+## Generated Story 5850808719902654095
+* greet
+    - utter_greet
+* search_restaurant{"budget": ">700", "cuisine": "italian", "location": "gurgaon"}
+    - slot{"budget": ">700"}
+    - slot{"cuisine": "italian"}
+    - slot{"location": "gurgaon"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": true}
+    - utter_query_ask_email
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+
+## Generated Story 6061993100952186407
+* greet
+    - utter_greet
+* search_restaurant{"budget": "<300", "cuisine": "Mexican"}
+    - slot{"budget": "<300"}
+    - slot{"cuisine": "Mexican"}
+    - utter_ask_location
+* search_restaurant{"location": "Chennai"}
+    - slot{"location": "Chennai"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": true}
+    - utter_query_ask_email
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+
+## Generated Story 5203668936517469404
+* greet
+    - utter_greet
+* search_restaurant
+    - utter_ask_location
+* search_restaurant{"cuisine": "chinese"}
+    - slot{"cuisine": "chinese"}
+    - utter_ask_location
+* search_restaurant{"location": "Jaipur"}
+    - slot{"location": "Jaipur"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_budget
+* search_restaurant{"budget": "<300"}
+    - slot{"budget": "<300"}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": true}
+    - utter_query_ask_email
 * deny
     - utter_goodbye
     - action_reset_slot

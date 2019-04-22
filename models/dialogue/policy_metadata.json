@@ -20,21 +20,21 @@
         "search_results"
       ]
     },
-    "action_reset_slot": {
-      "slots": [
-        "email_sent",
-        "email",
-        "valid_location",
-        "budget",
-        "location",
-        "found_results",
-        "cuisine",
-        "search_results"
-      ]
-    },
     "action_email": {
       "slots": [
         "email_sent"
+      ]
+    },
+    "action_reset_slot": {
+      "slots": [
+        "found_results",
+        "cuisine",
+        "email",
+        "valid_location",
+        "location",
+        "budget",
+        "email_sent",
+        "search_results"
       ]
     },
     "utter_greet": {
@@ -46,8 +46,8 @@
   },
   "rasa_core": "0.10.1",
   "max_histories": [
-    5,
-    5
+    10,
+    10
   ],
   "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
   "policy_names": [
