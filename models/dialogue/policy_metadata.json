@@ -3,27 +3,27 @@
     "action_listen": {
       "slots": [
         "cuisine",
-        "budget",
         "email",
+        "budget",
         "location"
       ]
     },
     "action_validate_location": {
       "slots": [
-        "valid_location",
-        "location"
+        "location",
+        "valid_location"
       ]
     },
     "action_reset_slot": {
       "slots": [
-        "budget",
-        "search_results",
-        "email_sent",
-        "valid_location",
         "cuisine",
+        "search_results",
+        "budget",
         "found_results",
+        "location",
         "email",
-        "location"
+        "valid_location",
+        "email_sent"
       ]
     },
     "action_restaurant": {
@@ -46,8 +46,8 @@
   },
   "rasa_core": "0.10.1",
   "max_histories": [
-    10,
-    10
+    5,
+    5
   ],
   "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
   "policy_names": [
