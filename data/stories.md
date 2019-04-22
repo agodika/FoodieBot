@@ -75,6 +75,7 @@
     - action_validate_location
     - slot{"location": null}
     - slot{"valid_location": false}
+    - utter_ask_alternate_city
 * search_restaurant{"location": "jaipur"}
     - slot{"location": "jaipur"}
     - action_validate_location
@@ -93,6 +94,49 @@
     - utter_goodbye
     - action_reset_slot
     - export
+
+## Generated Story 9189546364870490612
+* greet
+    - utter_greet
+* search_restaurant{"location": "rishikesh"}
+    - slot{"location": "rishikesh"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": false}
+    - utter_ask_alternate_city
+* search_restaurant{"location": "Delhi"}
+    - slot{"location": "Delhi"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_cuisine
+* search_restaurant{"cuisine": "Chinese"}
+    - slot{"cuisine": "Chinese"}
+    - utter_ask_budget
+* search_restaurant{"budget": "<300"}
+    - slot{"budget": "<300"}
+    - action_restaurant
+    - slot{"search_results": null}
+    - slot{"found_results": false}
+    - utter_ask_alternate_budget
+* search_restaurant{"budget": "300-700"}
+    - slot{"budget": "300-700"}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": true}
+    - utter_query_ask_email
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+
 
 ## Generated Story 3819246282420587981
 * greet
@@ -131,6 +175,7 @@
     - action_validate_location
     - slot{"location": null}
     - slot{"valid_location": null}
+    - utter_ask_alternate_city
 * search_restaurant{"location": "mumbai"}
     - slot{"location": "mumbai"}
     - action_validate_location
@@ -215,6 +260,7 @@
     - action_restaurant
     - slot{"search_results": "text"}
     - slot{"found_results": false}
+    - utter_ask_alternate_budget
 * search_restaurant{"budget": ">700"}
     - slot{"budget": ">700"}
     - action_restaurant
@@ -244,6 +290,7 @@
     - action_restaurant
     - slot{"search_results": "text"}
     - slot{"found_results": false}
+    - utter_ask_alternate_budget
 * deny
     - utter_goodbye
     - action_reset_slot
@@ -271,6 +318,7 @@
     - action_restaurant
     - slot{"search_results": null}
     - slot{"found_results": false}
+    - utter_ask_alternate_budget
 * search_restaurant{"budget": ">700"}
     - slot{"budget": ">700"}
     - action_restaurant
@@ -302,6 +350,7 @@
     - action_restaurant
     - slot{"search_results": null}
     - slot{"found_results": false}
+    - utter_ask_alternate_budget
 * deny
     - utter_goodbye
     - action_reset_slot
@@ -337,6 +386,7 @@
     - action_restaurant
     - slot{"search_results": null}
     - slot{"found_results": false}
+    - utter_ask_alternate_budget
 * search_restaurant{"budget": "300-700"}
     - slot{"budget": "300-700"}
     - action_restaurant
@@ -373,16 +423,19 @@
     - action_restaurant
     - slot{"search_results": null}
     - slot{"found_results": false}
+    - utter_ask_alternate_budget
 * search_restaurant{"budget": "300-700"}
     - slot{"budget": "300-700"}
     - action_restaurant
     - slot{"search_results": null}
     - slot{"found_results": false}
+    - utter_ask_alternate_budget
 * search_restaurant{"budget": "<300"}
     - slot{"budget": "<300"}
     - action_restaurant
     - slot{"search_results": null}
     - slot{"found_results": false}
+    - utter_ask_alternate_budget
 * deny
     - utter_goodbye
     - action_reset_slot
@@ -510,3 +563,342 @@
     - slot{"email_sent": null}
     - export
 
+## Generated Story 3800648596020791957
+* greet
+    - utter_greet
+* search_restaurant{"location": "almora"}
+    - slot{"location": "almora"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": false}
+    - utter_ask_alternate_city
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+* greet
+    - utter_greet
+* search_restaurant{"location": "paris"}
+    - slot{"location": "paris"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": null}
+    - utter_ask_alternate_city
+* search_restaurant{"location": "hyderabad"}
+    - slot{"location": "hyderabad"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_cuisine
+* search_restaurant{"cuisine": "south indian"}
+    - slot{"cuisine": "south indian"}
+    - utter_ask_budget
+* search_restaurant{"budget": "<300"}
+    - slot{"budget": "<300"}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": true}
+    - utter_query_ask_email
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+
+## Generated Story 2508725302789212799
+* search_restaurant{"location": "shimla"}
+    - slot{"location": "shimla"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": false}
+    - utter_ask_alternate_city
+* search_restaurant{"location": "srinagar"}
+    - slot{"location": "srinagar"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_cuisine
+* search_restaurant{"cuisine": "american"}
+    - slot{"cuisine": "american"}
+    - utter_ask_budget
+* search_restaurant{"budget": ">700"}
+    - slot{"budget": ">700"}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": true}
+    - utter_query_ask_email
+* affirm
+    - utter_ask_email
+* send_details{"email": "abc@def.com"}
+    - slot{"email": "abc@def.com"}
+    - action_email
+    - slot{"email_sent": true}
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+* search_restaurant{"location": "rourkela"}
+    - slot{"location": "rourkela"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_cuisine
+* search_restaurant{"cuisine": "south indian"}
+    - slot{"cuisine": "south indian"}
+    - utter_ask_budget
+* search_restaurant{"budget": "300-700"}
+    - slot{"budget": "300-700"}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": true}
+    - utter_query_ask_email
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+
+## Generated Story -6156717076256734887
+* search_restaurant{"cuisine": "Italian", "location": "panaji"}
+    - slot{"cuisine": "Italian"}
+    - slot{"location": "panaji"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": false}
+    - utter_ask_alternate_city
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+* search_restaurant{"cuisine": "Mexican", "location": "panaji"}
+    - slot{"cuisine": "Mexican"}
+    - slot{"location": "panaji"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": false}
+    - utter_ask_alternate_city
+* affirm
+    - utter_ask_location
+* search_restaurant{"location": "goa"}
+    - slot{"location": "goa"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": true}
+    - utter_query_ask_email
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+
+## Generated Story -9108298330462338250
+* search_restaurant{"location": "alwar"}
+    - slot{"location": "alwar"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": false}
+    - utter_ask_alternate_city
+* affirm
+    - utter_ask_location
+* search_restaurant{"location": "ajmer"}
+    - slot{"location": "ajmer"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - utter_ask_cuisine
+* search_restaurant{"cuisine": "Chinese"}
+    - slot{"cuisine": "Chinese"}
+    - utter_ask_budget
+* search_restaurant{"budget": "<300"}
+    - slot{"budget": "<300"}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": true}
+    - utter_query_ask_email
+* affirm
+    - utter_ask_email
+* send_details{"email": "foodbot0@gmail.com"}
+    - slot{"email": "foodbot0@gmail.com"}
+    - action_email
+    - slot{"email_sent": true}
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+
+## Generated Story 6153973767140398492
+* search_restaurant{"budget": "<300", "location": "Alwar"}
+    - slot{"budget": "<300"}
+    - slot{"location": "Alwar"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": false}
+    - utter_ask_alternate_city
+* search_restaurant{"location": "ajmer"}
+    - slot{"location": "ajmer"}
+    - action_validate_location
+    - slot{"valid_location": true}
+    - action_restaurant
+    - slot{"search_results": "text"}
+    - slot{"found_results": true}
+    - utter_query_ask_email
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+* search_restaurant{"location": "seattle"}
+    - slot{"location": "seattle"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": null}
+    - utter_ask_alternate_city
+* search_restaurant{"location": "bharatpur"}
+    - slot{"location": "bharatpur"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": false}
+    - utter_ask_alternate_city
+* search_restaurant{"location": "singapore"}
+    - slot{"location": "singapore"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": null}
+    - utter_ask_alternate_city
+* search_restaurant{"location": "bhilai"}
+    - slot{"location": "bhilai"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": false}
+    - utter_ask_alternate_city
+* search_restaurant{"budget": ">700", "location": "london"}
+    - slot{"budget": ">700"}
+    - slot{"location": "london"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": null}
+    - utter_ask_alternate_city
+* search_restaurant{"budget": "300-700", "location": "austin"}
+    - slot{"budget": "300-700"}
+    - slot{"location": "austin"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": null}
+    - utter_ask_alternate_city
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export
+
+## Handwritten story 1 
+* search_restaurant{"budget": ">700", "location": "seattle"}
+    - slot{"budget": ">700"}
+    - slot{"location": "seattle"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": null}
+    - utter_ask_alternate_city
+* search_restaurant{"location": "bharatpur"}
+    - slot{"location": "bharatpur"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": false}
+    - utter_ask_alternate_city
+* search_restaurant{"location": "singapore"}
+    - slot{"location": "singapore"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": null}
+    - utter_ask_alternate_city
+* search_restaurant{"location": "bhilai"}
+    - slot{"location": "bhilai"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": false}
+    - utter_ask_alternate_city
+* search_restaurant{"budget": ">700", "location": "london"}
+    - slot{"budget": ">700"}
+    - slot{"location": "london"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": null}
+    - utter_ask_alternate_city
+* search_restaurant{"budget": "300-700", "location": "austin"}
+    - slot{"budget": "300-700"}
+    - slot{"location": "austin"}
+    - action_validate_location
+    - slot{"location": null}
+    - slot{"valid_location": null}
+    - utter_ask_alternate_city
+* deny
+    - utter_goodbye
+    - action_reset_slot
+    - slot{"location": null}
+    - slot{"cuisine": null}
+    - slot{"budget": null}
+    - slot{"email": null}
+    - slot{"valid_location": false}
+    - slot{"search_results": null}
+    - slot{"found_results": null}
+    - slot{"email_sent": null}
+    - export

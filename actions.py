@@ -20,7 +20,7 @@ def results_to_utterance(price_results):
 	matching_results_found = False
 
 	if len(price_results)==0:
-		response = "Sorry couldn't find any restaurants in price range. Try a different price range?"
+		response = "Sorry couldn't find any restaurants in price range."
 	else:
 		matching_results_found = True
 		i = 0
@@ -82,9 +82,12 @@ class ActionSearchRestaurants(Action):
 
 		if matching_results_found:
 			dispatcher.utter_message("Showing you top rated restaurants:")
-
-		dispatcher.utter_message(response)
-		dispatcher.utter_message("---------------------------------------")
+			dispatcher.utter_message(response)
+			dispatcher.utter_message("---------------------------------------")
+		else:
+			dispatcher.utter_message(response)
+			dispatcher.utter_message("---------------------------------------")
+			# dispatcher.utter_template("utter_ask_alternate_budget", tracker, domain)
 
 		# cuisines_dict={'bakery':5,'chinese':25,'cafe':30,'italian':55,'biryani':7,'north indian':50,'south indian':85}
 		if matching_results_found:
@@ -310,10 +313,12 @@ class ValidateLocation(Action):
 		if loc.casefold() in valid_locs: 
 			return [SlotSet('valid_location', True)]
 		elif loc.casefold() in known_invalid_locs:
-			dispatcher.utter_message("Sorry, we don't operate in that city. Please specify some other location.")
+			dispatcher.utter_message("Sorry, we don't operate in that city.")
+			# dispatcher.utter_template("utter_ask_alternate_city", tracker, domain)
 			return [SlotSet('location', None), SlotSet('valid_location', False)]
 		else:
-			dispatcher.utter_message("Sorry, I couldn't find any such location. Please try again.")
+			dispatcher.utter_message("Sorry, I couldn't find any such location.")
+			# dispatcher.utter_template("utter_ask_alternate_city", tracker, domain)
 			return [SlotSet('location', None), SlotSet('valid_location', None)]
 
 

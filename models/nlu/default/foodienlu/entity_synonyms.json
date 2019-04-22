@@ -43,7 +43,6 @@
   "italian": "Italian",
   "mexican": "Mexican",
   "american ": "American ",
-  "good": ">700",
   "north indian": "North Indian",
   "more than 700": ">700",
   "lesser than rs. 300": "<300",
@@ -53,15 +52,16 @@
   "300 to 700": "300-700",
   "jaipur": "Jaipur",
   "bhopal": "Bhopal",
-  "aligarh": "Aligarh",
   "bokaro": "Bokaro Steel City",
   "chinese restaurants": "Chinese",
   "madras ": "Chennai",
   "range of 300-700": "300-700",
   "south indian restaurants": "South Indian",
   "chennai ": "Chennai",
-  "range of >700": ">700"
-  "mexican": "Mexican",
+  "range of >700": ">700",
   "classy": ">700",
-  "high quality ": ">700"
+  "high quality ": ">700",
+  "alwar": "Alwar",
+  "madurai": "Madurai",
+  "kochi": "Kochi"
 }

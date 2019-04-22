@@ -3,14 +3,26 @@
     "action_listen": {
       "slots": [
         "location",
-        "email",
         "cuisine",
-        "budget"
+        "budget",
+        "email"
       ]
     },
     "action_validate_location": {
       "slots": [
         "location",
+        "valid_location"
+      ]
+    },
+    "action_reset_slot": {
+      "slots": [
+        "cuisine",
+        "found_results",
+        "email",
+        "search_results",
+        "location",
+        "budget",
+        "email_sent",
         "valid_location"
       ]
     },
@@ -25,22 +37,10 @@
         "email_sent"
       ]
     },
-    "action_reset_slot": {
-      "slots": [
-        "found_results",
-        "cuisine",
-        "email",
-        "valid_location",
-        "location",
-        "budget",
-        "email_sent",
-        "search_results"
-      ]
-    },
-    "utter_greet": {
+    "utter_default": {
       "slots": []
     },
-    "utter_default": {
+    "utter_greet": {
       "slots": []
     }
   },

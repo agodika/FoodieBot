@@ -71,6 +71,9 @@ templates:
   utter_ask_location:
     - "In what location?"
     - "In which city?"
+  utter_ask_alternate_city:
+    - "Please specify some other location."
+    - "Would you like to search in another city?"
   utter_ask_budget:
     - text: "What price range are you looking at?"
       buttons:
@@ -80,9 +83,14 @@ templates:
         payload: "300-700"
       - title: "More than Rs. 700"
         payload: ">700"
+  utter_ask_alternate_budget:
+    - "Try a different price range?"
+    - "Would you like to search for another price range?"
   utter_query_ask_email:
     - text: "Should I send you details of all the restaurants on email?"
     - text: "Would you like to receive the restaurant list on email?"
+  utter_ask_alternate_cuisine:
+    - "I'm sorry, I don't understand that as a cuisine. Please try again."
   utter_ask_email:
     - text: "Ok. Please tell me your email address."
     - text: "Great! What email address should I send it to?"
@@ -96,6 +104,9 @@ actions:
 - utter_ask_location
 - utter_ask_cuisine
 - utter_ask_budget
+- utter_ask_alternate_city
+- utter_ask_alternate_budget
+- utter_ask_alternate_cuisine
 - utter_query_ask_email
 - utter_ask_email
 - actions.ActionSearchRestaurants

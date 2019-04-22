@@ -6,6 +6,9 @@ action_names:
 - utter_ask_location
 - utter_ask_cuisine
 - utter_ask_budget
+- utter_ask_alternate_city
+- utter_ask_alternate_budget
+- utter_ask_alternate_cuisine
 - utter_query_ask_email
 - utter_ask_email
 - action_restaurant
@@ -19,6 +22,9 @@ actions:
 - utter_ask_location
 - utter_ask_cuisine
 - utter_ask_budget
+- utter_ask_alternate_city
+- utter_ask_alternate_budget
+- utter_ask_alternate_cuisine
 - utter_query_ask_email
 - utter_ask_email
 - actions.ActionSearchRestaurants
@@ -73,6 +79,14 @@ slots:
     initial_value: false
     type: rasa_core.slots.BooleanSlot
 templates:
+  utter_ask_alternate_budget:
+  - text: Try a different price range?
+  - text: Would you like to search for another price range?
+  utter_ask_alternate_city:
+  - text: Please specify some other location.
+  - text: Would you like to search in another city?
+  utter_ask_alternate_cuisine:
+  - text: I'm sorry, I don't understand that as a cuisine. Please try again.
   utter_ask_budget:
   - buttons:
     - payload: <300
